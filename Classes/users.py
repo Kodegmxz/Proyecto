@@ -8,13 +8,11 @@ class usuario:
     def login(self,db,widget):
         db.dbcursor.execute("SELECT rol FROM Users.rol WHERE id_emp = %s AND password = %s", (self._id_emp, self._password)) #Usando el argumento para usar el cursor
         result = db.dbcursor.fetchone()
-        try:
-            # Funcion para determinar a donde se va a redirigir
-            if result[0] == "Recepcion":
-                from Ui.a_recep import a2
-                a2(db,widget)
-        except:
-            print("Error")
+
+        if result[0] == "Recepcion":
+            from Ui.a_recep import a2
+            a2(db,widget)
+
 
     def function(self):
         pass
