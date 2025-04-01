@@ -290,6 +290,19 @@ border: 3px solid rgb(122, 143, 168);</string>
     <bool>false</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="push_hola">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>140</y>
+     <width>391</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>HOLA</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

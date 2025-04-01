@@ -13,6 +13,7 @@ class Recepcion(QDialog):
         ui_a = os.path.join(dir_a, "u_recepcion.ui")
         loadUi(ui_a, self)
         self.salir_boton.clicked.connect(self.salidabutton)
+        self.push_hola.clicked.connect(self.hola)
 
     def salidabutton(self):
         from Ui.a_login import Login
