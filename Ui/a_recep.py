@@ -27,14 +27,10 @@ class Recepcion(QDialog):
         
         # Conectar el botón de "salir" para cambiar de ventana
         self.salir_boton.clicked.connect(self.salidabutton)
-<<<<<<< HEAD
-        self.push_hola.clicked.connect(self.hola)
-=======
         
         self.pushsave.clicked.connect(self.guardar_estado)
 
         self.cargar_estado()
->>>>>>> 6e47cea60ce33e842f3ef647c7324376d0570321
 
     def salidabutton(self):
         from Ui.a_login import Login
