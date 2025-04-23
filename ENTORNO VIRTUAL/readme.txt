@@ -1,0 +1,1 @@
+esto lo creo solo pyqt para que no hayan errores con la app, no ejecuta nada solo no lo borres
