@@ -1,3 +1,5 @@
+"""AQUI SERA DONDE LOS MESEROS ESCOJAN LOS PRODUCTOS QUE DESEAN LOS DE CADA MESA Y AHI MISMO SE HARA LA SUMA TOTAL DE CADA COSA"""
+
 from PyQt5 import uic
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QMessageBox
 
@@ -13,13 +15,13 @@ class MesaDialog(QDialog):
         self.hamburguesa1.clicked.connect(lambda: self.agregar_producto("Hamburguesa", 1, 15.0))
         self.pizza1.clicked.connect(lambda: self.agregar_producto("Pizza", 1, 20.0))
 
-        # Conectar la señal cellChanged para actualizar el total cuando cambien los valores en la tabla
+
         self.cuenta1.cellChanged.connect(self.actualizar_total)
 
         # Conectar el botón de borrar
         self.borrar.clicked.connect(self.borrar_fila)
 
-        # Variable para el total
+        # total
         self.total = 0.0
 
     def agregar_producto(self, producto, cantidad, precio):

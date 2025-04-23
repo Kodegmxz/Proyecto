@@ -1,3 +1,6 @@
+""" ESTE ES EL LOGIN PRINCIPAL DE LA APLICACION """
+
+
 import sys
 import os
 from PyQt5 import QtWidgets
