@@ -1,12 +1,3 @@
-#LOS BOTONES DE CADA MESA, EL CUAL USARAN LOS RECPCIONISTAS, 
-#GENERA UN JSON PARA GUARDAR LOS CAMBIOS DE LAS MESAS Y SE MANTENGAN AL CERRAR LA APP
-
-
-
-
-
-
-
 import sys
 import os
 import json
@@ -42,7 +33,7 @@ class Recepcion(QDialog):
         self.cargar_estado()
 
     def salidabutton(self):
-        from Ui.INICIO.a_login import Login
+        from Ui.Login.a_login import Login
         mainwindow = Login(self.widget, self.db)
         self.widget.addWidget(mainwindow)
         self.widget.setFixedWidth(400)
