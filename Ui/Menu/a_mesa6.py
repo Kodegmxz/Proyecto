@@ -1,4 +1,4 @@
-"""AQUI SERA DONDE LOS MESEROS ESCOJAN LOS PRODUCTOS QUE DESEAN LOS DE CADA MESA Y AHI MISMO SE HARA LA SUMA TOTAL DE CADA COSA"""
+# Este archivo es una copia de a_mesa1.py, adaptado para ser utilizado como a_mesa6.py.
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QMessageBox
@@ -7,16 +7,16 @@ class MesaDialog(QDialog):
     def __init__(self):
         super().__init__()
         # Cargar el archivo .ui
-        uic.loadUi("D:\\POO\\PROYECTOS\\Proyectoe\\Ui\\MENU DE MESAS\\u_mesa1.ui", self)
+        uic.loadUi("D:\\POO\\PROYECTOS\\Proyectoe\\Ui\\MENU DE MESAS\\u_mesa6.ui", self)
 
         # Conectar los botones a sus funciones
-        self.arroz1.clicked.connect(lambda: self.agregar_producto("Arroz", 1, 10.0))
-        self.pera1.clicked.connect(lambda: self.agregar_producto("Pera", 1, 5.0))
-        self.hamburguesa1.clicked.connect(lambda: self.agregar_producto("Hamburguesa", 1, 15.0))
-        self.pizza1.clicked.connect(lambda: self.agregar_producto("Pizza", 1, 20.0))
+        self.arroz6.clicked.connect(lambda: self.agregar_producto("Arroz", 1, 10.0))
+        self.pera6.clicked.connect(lambda: self.agregar_producto("Pera", 1, 5.0))
+        self.hamburguesa6.clicked.connect(lambda: self.agregar_producto("Hamburguesa", 1, 15.0))
+        self.pizza6.clicked.connect(lambda: self.agregar_producto("Pizza", 1, 20.0))
 
 
-        self.cuenta1.cellChanged.connect(self.actualizar_total)
+        self.cuenta6.cellChanged.connect(self.actualizar_total)
 
         # Conectar el botón de borrar
         self.borrar.clicked.connect(self.borrar_fila)
@@ -26,11 +26,11 @@ class MesaDialog(QDialog):
 
     def agregar_producto(self, producto, cantidad, precio):
         # Agregar producto a la tabla
-        row_position = self.cuenta1.rowCount()
-        self.cuenta1.insertRow(row_position)
-        self.cuenta1.setItem(row_position, 0, QTableWidgetItem(producto))
-        self.cuenta1.setItem(row_position, 1, QTableWidgetItem(str(cantidad)))
-        self.cuenta1.setItem(row_position, 2, QTableWidgetItem(f"{precio:.2f}"))
+        row_position = self.cuenta6.rowCount()
+        self.cuenta6.insertRow(row_position)
+        self.cuenta6.setItem(row_position, 0, QTableWidgetItem(producto))
+        self.cuenta6.setItem(row_position, 1, QTableWidgetItem(str(cantidad)))
+        self.cuenta6.setItem(row_position, 2, QTableWidgetItem(f"{precio:.2f}"))
 
         # Actualizar el total
         self.actualizar_total()
@@ -38,21 +38,21 @@ class MesaDialog(QDialog):
     def actualizar_total(self):
         # Recalcular el total sumando los valores de la columna de precios
         self.total = 0.0
-        for row in range(self.cuenta1.rowCount()):
+        for row in range(self.cuenta6.rowCount()):
             try:
-                cantidad = int(self.cuenta1.item(row, 1).text())
-                precio = float(self.cuenta1.item(row, 2).text())
+                cantidad = int(self.cuenta6.item(row, 1).text())
+                precio = float(self.cuenta6.item(row, 2).text())
                 self.total += cantidad * precio
             except (ValueError, AttributeError):
                 # Ignorar filas con datos inválidos o incompletos
                 continue
 
         # Actualizar el QLabel con el nuevo total
-        self.total1.setText(f"TOTAL: {self.total:.2f}")
+        self.total6.setText(f"TOTAL: {self.total:.2f}")
 
     def borrar_fila(self):
         # Obtener la fila seleccionada
-        selected_row = self.cuenta1.currentRow()
+        selected_row = self.cuenta6.currentRow()
         if (selected_row == -1):
             # Mostrar un mensaje si no hay ninguna fila seleccionada
             QMessageBox.warning(self, "Advertencia", "Por favor, selecciona una fila para borrar.")
@@ -63,7 +63,7 @@ class MesaDialog(QDialog):
                                        QMessageBox.Yes | QMessageBox.No)
         if (confirm == QMessageBox.Yes):
             # Eliminar la fila seleccionada
-            self.cuenta1.removeRow(selected_row)
+            self.cuenta6.removeRow(selected_row)
             # Actualizar el total después de borrar
             self.actualizar_total()
 

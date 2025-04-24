@@ -1,4 +1,4 @@
-"""AQUI SERA DONDE LOS MESEROS ESCOJAN LOS PRODUCTOS QUE DESEAN LOS DE CADA MESA Y AHI MISMO SE HARA LA SUMA TOTAL DE CADA COSA"""
+# Este archivo es una copia de a_mesa1.py, adaptado para ser utilizado como a_mesa2.py.
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QDialog, QTableWidgetItem, QMessageBox
