@@ -55,6 +55,8 @@ class Recepcion(QDialog):
         next_color = colores[(colores.index(current_color) + 1) % len(colores)]
         boton.setStyleSheet(f'background-color: {next_color};')
 
+
+
     def guardar_estado(self):
         #Guarda el color actual de cada botón
         estados = {

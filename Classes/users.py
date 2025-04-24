@@ -10,4 +10,3 @@ class usuario:
         if result[0] == "Recepcion":
             from Ui.Recepcion.a_recep import a2
             a2(db,widget)
-
