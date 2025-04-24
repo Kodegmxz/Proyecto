@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\POO\PROYECTOS\Proyectoe\Ui\MENU DE MESAS\u_mesa5.ui'
+# Form implementation generated from reading ui file 'd:\POO\PROYECTOS\Proyectoe\Ui\Menu\u_mesa5.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
