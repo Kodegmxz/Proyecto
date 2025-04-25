@@ -22,6 +22,7 @@ class DataB:
     def __init__(self):
         self.db = None
         self.dbcursor = None
+
     def connect(self):
         try:
             self.db = mysql.connector.connect(
@@ -34,3 +35,6 @@ class DataB:
             return True
         except Error as err:
             return False
+
+    def commit(self):
+        self.db.commit()
