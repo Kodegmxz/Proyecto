@@ -4,7 +4,7 @@ import sys
 class AlmacenApp(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('u_almacen.ui', self)
+        uic.loadUi('alamacen mamalon.ui', self)
 
         # Conectar el botón 'agregar' con la función correspondiente
         self.agregar.clicked.connect(self.guardar_producto)
@@ -16,7 +16,7 @@ class AlmacenApp(QtWidgets.QWidget):
     def guardar_producto(self):
         # Obtener los valores de los campos de entrada
         nombre = self.linenombre.text()
-        tipo = self.linetipo.text()
+        tipo = self.comboBox.currentText()
         cantidad = self.linecantidad.text()
         codigo = self.linecodigo.text()
         proveedor = self.lineproveedor.text()
@@ -51,7 +51,7 @@ class AlmacenApp(QtWidgets.QWidget):
 
         # Limpiar los campos de entrada
         self.linenombre.clear()
-        self.linetipo.clear()
+        self.comboBox.setCurrentIndex(0)  # Reiniciar el combo box después de guardar
         self.linecantidad.clear()
         self.linecodigo.clear()
         self.lineproveedor.clear()
