@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1099</width>
-    <height>601</height>
+    <width>1131</width>
+    <height>646</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI Symbol</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -19,56 +24,66 @@
   <widget class="QLineEdit" name="barrabusqueda">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>60</y>
-     <width>351</width>
+     <x>120</x>
+     <y>70</y>
+     <width>341</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
+    <string notr="true">QLineEdit {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 245);
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="lbl_busqueda">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>60</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(189, 44, 0);</string>
-   </property>
-   <property name="text">
-    <string>Búsqueda:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="ENCARGADO">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>30</y>
-     <width>221</width>
+     <x>20</x>
+     <y>70</y>
+     <width>101</width>
      <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <family>Segoe UI Symbol</family>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(39, 213, 202);</string>
+    <string notr="true">color: #4078c0</string>
    </property>
    <property name="text">
-    <string>Encargado</string>
+    <string>Búsqueda</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ENCARGADO">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #4078c0</string>
+   </property>
+   <property name="text">
+    <string>Encargado:  *******</string>
    </property>
   </widget>
   <widget class="QLabel" name="titulo_bodega">
@@ -80,9 +95,17 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Sitka Small Semibold</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-weight: bold; font-size: 20px;
-color: rgb(39, 213, 202);</string>
+    <string notr="true">
+color: #4078c0</string>
    </property>
    <property name="text">
     <string>BODEGA</string>
@@ -94,46 +117,75 @@ color: rgb(39, 213, 202);</string>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>80</y>
-     <width>731</width>
+     <x>10</x>
+     <y>110</y>
+     <width>741</width>
      <height>521</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QTableWidget {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
+    background-color: #f5f5f5; /* Set entire widget background to #f5f5f5 */
+    border: none; /* Remove external border */
     border-radius: 10px;
     padding: 5px;
-    gridline-color: #ddd;
+    gridline-color: #ddd; /* Keep gridlines for column distinction */
 }
 QTableWidget::item {
-    border: none;
+    background-color: #f5f5f5; /* Set item background to #f5f5f5 */
+    border: none; /* Remove item border */
     padding: 5px;
 }
 QHeaderView::section {
-    background-color: #e9e9e9;
-    border: 1px solid #ccc;
+    background-color: #f5f5f5; /* Set header background to #f5f5f5 */
+    border: 1px solid #ccc; /* Keep header border for distinction */
     border-radius: 5px;
     padding: 5px;
+}
+QTabWidget {
+    background-color: #f5f5f5; /* Set tab widget background to #f5f5f5 */
+    border: none; /* Remove external border */
+    border-radius: 10px;
 }</string>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="BEBIDAS">
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
     <attribute name="title">
-     <string>BEBIDAS</string>
+     <string>Bebidas</string>
     </attribute>
     <widget class="QTableWidget" name="tabla_producto">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
+       <x>10</x>
+       <y>10</y>
        <width>721</width>
-       <height>491</height>
+       <height>481</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Symbol</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
      </property>
      <column>
       <property name="text">
@@ -166,158 +218,44 @@ QHeaderView::section {
       </property>
      </column>
     </widget>
-   </widget>
-   <widget class="QWidget" name="BEBIDASA">
-    <attribute name="title">
-     <string>BEBIDAS A</string>
-    </attribute>
-    <widget class="QTableWidget" name="tabla_productos_3">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>721</width>
-       <height>491</height>
-      </rect>
-     </property>
-     <column>
-      <property name="text">
-       <string>Código</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Precio</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Producto</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Cantidad</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Último Ingreso</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Proveedor</string>
-      </property>
-     </column>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="CARNES">
-    <attribute name="title">
-     <string>CARNES</string>
-    </attribute>
-    <widget class="QTableWidget" name="tabla_productos_4">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>721</width>
-       <height>491</height>
-      </rect>
-     </property>
-     <column>
-      <property name="text">
-       <string>Código</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Precio</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Producto</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Cantidad</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Último Ingreso</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Proveedor</string>
-      </property>
-     </column>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="POSTRES">
-    <attribute name="title">
-     <string>POSTRES</string>
-    </attribute>
-    <widget class="QTableWidget" name="tabla_productos_5">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>721</width>
-       <height>491</height>
-      </rect>
-     </property>
-     <column>
-      <property name="text">
-       <string>Código</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Precio</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Producto</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Cantidad</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Último Ingreso</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Proveedor</string>
-      </property>
-     </column>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="ENTRADAS">
-    <attribute name="title">
-     <string>ENTRADAS</string>
-    </attribute>
-    <widget class="QTableWidget" name="tabla_productos_6">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>731</width>
-       <height>491</height>
+       <width>741</width>
+       <height>501</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(245, 245, 245);</string>
      </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>tabla_producto</zorder>
+   </widget>
+   <widget class="QWidget" name="BEBIDASA">
+    <attribute name="title">
+     <string>Bebidas A.</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_producto_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
      <column>
       <property name="text">
        <string>Código</string>
@@ -349,36 +287,518 @@ QHeaderView::section {
       </property>
      </column>
     </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>741</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_2</zorder>
+    <zorder>tabla_producto_2</zorder>
    </widget>
+   <widget class="QWidget" name="CARNES">
+    <attribute name="title">
+     <string>Carnes</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_producto_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <column>
+      <property name="text">
+       <string>Código</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Producto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cantidad</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Último Ingreso</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Proveedor</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>741</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_3</zorder>
+    <zorder>tabla_producto_3</zorder>
+   </widget>
+   <widget class="QWidget" name="POSTRES">
+    <attribute name="title">
+     <string>Postres</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_producto_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <column>
+      <property name="text">
+       <string>Código</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Producto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cantidad</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Último Ingreso</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Proveedor</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>741</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_4</zorder>
+    <zorder>tabla_producto_4</zorder>
+   </widget>
+   <widget class="QWidget" name="ENTRADAS">
+    <attribute name="title">
+     <string>Entradas</string>
+    </attribute>
+    <widget class="QTableWidget" name="tabla_producto_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <column>
+      <property name="text">
+       <string>Código</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Precio</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Producto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cantidad</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Último Ingreso</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Proveedor</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>741</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_5</zorder>
+    <zorder>tabla_producto_5</zorder>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="botonbuscar">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>60</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="botonreset">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>60</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Reiniciar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="editar">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>290</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+        background-color: #f5f5f5;
+        border: 1px solid #f5f5f5;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+</string>
+   </property>
+   <property name="text">
+    <string>Editar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="agregar">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>300</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+        background-color: #f5f5f5;
+        border: 1px solid #f5f5f5;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+</string>
+   </property>
+   <property name="text">
+    <string>Agregar </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Registro">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>380</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+        background-color: #f5f5f5;
+        border: 1px solid #f5f5f5;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+</string>
+   </property>
+   <property name="text">
+    <string>Registro</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Productoprecio_4">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>110</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Nombre</string>
+   </property>
   </widget>
   <widget class="QLabel" name="titulo_bodega_2">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>60</y>
-     <width>411</width>
+     <x>840</x>
+     <y>70</y>
+     <width>281</width>
      <height>24</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font-weight: bold; font-size: 20px;
-background-color: rgb(245, 245, 245);</string>
+    <string notr="true">QLabel {
+	font: 63 italic 10pt &quot;Sitka Small Semibold&quot;;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
-    <string>ingresar producto</string>
+    <string>Ingresar producto</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>260</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    color: black; /* Asegura que el texto sea visible */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #f5f5f5;
+    color: black; /* Color del texto en el menú desplegable */
+}
+QComboBox::item:selected {
+    background-color: #dcdcdc; /* Fondo del texto seleccionado */
+    color: black; /* Color del texto seleccionado */
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Bebidas</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bebidas A.</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Carnes</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Postres</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Entradas</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="linecodigo">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>170</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineproveedor">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>200</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
+   </property>
+  </widget>
   <widget class="QLineEdit" name="linenombre">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>140</y>
+     <x>950</x>
+     <y>110</y>
      <width>111</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -387,246 +807,187 @@ background-color: rgb(245, 245, 245);</string>
   <widget class="QLineEdit" name="linecantidad">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>170</y>
-     <width>113</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="productotipo">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>290</y>
-     <width>55</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
-   </property>
-   <property name="text">
-    <string>TIPO</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="productonombre">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
+     <x>950</x>
      <y>140</y>
-     <width>55</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
-   </property>
-   <property name="text">
-    <string>NOMBRE</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="productocantidad">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>170</y>
-     <width>55</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
-   </property>
-   <property name="text">
-    <string>cantidad</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="productocodigo">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>200</y>
-     <width>55</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
-   </property>
-   <property name="text">
-    <string>codigo</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="linecodigo">
-   <property name="geometry">
-    <rect>
-     <x>900</x>
-     <y>200</y>
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
   </widget>
   <widget class="QLabel" name="productoproveedor">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>230</y>
-     <width>71</width>
-     <height>16</height>
+     <x>850</x>
+     <y>200</y>
+     <width>81</width>
+     <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
+    <string notr="true">QLabel {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
     <string>Proveedor</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineproveedor">
+  <widget class="QLabel" name="Productoprecio_2">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>230</y>
-     <width>113</width>
-     <height>22</height>
+     <x>850</x>
+     <y>260</y>
+     <width>81</width>
+     <height>20</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLabel" name="Productoprecio">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>260</y>
-     <width>55</width>
-     <height>16</height>
-    </rect>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
+    <string notr="true">QLabel {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
-    <string>Precio</string>
+    <string>Tipo</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineprecio">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>260</y>
+     <x>950</x>
+     <y>230</y>
      <width>113</width>
      <height>22</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="agregar">
+  <widget class="QLabel" name="Productoprecio_3">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>380</y>
-     <width>111</width>
-     <height>41</height>
+     <x>850</x>
+     <y>140</y>
+     <width>81</width>
+     <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+    <string notr="true">QLabel {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
-    <string>SAVE</string>
+    <string>Cantidad</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="botonbuscar">
+  <widget class="QLabel" name="Productoprecio">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>50</y>
-     <width>101</width>
-     <height>41</height>
+     <x>850</x>
+     <y>230</y>
+     <width>81</width>
+     <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+    <string notr="true">QLabel {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
-    <string>BUSCAR</string>
+    <string>Precio</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="botonreset">
+  <widget class="QLabel" name="productoproveedor_2">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>50</y>
-     <width>101</width>
-     <height>41</height>
+     <x>850</x>
+     <y>170</y>
+     <width>81</width>
+     <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+    <string notr="true">QLabel {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
-    <string>REINICIAR</string>
+    <string>Código</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
-   <property name="geometry">
-    <rect>
-     <x>900</x>
-     <y>290</y>
-     <width>111</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(245, 245, 245);</string>
-   </property>
-   <item>
-    <property name="text">
-     <string>BEBIDAS</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>BEBIDAS A</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>CARNES</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>POSTRES</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>ENTRADAS</string>
-    </property>
-   </item>
-  </widget>
+  <zorder>tabWidget</zorder>
+  <zorder>barrabusqueda</zorder>
+  <zorder>lbl_busqueda</zorder>
+  <zorder>ENCARGADO</zorder>
+  <zorder>titulo_bodega</zorder>
+  <zorder>botonbuscar</zorder>
+  <zorder>botonreset</zorder>
+  <zorder>editar</zorder>
+  <zorder>agregar</zorder>
+  <zorder>Registro</zorder>
+  <zorder>Productoprecio_4</zorder>
+  <zorder>titulo_bodega_2</zorder>
+  <zorder>comboBox</zorder>
+  <zorder>linecodigo</zorder>
+  <zorder>lineproveedor</zorder>
+  <zorder>linenombre</zorder>
+  <zorder>linecantidad</zorder>
+  <zorder>productoproveedor</zorder>
+  <zorder>Productoprecio_2</zorder>
+  <zorder>lineprecio</zorder>
+  <zorder>Productoprecio_3</zorder>
+  <zorder>Productoprecio</zorder>
+  <zorder>productoproveedor_2</zorder>
  </widget>
  <resources/>
  <connections/>

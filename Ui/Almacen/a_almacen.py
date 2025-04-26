@@ -4,7 +4,7 @@ import sys
 class AlmacenApp(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('alamacen mamalon.ui', self)
+        uic.loadUi('Ui/Almacen/u_almacen.ui', self)
 
         # Conectar el botón 'agregar' con la función correspondiente
         self.agregar.clicked.connect(self.guardar_producto)
