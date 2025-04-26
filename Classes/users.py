@@ -10,3 +10,6 @@ class usuario:
         if result[0] == "Recepcion":
             from Ui.Recepcion.a_recep import a2
             a2(db,widget)
+        elif result[0] == "Bodega":
+            from Ui.Almacen.a_almacen import a3
+            a3(db, widget)

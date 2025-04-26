@@ -13,6 +13,7 @@ class Recepcion(QDialog):
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_recepcion.ui")
         loadUi(ui_a, self)
+
         self.cargar_mesas(db)
 
         self.m_1.clicked.connect(lambda: self.upd_mesa(self.m_1, db))

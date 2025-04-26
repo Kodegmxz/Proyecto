@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets, uic, QtCore
 import sys
 
-class AlmacenApp(QtWidgets.QWidget):
+class Almacen(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('Ui/Almacen/u_almacen.ui', self)
@@ -98,8 +98,10 @@ class AlmacenApp(QtWidgets.QWidget):
             for row in range(table.rowCount()):
                 table.setRowHidden(row, False)
 
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    window = AlmacenApp()
-    window.show()
-    sys.exit(app.exec_())
+
+def a3(db, widget): 
+    almacen_w = Almacen(widget, db)
+    widget.addWidget(almacen_w)
+    widget.setFixedWidth(901)
+    widget.setFixedHeight(501)
+    widget.setCurrentIndex(widget.currentIndex() + 1)
