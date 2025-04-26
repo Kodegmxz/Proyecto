@@ -1,61 +1,83 @@
-from PyQt5 import QtWidgets, uic, QtCore
 import sys
+import os
+from unittest import result
+from PyQt5 import QtCore
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.uic import loadUi
+import mysql.connector
+from Ui.Almacen.a_agregar import AgregarProducto
+from Ui.Almacen.a_editar import Editar
 
 class Almacen(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi('Ui/Almacen/u_almacen.ui', self)
+    def __init__(self, widget, db):
+        super(Almacen, self).__init__()
+        self.widget = widget  # Guardar referencia al widget
+        self.db = db  # Guardar referencia a la db
+        dir_a = os.path.dirname(os.path.abspath(__file__))
+        ui_a = os.path.join(dir_a, "u_almacen.ui")
+        loadUi(ui_a, self)
 
-        # Conectar el botón 'agregar' con la función correspondiente
-        self.agregar.clicked.connect(self.guardar_producto)
         # Conectar el botón 'buscar' con la función correspondiente
         self.botonbuscar.clicked.connect(self.buscar_producto)
         # Conectar el botón 'reset' con la función correspondiente
         self.botonreset.clicked.connect(self.resetear_tabla)
+        self.agregar_2.clicked.connect(self.abrir_agregar_producto)
+        self.editar.clicked.connect(self.abrir_editar_producto)  # Marcado como indefinido
 
-    def guardar_producto(self):
-        # Obtener los valores de los campos de entrada
-        nombre = self.linenombre.text()
-        tipo = self.comboBox.currentText()
-        cantidad = self.linecantidad.text()
-        codigo = self.linecodigo.text()
-        proveedor = self.lineproveedor.text()
-        precio_unitario = self.lineprecio.text()
-        fecha = QtCore.QDate.currentDate().toString("dd/MM/yyyy")
+        # Cargar datos iniciales en las tablas
+        self.cargar_datos_iniciales()
 
-        # Validar que los campos no estén vacíos
-        if not all([nombre, tipo, cantidad, codigo, proveedor, precio_unitario]):
-            return
+    def cargar_datos_iniciales(self):
+        self.cargar_bebidas()
+        self.cargar_bebidasA()
+        self.cargar_carnes()
+        self.cargar_condimentos()
+        self.cargar_fya()
+        self.cargar_lacteos()
+        self.cargar_panaderia()
 
-        # Obtener las pestañas del TabWidget
-        tab_widget = self.tabWidget
-        tab_names = [tab_widget.tabText(i).lower() for i in range(tab_widget.count())]
+    def cargar_bebidas(self):
+        self.cargar_datos_tabla_personalizada(0, "b_bebidas")
 
-        # Verificar si el tipo coincide con alguna pestaña
-        if tipo.lower() in tab_names:
-            tab_index = tab_names.index(tipo.lower())
-            tab = tab_widget.widget(tab_index)
+    def cargar_bebidasA(self):
+        self.cargar_datos_tabla_personalizada(1, "b_bebidasA")
 
-            # Buscar la tabla dentro de la pestaña
-            table = tab.findChild(QtWidgets.QTableWidget)
-            if table:
-                # Agregar una nueva fila a la tabla
-                row_position = table.rowCount()
-                table.insertRow(row_position)
-                table.setItem(row_position, 0, QtWidgets.QTableWidgetItem(codigo))
-                table.setItem(row_position, 1, QtWidgets.QTableWidgetItem(precio_unitario))
-                table.setItem(row_position, 2, QtWidgets.QTableWidgetItem(nombre))
-                table.setItem(row_position, 3, QtWidgets.QTableWidgetItem(cantidad))
-                table.setItem(row_position, 4, QtWidgets.QTableWidgetItem(fecha))
-                table.setItem(row_position, 5, QtWidgets.QTableWidgetItem(proveedor))
+    def cargar_carnes(self):
+        self.cargar_datos_tabla_personalizada(2, "b_carnes")
 
-        # Limpiar los campos de entrada
-        self.linenombre.clear()
-        self.comboBox.setCurrentIndex(0)  # Reiniciar el combo box después de guardar
-        self.linecantidad.clear()
-        self.linecodigo.clear()
-        self.lineproveedor.clear()
-        self.lineprecio.clear()
+    def cargar_condimentos(self):
+        self.cargar_datos_tabla_personalizada(3, "b_condimentos")
+
+    def cargar_fya(self):
+        self.cargar_datos_tabla_personalizada(4, "b_fya")
+
+    def cargar_lacteos(self):
+        self.cargar_datos_tabla_personalizada(5, "b_lacteos")
+
+    def cargar_panaderia(self):
+        self.cargar_datos_tabla_personalizada(6, "b_panaderia")
+
+    def cargar_datos_tabla_personalizada(self, tab_index, nombre_tabla):
+        # Obtener la pestaña correspondiente
+        tab = self.tabWidget.widget(tab_index)
+        table = tab.findChild(QtWidgets.QTableWidget)
+
+        if table:
+            # Ejecutar consulta SQL para obtener los datos
+            cursor = self.db.dbcursor
+            query = f"SELECT codigo, precio, nombre, cantidad, ingreso, proveedor FROM {nombre_tabla}"
+            cursor.execute(query)
+            resultados = cursor.fetchall()
+
+            # Configurar la tabla
+            table.setRowCount(len(resultados))
+            table.setColumnCount(6)  # Asumimos 6 columnas
+
+            # Insertar los datos en la tabla
+            for row_idx, row_data in enumerate(resultados):
+                for col_idx, value in enumerate(row_data):
+                    table.setItem(row_idx, col_idx, QtWidgets.QTableWidgetItem(str(value)))
 
     def buscar_producto(self):
         # Obtener el texto de búsqueda
@@ -63,6 +85,7 @@ class Almacen(QtWidgets.QWidget):
 
         # Validar que el texto de búsqueda no esté vacío
         if not texto_busqueda:
+            QtWidgets.QMessageBox.warning(self, "Búsqueda vacía", "Por favor, ingrese un texto para buscar.")
             return
 
         # Obtener la pestaña activa
@@ -70,38 +93,81 @@ class Almacen(QtWidgets.QWidget):
         tab_index = tab_widget.currentIndex()
         tab = tab_widget.widget(tab_index)
 
+        # Diccionario que asocia pestañas con nombres de tablas en la base de datos
+        tablas = {
+            0: "b_bebidas",
+            1: "b_bebidasA",
+            2: "b_carnes",
+            3: "b_condimentos",
+            4: "b_fya",
+            5: "b_lacteos",
+            6: "b_panaderia"
+        }
+
+        nombre_tabla = tablas.get(tab_index)
+        if not nombre_tabla:
+            QtWidgets.QMessageBox.warning(self, "Error", "No se pudo determinar la tabla activa.")
+            return
+
+        # Ejecutar consulta SQL para buscar los datos
+        cursor = self.db.dbcursor
+        query = f"""
+            SELECT codigo, precio, nombre, cantidad, ingreso, proveedor 
+            FROM {nombre_tabla} 
+            WHERE LOWER(codigo) LIKE %s 
+               OR LOWER(nombre) LIKE %s 
+               OR LOWER(proveedor) LIKE %s
+        """
+        cursor.execute(query, (f"%{texto_busqueda}%", f"%{texto_busqueda}%", f"%{texto_busqueda}%"))
+        resultados = cursor.fetchall()
+
         # Buscar la tabla dentro de la pestaña activa
         table = tab.findChild(QtWidgets.QTableWidget)
         if table:
-            # Iterar sobre las filas de la tabla
-            for row in range(table.rowCount()):
-                match = False
-                for column in range(table.columnCount()):  # Revisar todas las columnas
-                    item = table.item(row, column)
-                    if item and texto_busqueda in item.text().strip().lower():
-                        match = True
-                        break
+            # Configurar la tabla con los resultados
+            table.setRowCount(len(resultados))
+            table.setColumnCount(6)  # Asumimos 6 columnas
 
-                # Mostrar u ocultar la fila según el resultado de la búsqueda
-                table.setRowHidden(row, not match)
+            for row_idx, row_data in enumerate(resultados):
+                for col_idx, value in enumerate(row_data):
+                    table.setItem(row_idx, col_idx, QtWidgets.QTableWidgetItem(str(value)))
 
     def resetear_tabla(self):
         # Obtener la pestaña activa
         tab_widget = self.tabWidget
         tab_index = tab_widget.currentIndex()
-        tab = tab_widget.widget(tab_index)
 
-        # Buscar la tabla dentro de la pestaña activa
-        table = tab.findChild(QtWidgets.QTableWidget)
-        if table:
-            # Mostrar todas las filas de la tabla
-            for row in range(table.rowCount()):
-                table.setRowHidden(row, False)
+        # Diccionario que asocia pestañas con nombres de tablas en la base de datos
+        tablas = {
+            0: "b_bebidas",
+            1: "b_bebidasA",
+            2: "b_carnes",
+            3: "b_condimentos",
+            4: "b_fya",
+            5: "b_lacteos",
+            6: "b_panaderia"
+        }
+
+        nombre_tabla = tablas.get(tab_index)
+        if not nombre_tabla:
+            QtWidgets.QMessageBox.warning(self, "Error", "No se pudo determinar la tabla activa.")
+            return
+
+        # Recargar los datos de la tabla activa
+        self.cargar_datos_tabla_personalizada(tab_index, nombre_tabla)
+
+    def abrir_agregar_producto(self):
+        agregar_producto_dialog = AgregarProducto(self.db)
+        agregar_producto_dialog.exec_()
+        
+    def abrir_editar_producto(self):
+        editar_producto_dialog = Editar(self.db)
+        editar_producto_dialog.exec_()
 
 
 def a3(db, widget): 
     almacen_w = Almacen(widget, db)
     widget.addWidget(almacen_w)
-    widget.setFixedWidth(901)
-    widget.setFixedHeight(501)
+    widget.setFixedWidth(931)
+    widget.setFixedHeight(641)
     widget.setCurrentIndex(widget.currentIndex() + 1)
