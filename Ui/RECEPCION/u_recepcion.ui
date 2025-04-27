@@ -605,13 +605,13 @@ padding: 10px 20px;</string>
     <widget class="QWidget" name="Reservaciones" native="true">
      <property name="minimumSize">
       <size>
-       <width>221</width>
+       <width>271</width>
        <height>501</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>221</width>
+       <width>271</width>
        <height>501</height>
       </size>
      </property>
@@ -625,17 +625,41 @@ border-color: #f5f5f5;
        <rect>
         <x>10</x>
         <y>80</y>
-        <width>201</width>
+        <width>251</width>
         <height>301</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #f5f5f5;
+border: 1px solid #333333</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>Nombre</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cantidad</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Fecha</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Hora</string>
+       </property>
+      </column>
      </widget>
      <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>420</y>
-        <width>221</width>
+        <width>271</width>
         <height>26</height>
        </rect>
       </property>
@@ -715,7 +739,7 @@ border-color: #f5f5f5;
        <rect>
         <x>0</x>
         <y>460</y>
-        <width>221</width>
+        <width>271</width>
         <height>26</height>
        </rect>
       </property>
@@ -795,7 +819,7 @@ border-color: #f5f5f5;
        <rect>
         <x>0</x>
         <y>10</y>
-        <width>221</width>
+        <width>271</width>
         <height>33</height>
        </rect>
       </property>
@@ -862,13 +886,13 @@ color: #333333</string>
     <widget class="QWidget" name="content" native="true">
      <property name="minimumSize">
       <size>
-       <width>851</width>
+       <width>801</width>
        <height>501</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>16777215</width>
+       <width>1001</width>
        <height>501</height>
       </size>
      </property>
@@ -877,21 +901,6 @@ color: #333333</string>
 background-color: #333333;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>8</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <property name="spacing">
@@ -2023,7 +2032,7 @@ color: #333333</string>
      <y>433</y>
     </hint>
     <hint type="destinationlabel">
-     <x>103</x>
+     <x>214</x>
      <y>470</y>
     </hint>
    </hints>
