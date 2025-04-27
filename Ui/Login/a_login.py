@@ -25,6 +25,9 @@ class Login(QDialog):
         if self.id_emp.text() and self.pwd_emp.text():
             usr.login(self.db, self.widget) # Referencia db y widged
 
+    def cierre(self, event):
+        pass
+
 def a1(db):
     app = QApplication(sys.argv)
     widget = QtWidgets.QStackedWidget()
@@ -33,4 +36,4 @@ def a1(db):
     widget.setFixedWidth(400)
     widget.setFixedHeight(500)
     widget.show()
-    app.exec_()
+    sys.exit(app.exec_())
