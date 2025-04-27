@@ -12,9 +12,13 @@ class Recepcion(QDialog):
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_recepcion.ui")
         loadUi(ui_a, self)
+        self.color=['#6cc644','#f6c40f','#bd2c00']
+        self.color_sub=['#5eaa3b','#d6ab0d','#ad2500']
+        self.color_sub2=['#589f37','#cca20c','#a12000']
 
         self.cargar_mesas(db)
 
+        self.Reservaciones.hide()
         self.m_1.clicked.connect(lambda: self.upd_mesa(1, db))
         self.m_2.clicked.connect(lambda: self.upd_mesa(2, db))
         self.m_3.clicked.connect(lambda: self.upd_mesa(3, db))
@@ -37,23 +41,23 @@ class Recepcion(QDialog):
         self.m_20.clicked.connect(lambda: self.upd_mesa(20, db))
         self.m_21.clicked.connect(lambda: self.upd_mesa(21, db))
 
-        self.B_resv.clicked.connect(lambda: self.cargar_mesas())
-        self.B_salir.clicked.connect(self.salir)
+        self.b_salir_1.clicked.connect(self.salir)
+        self.b_salir_2.clicked.connect(self.salir)
 
     def upd_mesa(self, n, db):
         button = getattr(self, f'm_{n}')
-        color=['#6cc644','#f6c40f','#bd2c00']
-        color_sub=['#5eaa3b','#d6ab0d','#ad2500']
-        color_sub2=['#589f37','#cca20c','#a12000']
         style = button.styleSheet()
-
         current_color = style.split("QPushButton {background-color:")[1].split(";")[0].strip()
-        next_color = color[(color.index(current_color) + 1) % len(color)]
-        next_color_sub = color_sub[(color.index(current_color) + 1) % len(color)]
-        next_color_sub2 = color_sub2[(color.index(current_color) + 1) % len(color)]
+        print(current_color)
+        next_color = self.color[(self.color.index(current_color) + 1) % len(self.color)]
+        next_color_sub = self.color_sub[(self.color.index(current_color) + 1) % len(self.color)]
+        next_color_sub2 = self.color_sub2[(self.color.index(current_color) + 1) % len(self.color)]
+        print(next_color)
+        print(next_color_sub)
+        print(next_color_sub2)
         style_n = style.replace("QPushButton {background-color: "+current_color+';', "QPushButton {background-color: "+next_color+';')
-        style_nsub = style_n.replace("QPushButton:hover {background-color: "+color_sub[color.index(current_color) % len(color)]+';', "QPushButton:hover {background-color: "+next_color_sub+';')
-        style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: "+color_sub2[color.index(current_color) % len(color)]+';', "QPushButton:pressed {background-color: "+next_color_sub2+';')
+        style_nsub = style_n.replace("QPushButton:hover {background-color: "+self.color_sub[self.color.index(current_color) % len(self.color)]+';', "QPushButton:hover {background-color: "+next_color_sub+';')
+        style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: "+self.color_sub2[self.color.index(current_color) % len(self.color)]+';', "QPushButton:pressed {background-color: "+next_color_sub2+';')
         db.dbcursor.execute("UPDATE Users.mesas SET v1 = %s, v2 = %s, v3 = %s WHERE mesa = %s;", (next_color, next_color_sub, next_color_sub2, button.text()))
         db.commit()
 
@@ -65,18 +69,19 @@ class Recepcion(QDialog):
         data = db.dbcursor.fetchall()
         for n in range(len(data)):
             dat = str(data[n])
-            if dat == "('#6cc644',)":
-                c = '#6cc644'
-                c_sub='#5eaa3b'
-                c_sub2 = '#589f37'
-            elif dat == "('#f6c40f',)":
-                c = '#f6c40f'
-                c_sub = '#d6ab0d'
-                c_sub2 = '#cca20c'
+            print(dat)
+            if dat == (f"('{self.color[0]}',)"):
+                c = self.color[0]
+                c_sub= self.color_sub2[0]
+                c_sub2 = self.color[0]
+            elif dat == (f"('{self.color[1]}',)"):
+                c = self.color[1]
+                c_sub = self.color_sub[1]
+                c_sub2 = self.color_sub2[1]
             else:
-                c = '#bd2c00'   
-                c_sub = '#ad2500'
-                c_sub2 = '#a12000'
+                c = self.color[2]   
+                c_sub = self.color_sub[2]
+                c_sub2 = self.color_sub2[2]
 
             button = getattr(self, f'm_{n+1}')
             style = button.styleSheet()
@@ -103,6 +108,6 @@ class Recepcion(QDialog):
 def a2(db, widget):
     recep_w = Recepcion(widget, db)
     widget.addWidget(recep_w)
-    widget.setFixedWidth(901)
+    widget.setFixedWidth(1091)
     widget.setFixedHeight(501)
     widget.setCurrentIndex(widget.currentIndex() + 1)
