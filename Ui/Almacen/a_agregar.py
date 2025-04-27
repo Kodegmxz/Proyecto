@@ -1,9 +1,13 @@
 from datetime import datetime
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import pyqtSignal  # Importar pyqtSignal
 from .u_agregar_ui import Ui_Dialog
 
 class AgregarProducto(QtWidgets.QDialog):
+    # Definir la señal
+    producto_agregado = pyqtSignal()
+
     def __init__(self, db):
         super(AgregarProducto, self).__init__()
         self.ui = Ui_Dialog()
@@ -32,8 +36,10 @@ class AgregarProducto(QtWidgets.QDialog):
             "Bebidas": "b_bebidas",
             "Bebidas A.": "b_bebidasA",
             "Carnes": "b_carnes",
-            "Postres": "b_condimentos",
-            "Entradas": "b_fya"
+            "Condimentos": "b_condimentos",
+            "Frutas y Verduras": "b_fya",
+            "Panadería": "b_panaderia",
+            "Lácteos": "b_lacteos",
         }
 
         nombre_tabla = tablas.get(tabla)
@@ -54,6 +60,10 @@ class AgregarProducto(QtWidgets.QDialog):
             cursor.execute(query, (codigo, precio, nombre, cantidad, proveedor, fecha_ingreso))
             self.db.db.commit()
             QMessageBox.information(self, "Éxito", "Producto agregado correctamente.")
+            
+            # Emitir la señal para notificar que se agregó un producto
+            self.producto_agregado.emit()
+            
             self.close()
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Ocurrió un error al agregar el producto: {e}")

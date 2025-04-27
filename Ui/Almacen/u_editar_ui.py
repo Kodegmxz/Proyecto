@@ -47,6 +47,7 @@ class Ui_Dialog(object):
         self.buscarcode.setObjectName("buscarcode")
         self.tableWidget = QtWidgets.QTableWidget(Dialog)
         self.tableWidget.setGeometry(QtCore.QRect(380, 20, 421, 321))
+        self.tableWidget.setStyleSheet("background-color: rgb(245, 245, 245);")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)

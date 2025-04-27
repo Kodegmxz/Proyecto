@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(936, 648)
+        Form.resize(948, 648)
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         Form.setFont(font)

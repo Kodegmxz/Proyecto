@@ -157,7 +157,13 @@ class Almacen(QtWidgets.QWidget):
         self.cargar_datos_tabla_personalizada(tab_index, nombre_tabla)
 
     def abrir_agregar_producto(self):
+        # Crear una instancia del diálogo AgregarProducto
         agregar_producto_dialog = AgregarProducto(self.db)
+        
+        # Conectar la señal producto_agregado al método cargar_datos_iniciales
+        agregar_producto_dialog.producto_agregado.connect(self.cargar_datos_iniciales)
+        
+        # Mostrar el diálogo
         agregar_producto_dialog.exec_()
         
     def abrir_editar_producto(self):
