@@ -7,7 +7,7 @@ from PyQt5.uic import loadUi
 class Recepcion(QDialog):
     def __init__(self, widget, db):
         super(Recepcion, self).__init__()
-        self.widget = widget  # Guardar referencia al widget
+        self.original_widget = widget  # Guardar referencia al widget
         self.db = db  # Guardar referencia a la db
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_recepcion.ui")
@@ -93,12 +93,11 @@ class Recepcion(QDialog):
 
     def salir(self):
         from Ui.Login.a_login import Login
-        mainwindow = Login(self.widget, self.db)
-        self.widget.addWidget(mainwindow)
-        self.widget.setFixedWidth(400)
-        self.widget.setFixedHeight(500)
-        self.widget.setCurrentIndex(self.widget.currentIndex()+1)
-
+        mainwindow = Login(self.original_widget, self.db)
+        self.original_widget.addWidget(mainwindow)
+        self.original_widget.setFixedWidth(400)
+        self.original_widget.setFixedHeight(500)
+        self.original_widget.setCurrentIndex(self.original_widget.currentIndex()+1)
 
 
 
