@@ -167,7 +167,13 @@ class Almacen(QtWidgets.QWidget):
         agregar_producto_dialog.exec_()
         
     def abrir_editar_producto(self):
+        # Crear una instancia del diálogo Editar
         editar_producto_dialog = Editar(self.db)
+        
+        # Conectar la señal actualizarTablaSignal al método cargar_datos_iniciales
+        editar_producto_dialog.actualizarTablaSignal.connect(self.cargar_datos_iniciales)
+        
+        # Mostrar el diálogo
         editar_producto_dialog.exec_()
 
 
