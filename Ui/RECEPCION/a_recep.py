@@ -16,9 +16,12 @@ class Recepcion(QDialog):
         self.color_sub=['#5eaa3b','#d6ab0d','#ad2500']
         self.color_sub2=['#589f37','#cca20c','#a12000']
 
+        self.Reservaciones.hide()
+        self.Reservaciones_2.hide()
+        self.Reservaciones_3.hide()
+        self.Reservaciones_4.hide()
         self.cargar_mesas(db)
 
-        self.Reservaciones.hide()
         self.m_1.clicked.connect(lambda: self.upd_mesa(1, db))
         self.m_2.clicked.connect(lambda: self.upd_mesa(2, db))
         self.m_3.clicked.connect(lambda: self.upd_mesa(3, db))
@@ -42,7 +45,6 @@ class Recepcion(QDialog):
         self.m_21.clicked.connect(lambda: self.upd_mesa(21, db))
 
         self.b_salir_1.clicked.connect(self.salir)
-        self.b_salir_2.clicked.connect(self.salir)
 
     def upd_mesa(self, n, db):
         button = getattr(self, f'm_{n}')
@@ -62,7 +64,6 @@ class Recepcion(QDialog):
         db.commit()
 
         button.setStyleSheet(style_nsub2)
-
 
     def cargar_mesas(self, db):
         db.dbcursor.execute("SELECT v1 FROM Users.mesas")
@@ -89,10 +90,6 @@ class Recepcion(QDialog):
             style_nsub = style_n.replace("QPushButton:hover {background-color: #5eaa3b;", "QPushButton:hover {background-color: "+c_sub+';')
             style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: #589f37;", "QPushButton:pressed {background-color: "+c_sub2+';')
             button.setStyleSheet(style_nsub2)
-
-
-    def resv(self):
-        pass
 
     def salir(self):
         from Ui.Login.a_login import Login

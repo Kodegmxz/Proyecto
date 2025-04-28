@@ -28,7 +28,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout_13">
+  <layout class="QHBoxLayout" name="horizontalLayout_3">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -624,7 +624,7 @@ border-color: #f5f5f5;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>80</y>
+        <y>60</y>
         <width>251</width>
         <height>301</height>
        </rect>
@@ -635,12 +635,17 @@ border: 1px solid #333333</string>
       </property>
       <column>
        <property name="text">
+        <string>Código</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Nombre</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Cantidad</string>
+        <string>Codigo</string>
        </property>
       </column>
       <column>
@@ -658,7 +663,7 @@ border: 1px solid #333333</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>420</y>
+        <y>460</y>
         <width>271</width>
         <height>26</height>
        </rect>
@@ -715,86 +720,6 @@ border: 1px solid #333333</string>
        </item>
        <item>
         <spacer name="horizontalSpacer_27">
-         <property name="maximumSize">
-          <size>
-           <width>131</width>
-           <height>24</height>
-          </size>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>460</y>
-        <width>271</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <spacer name="horizontalSpacer_23">
-         <property name="maximumSize">
-          <size>
-           <width>131</width>
-           <height>24</height>
-          </size>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="b_salir_2">
-         <property name="minimumSize">
-          <size>
-           <width>131</width>
-           <height>24</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>131</width>
-           <height>24</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {background-color: #f5f5f5;
-        border: 1px solid #333333;
-        border-radius: 10px;
-		color: #333333
-    }
-    QPushButton:hover {background-color: #eaeaea;
-    }
-    QPushButton:pressed {background-color: #eaeaea;
-    }</string>
-         </property>
-         <property name="text">
-          <string>Salir</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_22">
          <property name="maximumSize">
           <size>
            <width>131</width>
@@ -880,13 +805,1790 @@ color: #333333</string>
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="layoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>420</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <spacer name="horizontalSpacer_42">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Editar/Eliminar Resv.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_43">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>380</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <spacer name="horizontalSpacer_44">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Agregar Resv.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_45">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="Reservaciones_2" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>271</width>
+       <height>501</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>271</width>
+       <height>501</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #333333;
+border-color: #f5f5f5;
+</string>
+     </property>
+     <widget class="QWidget" name="layoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>460</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <spacer name="horizontalSpacer_46">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Cerrar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_47">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>271</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <spacer name="horizontalSpacer_48">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #f5f5f5;
+border: 1px solid;
+border-radius: 10px;
+color: #333333</string>
+         </property>
+         <property name="text">
+          <string>Crear Reservación</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_49">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>340</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <spacer name="horizontalSpacer_50">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #62b13d;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #6dc143;
+    }
+    QPushButton:pressed {background-color: #6cc644;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Agregar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_51">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>249</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #f5f5f5</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>231</width>
+           <height>41</height>
+          </size>
+         </property>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Nombre</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>0</y>
+            <width>151</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>11</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_6" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>231</width>
+           <height>41</height>
+          </size>
+         </property>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Cantidad</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>0</y>
+            <width>151</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>12</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_7" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>231</width>
+           <height>41</height>
+          </size>
+         </property>
+         <widget class="QLabel" name="label_16">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Fecha</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>0</y>
+            <width>151</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>11</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_8" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>231</width>
+           <height>41</height>
+          </size>
+         </property>
+         <widget class="QLabel" name="label_18">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Hora</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_6">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>0</y>
+            <width>151</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>420</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_18">
+       <item>
+        <spacer name="horizontalSpacer_52">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_9">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Eliminar Resv.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_53">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>380</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_23">
+       <item>
+        <spacer name="horizontalSpacer_62">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Editar Resv.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_63">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="Reservaciones_3" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>271</width>
+       <height>501</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>271</width>
+       <height>501</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #333333;
+border-color: #f5f5f5;
+</string>
+     </property>
+     <widget class="QWidget" name="layoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>460</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <item>
+        <spacer name="horizontalSpacer_54">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_10">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Cerrar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_55">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>271</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_20">
+       <item>
+        <spacer name="horizontalSpacer_56">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_19">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #f5f5f5;
+border: 1px solid;
+border-radius: 10px;
+color: #333333</string>
+         </property>
+         <property name="text">
+          <string>Editar Reservación</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_57">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>380</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <item>
+        <spacer name="horizontalSpacer_58">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #62b13d;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #6dc143;
+    }
+    QPushButton:pressed {background-color: #6cc644;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Editar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_59">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>420</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_22">
+       <item>
+        <spacer name="horizontalSpacer_60">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Eliminar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_61">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget_9" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>249</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #f5f5f5</string>
+      </property>
+      <widget class="QWidget" name="widget_10" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>231</width>
+         <height>41</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Codigo</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_7">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_14" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>231</width>
+         <height>41</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Cantidad</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_11">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_11" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>231</width>
+         <height>41</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Hora</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_8">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_13" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>231</width>
+         <height>41</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_10">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_12" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>231</width>
+         <height>41</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Fecha</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_9">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="Reservaciones_4" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>271</width>
+       <height>501</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>271</width>
+       <height>501</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #333333;
+border-color: #f5f5f5;
+</string>
+     </property>
+     <widget class="QWidget" name="layoutWidget_18">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>460</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_28">
+       <item>
+        <spacer name="horizontalSpacer_72">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_17">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #f5f5f5;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #eaeaea;
+    }
+    QPushButton:pressed {background-color: #eaeaea;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Cerrar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_73">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_19">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>271</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_29">
+       <item>
+        <spacer name="horizontalSpacer_74">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_31">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #f5f5f5;
+border: 1px solid;
+border-radius: 10px;
+color: #333333</string>
+         </property>
+         <property name="text">
+          <string>Eliminar Reservación</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_75">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_21">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>200</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_31">
+       <item>
+        <spacer name="horizontalSpacer_78">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_19">
+         <property name="minimumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {background-color: #62b13d;
+        border: 1px solid #333333;
+        border-radius: 10px;
+		color: #333333
+    }
+    QPushButton:hover {background-color: #6dc143;
+    }
+    QPushButton:pressed {background-color: #6cc644;
+    }</string>
+         </property>
+         <property name="text">
+          <string>Eliminar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_79">
+         <property name="maximumSize">
+          <size>
+           <width>131</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget_21" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>249</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #f5f5f5</string>
+      </property>
+      <widget class="QWidget" name="widget_22" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>231</width>
+         <height>41</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f5f5f5;
+color: #333333;
+border: 1px solid #333333;
+
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Codigo</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_17">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #333333;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
     </widget>
    </item>
    <item>
     <widget class="QWidget" name="content" native="true">
      <property name="minimumSize">
       <size>
-       <width>801</width>
+       <width>1</width>
        <height>501</height>
       </size>
      </property>
@@ -1990,66 +3692,418 @@ color: #333333</string>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_8</sender>
    <signal>clicked()</signal>
-   <receiver>Reservaciones</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>42</x>
-     <y>399</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>139</x>
-     <y>428</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_4</sender>
-   <signal>clicked()</signal>
-   <receiver>menu</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>187</x>
-     <y>435</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>65</x>
-     <y>331</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_4</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones</receiver>
+   <receiver>Reservaciones_2</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>170</x>
-     <y>433</y>
+     <x>452</x>
+     <y>350</y>
     </hint>
     <hint type="destinationlabel">
-     <x>214</x>
+     <x>429</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>484</x>
      <y>470</y>
     </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>7</y>
+    </hint>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_11</sender>
    <signal>clicked()</signal>
-   <receiver>menu</receiver>
+   <receiver>Reservaciones_3</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>47</x>
+     <x>705</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>693</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>475</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>723</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_19</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>974</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>976</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_17</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>935</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>910</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>164</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
      <y>390</y>
     </hint>
     <hint type="destinationlabel">
-     <x>55</x>
-     <y>331</y>
+     <x>368</x>
+     <y>12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>289</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>764</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>871</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>731</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>807</x>
+     <y>15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>399</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>menu</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>413</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>51</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>menu</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>462</x>
+     <y>469</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>506</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>559</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>541</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>440</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>658</x>
+     <y>32</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>874</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tableWidget</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>158</x>
+     <y>312</y>
     </hint>
    </hints>
   </connection>
