@@ -17,7 +17,7 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(54, 54, 54)</string>
+   <string notr="true">background-color: rgb(51, 51, 51);</string>
   </property>
   <widget class="QWidget" name="fondogris" native="true">
    <property name="geometry">
@@ -29,9 +29,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-background-color: rgb(80, 255, 176);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+    <string notr="true"/>
    </property>
    <widget class="QLabel" name="Title">
     <property name="geometry">
@@ -52,7 +50,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
      <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
     </property>
     <property name="text">
-     <string>𝐿𝒪𝒢𝐼𝒩</string>
+     <string>LOGIN</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -83,9 +81,12 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255, 255);
-border: 2px solid rgb(122, 143, 168);
-padding: 5px;</string>
+     <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -113,11 +114,13 @@ padding: 5px;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255, 255);
-border: 2px Solid rgb(122, 143, 168);</string>
+     <string notr="true">background-color: #f5f5f5;
+border: 1px solid #333333;
+border-radius: 10px;
+color: #333333</string>
     </property>
     <property name="text">
-     <string>𝐼𝒟 𝐸𝑀𝒫</string>
+     <string>ID EMP</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -142,11 +145,13 @@ border: 2px Solid rgb(122, 143, 168);</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255, 255);
-border: 2px Solid rgb(122, 143, 168);</string>
+     <string notr="true">background-color: #f5f5f5;
+border: 1px solid #333333;
+border-radius: 10px;
+color: #333333</string>
     </property>
     <property name="text">
-     <string>𝒫𝒶𝓈𝓈𝓌𝑜𝓇𝒹</string>
+     <string>Password</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -168,9 +173,12 @@ border: 2px Solid rgb(122, 143, 168);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgba(255, 255, 255);
-border: 2px solid rgb(122, 143, 168);
-padding: 5px;</string>
+     <string notr="true">QLineEdit
+{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -195,8 +203,10 @@ padding: 5px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border: 2px solid rgb(122, 143, 168);</string>
+     <string notr="true">background-color: rgb(245, 245, 245);
+border: 1px solid;
+border-radius: 10px;
+</string>
     </property>
     <property name="text">
      <string>𝐿𝒪𝒢𝐼𝒩</string>
@@ -204,8 +214,6 @@ border: 2px solid rgb(122, 143, 168);</string>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="../fr.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
