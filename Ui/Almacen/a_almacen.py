@@ -8,24 +8,24 @@ from PyQt5.uic import loadUi
 import mysql.connector
 from Ui.Almacen.a_agregar import AgregarProducto
 from Ui.Almacen.a_editar import Editar
+from Ui.Almacen.a_eliminar import Eliminar  # Importar el diálogo de eliminación
 
 class Almacen(QtWidgets.QWidget):
     def __init__(self, widget, db):
         super(Almacen, self).__init__()
         self.widget = widget  # Guardar referencia al widget
-        self.db = db  # Guardar referencia a la db
+        self.db = db  # Guardar referencia a la base de datos
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_almacen.ui")
         loadUi(ui_a, self)
 
-        # Conectar el botón 'buscar' con la función correspondiente
+        # Conectar botones a sus funciones
         self.botonbuscar.clicked.connect(self.buscar_producto)
-        # Conectar el botón 'reset' con la función correspondiente
         self.botonreset.clicked.connect(self.resetear_tabla)
         self.agregar_2.clicked.connect(self.abrir_agregar_producto)
-        self.editar.clicked.connect(self.abrir_editar_producto)  # Marcado como indefinido
+        self.editar.clicked.connect(self.abrir_editar_producto)
+        self.eliminar.clicked.connect(self.abrir_eliminar_producto) 
 
-        # Cargar datos iniciales en las tablas
         self.cargar_datos_iniciales()
 
     def cargar_datos_iniciales(self):
@@ -175,6 +175,16 @@ class Almacen(QtWidgets.QWidget):
         
         # Mostrar el diálogo
         editar_producto_dialog.exec_()
+
+    def abrir_eliminar_producto(self):
+        # Crear una instancia del diálogo Eliminar
+        eliminar_producto_dialog = Eliminar(self.db)
+        
+        # Conectar la señal actualizarTablaSignal al método cargar_datos_iniciales
+        eliminar_producto_dialog.actualizarTablaSignal.connect(self.cargar_datos_iniciales)
+        
+        # Mostrar el diálogo
+        eliminar_producto_dialog.exec_()
 
 
 def a3(db, widget): 

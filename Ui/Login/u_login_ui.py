@@ -14,14 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 500)
+        Dialog.resize(401, 501)
         Dialog.setLayoutDirection(QtCore.Qt.LeftToRight)
-        Dialog.setStyleSheet("background-color:rgb(54, 54, 54)")
+        Dialog.setStyleSheet("background-color: rgb(51, 51, 51);")
         self.fondogris = QtWidgets.QWidget(Dialog)
         self.fondogris.setGeometry(QtCore.QRect(0, 0, 401, 501))
-        self.fondogris.setStyleSheet("\n"
-"background-color: rgb(80, 255, 176);\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));")
+        self.fondogris.setStyleSheet("")
         self.fondogris.setObjectName("fondogris")
         self.Title = QtWidgets.QLabel(self.fondogris)
         self.Title.setGeometry(QtCore.QRect(0, 50, 400, 50))
@@ -40,9 +38,12 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(13)
         self.id_emp.setFont(font)
-        self.id_emp.setStyleSheet("background-color:rgb(255, 255, 255);\n"
-"border: 2px solid rgb(122, 143, 168);\n"
-"padding: 5px;")
+        self.id_emp.setStyleSheet("QLineEdit\n"
+"{\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #f5f5f5;\n"
+"    border-radius: 10px;\n"
+"}")
         self.id_emp.setText("")
         self.id_emp.setFrame(True)
         self.id_emp.setObjectName("id_emp")
@@ -53,8 +54,10 @@ class Ui_Dialog(object):
         font.setPointSize(13)
         self.label.setFont(font)
         self.label.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.label.setStyleSheet("background-color:rgb(255, 255, 255);\n"
-"border: 2px Solid rgb(122, 143, 168);")
+        self.label.setStyleSheet("background-color: #f5f5f5;\n"
+"border: 1px solid #333333;\n"
+"border-radius: 10px;\n"
+"color: #333333")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.fondogris)
@@ -64,8 +67,10 @@ class Ui_Dialog(object):
         font.setPointSize(13)
         self.label_2.setFont(font)
         self.label_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.label_2.setStyleSheet("background-color:rgb(255, 255, 255);\n"
-"border: 2px Solid rgb(122, 143, 168);")
+        self.label_2.setStyleSheet("background-color: #f5f5f5;\n"
+"border: 1px solid #333333;\n"
+"border-radius: 10px;\n"
+"color: #333333")
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.pwd_emp = QtWidgets.QLineEdit(self.fondogris)
@@ -74,9 +79,12 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(13)
         self.pwd_emp.setFont(font)
-        self.pwd_emp.setStyleSheet("background-color:rgba(255, 255, 255);\n"
-"border: 2px solid rgb(122, 143, 168);\n"
-"padding: 5px;")
+        self.pwd_emp.setStyleSheet("QLineEdit\n"
+"{\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #f5f5f5;\n"
+"    border-radius: 10px;\n"
+"}")
         self.pwd_emp.setText("")
         self.pwd_emp.setFrame(True)
         self.pwd_emp.setObjectName("pwd_emp")
@@ -86,8 +94,10 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(13)
         self.pushlogin.setFont(font)
-        self.pushlogin.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border: 2px solid rgb(122, 143, 168);")
+        self.pushlogin.setStyleSheet("background-color: rgb(245, 245, 245);\n"
+"border: 1px solid;\n"
+"border-radius: 10px;\n"
+"")
         self.pushlogin.setObjectName("pushlogin")
 
         self.retranslateUi(Dialog)
@@ -96,8 +106,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.Title.setText(_translate("Dialog", "𝐿𝒪𝒢𝐼𝒩"))
-        self.label.setText(_translate("Dialog", "𝐼𝒟 𝐸𝑀𝒫"))
-        self.label_2.setText(_translate("Dialog", "𝒫𝒶𝓈𝓈𝓌𝑜𝓇𝒹"))
+        self.Title.setText(_translate("Dialog", "LOGIN"))
+        self.label.setText(_translate("Dialog", "ID EMP"))
+        self.label_2.setText(_translate("Dialog", "Password"))
         self.pushlogin.setText(_translate("Dialog", "𝐿𝒪𝒢𝐼𝒩"))
-import fr_rc
