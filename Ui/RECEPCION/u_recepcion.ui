@@ -1337,7 +1337,7 @@ border-bottom-right-radius: 20px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="resv_2_name">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1414,7 +1414,7 @@ border-bottom-right-radius: 20px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="resv_2_cant">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1491,7 +1491,7 @@ border-bottom-right-radius: 20px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_4">
+         <widget class="QLineEdit" name="resv_2_fecha">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1568,7 +1568,7 @@ border-bottom-right-radius: 20px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_6">
+         <widget class="QLineEdit" name="resv_2_hora">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -2172,7 +2172,7 @@ border-bottom-right-radius: 20px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="resv_3_codigo">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2242,7 +2242,7 @@ border-bottom-right-radius: 20px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_11">
+       <widget class="QLineEdit" name="resv_3_cantidad">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2312,7 +2312,7 @@ border-bottom-right-radius: 20px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
+       <widget class="QLineEdit" name="resv_3_hora">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2382,7 +2382,7 @@ border-bottom-right-radius: 20px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
+       <widget class="QLineEdit" name="resv_3_name">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2452,7 +2452,7 @@ border-bottom-right-radius: 20px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_9">
+       <widget class="QLineEdit" name="resv_3_fecha">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2799,7 +2799,7 @@ border-bottom-right-radius: 20px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_17">
+       <widget class="QLineEdit" name="resv_4_codigo">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -3949,22 +3949,6 @@ color: #333333</string>
  <resources/>
  <connections>
   <connection>
-   <sender>b_agregar_resv_2</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_2</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>452</x>
-     <y>350</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>429</x>
-     <y>47</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>b_cerrar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_2</receiver>
@@ -3992,22 +3976,6 @@ color: #333333</string>
     </hint>
     <hint type="destinationlabel">
      <x>723</x>
-     <y>6</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>b_eliminar_resv_4</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_4</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>974</x>
-     <y>207</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>976</x>
      <y>6</y>
     </hint>
    </hints>
@@ -4185,22 +4153,6 @@ color: #333333</string>
     <hint type="destinationlabel">
      <x>329</x>
      <y>475</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>b_agregar_resv_2</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>523</x>
-     <y>354</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>333</x>
-     <y>376</y>
     </hint>
    </hints>
   </connection>
@@ -4400,7 +4352,7 @@ color: #333333</string>
    <sender>b_cerrar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>menu</receiver>
-   <slot>show()</slot>
+   <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>505</x>
@@ -4440,6 +4392,102 @@ color: #333333</string>
     </hint>
     <hint type="destinationlabel">
      <x>96</x>
+     <y>454</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>559</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>506</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>476</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>653</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>302</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>887</x>
      <y>454</y>
     </hint>
    </hints>
