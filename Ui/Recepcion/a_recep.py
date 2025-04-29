@@ -1,7 +1,7 @@
-import sys
+﻿import sys
 import os
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5 import QtWidgets, QtCore
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi
 
 class Recepcion(QDialog):
@@ -12,9 +12,9 @@ class Recepcion(QDialog):
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_recepcion.ui")
         loadUi(ui_a, self)
-        self.color=['#6cc644','#f6c40f','#bd2c00']
+        self.color=['#589f37','#cca20c','#a12000']
         self.color_sub=['#5eaa3b','#d6ab0d','#ad2500']
-        self.color_sub2=['#589f37','#cca20c','#a12000']
+        self.color_sub2=['#6cc644','#f6c40f','#bd2c00']
 
         self.Reservaciones.hide()
         self.Reservaciones_2.hide()
@@ -44,7 +44,14 @@ class Recepcion(QDialog):
         self.m_20.clicked.connect(lambda: self.upd_mesa(20, db))
         self.m_21.clicked.connect(lambda: self.upd_mesa(21, db))
 
+        self.b_agregar_resv_2.clicked.connect(self.agregar_resv)
+
         self.b_salir_1.clicked.connect(self.salir)
+
+    def agregar_resv(self):
+        if not all([self.resv_2_name.text(), self.resv_2_cant.text(), self.resv_2_fecha.text(), self.resv_2_hora.text()]):
+            QMessageBox.warning(self, "Búsqueda vacía", "Por favor, complete todos los campos.")
+            return
 
     def upd_mesa(self, n, db):
         button = getattr(self, f'm_{n}')
@@ -95,9 +102,13 @@ class Recepcion(QDialog):
         from Ui.Login.a_login import Login
         mainwindow = Login(self.original_widget, self.db)
         self.original_widget.addWidget(mainwindow)
-        self.original_widget.setFixedWidth(400)
-        self.original_widget.setFixedHeight(500)
+        self.original_widget.setFixedWidth(1091)
+        self.original_widget.setFixedHeight(501)
         self.original_widget.setCurrentIndex(self.original_widget.currentIndex()+1)
+
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Escape:
+            pass
 
 
 
