@@ -53,6 +53,8 @@ class Recepcion(QDialog):
             QMessageBox.warning(self, "Búsqueda vacía", "Por favor, complete todos los campos.")
             return
 
+
+
     def upd_mesa(self, n, db):
         button = getattr(self, f'm_{n}')
         style = button.styleSheet()
@@ -77,7 +79,6 @@ class Recepcion(QDialog):
         data = db.dbcursor.fetchall()
         for n in range(len(data)):
             dat = str(data[n])
-            print(dat)
             if dat == (f"('{self.color[0]}',)"):
                 c = self.color[0]
                 c_sub= self.color_sub2[0]
@@ -93,9 +94,9 @@ class Recepcion(QDialog):
 
             button = getattr(self, f'm_{n+1}')
             style = button.styleSheet()
-            style_n = style.replace("QPushButton {background-color: #6cc644;", "QPushButton {background-color: "+c+';')
+            style_n = style.replace("QPushButton {background-color: #589f37;", "QPushButton {background-color: "+c+';')
             style_nsub = style_n.replace("QPushButton:hover {background-color: #5eaa3b;", "QPushButton:hover {background-color: "+c_sub+';')
-            style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: #589f37;", "QPushButton:pressed {background-color: "+c_sub2+';')
+            style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: #6cc644;", "QPushButton:pressed {background-color: "+c_sub2+';')
             button.setStyleSheet(style_nsub2)
 
     def salir(self):
