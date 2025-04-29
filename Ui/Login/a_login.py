@@ -1,7 +1,7 @@
-import sys
+﻿import sys
 import os
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtWidgets import QDial, QDialog, QApplication
+from PyQt5.QtWidgets import QDial, QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -22,7 +22,11 @@ class Login(QDialog):
         from Classes.users import usuario
         usr = usuario(self.id_emp.text(), self.pwd_emp.text())
         if self.id_emp.text() and self.pwd_emp.text():
-            usr.login(self.db, self.original_widget) # Referencia db y widged
+            a = usr.login(self.db, self.original_widget) # Referencia db y widged
+            if a == True:
+                QMessageBox.warning(self, "Error", "Usuario y Contraseña no coinciden")
+            else:
+                usr.login(self.db, self.original_widget)
 
     def keyPressEvent(self, event):
         if event.key() == QtCore.Qt.Key_Escape:
