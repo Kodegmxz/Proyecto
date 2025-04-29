@@ -14,10 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(332, 395)
+        Dialog.resize(332, 398)
         Dialog.setStyleSheet("background-color: rgb(51, 51, 51);")
         self.comboBox = QtWidgets.QComboBox(Dialog)
         self.comboBox.setGeometry(QtCore.QRect(140, 220, 111, 22))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.comboBox.setFont(font)
         self.comboBox.setStyleSheet("QComboBox {\n"
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #f5f5f5;\n"
@@ -43,6 +46,9 @@ class Ui_Dialog(object):
         self.comboBox.addItem("")
         self.linecantidad = QtWidgets.QLineEdit(Dialog)
         self.linecantidad.setGeometry(QtCore.QRect(140, 100, 113, 22))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.linecantidad.setFont(font)
         self.linecantidad.setStyleSheet("QLineEdit\n"
 "{\n"
 "    background-color: #f5f5f5;\n"
@@ -84,6 +90,9 @@ class Ui_Dialog(object):
         self.Productoprecio_4.setObjectName("Productoprecio_4")
         self.lineprecio = QtWidgets.QLineEdit(Dialog)
         self.lineprecio.setGeometry(QtCore.QRect(140, 190, 113, 22))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.lineprecio.setFont(font)
         self.lineprecio.setStyleSheet("QLineEdit\n"
 "{\n"
 "    background-color: #f5f5f5;\n"
@@ -115,6 +124,9 @@ class Ui_Dialog(object):
         self.Productoprecio_2.setObjectName("Productoprecio_2")
         self.lineproveedor = QtWidgets.QLineEdit(Dialog)
         self.lineproveedor.setGeometry(QtCore.QRect(140, 160, 113, 22))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.lineproveedor.setFont(font)
         self.lineproveedor.setStyleSheet("QLineEdit\n"
 "{\n"
 "    background-color: #f5f5f5;\n"
@@ -146,6 +158,9 @@ class Ui_Dialog(object):
         self.productoproveedor_2.setObjectName("productoproveedor_2")
         self.linecodigo = QtWidgets.QLineEdit(Dialog)
         self.linecodigo.setGeometry(QtCore.QRect(140, 130, 113, 22))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.linecodigo.setFont(font)
         self.linecodigo.setStyleSheet("QLineEdit\n"
 "{\n"
 "    background-color: #f5f5f5;\n"
@@ -155,6 +170,9 @@ class Ui_Dialog(object):
         self.linecodigo.setObjectName("linecodigo")
         self.linenombre = QtWidgets.QLineEdit(Dialog)
         self.linenombre.setGeometry(QtCore.QRect(140, 70, 111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.linenombre.setFont(font)
         self.linenombre.setStyleSheet("QLineEdit\n"
 "{\n"
 "    background-color: #f5f5f5;\n"
@@ -166,13 +184,14 @@ class Ui_Dialog(object):
         self.agregar = QtWidgets.QPushButton(Dialog)
         self.agregar.setGeometry(QtCore.QRect(200, 340, 111, 41))
         font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
         font.setPointSize(10)
         self.agregar.setFont(font)
         self.agregar.setStyleSheet("QPushButton {\n"
 "        background-color: #f5f5f5;\n"
 "        border: 1px solid #f5f5f5;\n"
 "        border-radius: 10px;\n"
-"        padding: 10px 20px;\n"
+"\n"
 "    }\n"
 "")
         self.agregar.setObjectName("agregar")

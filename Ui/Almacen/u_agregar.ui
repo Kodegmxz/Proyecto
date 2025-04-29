@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>332</width>
-    <height>395</height>
+    <height>398</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,6 +24,11 @@
      <width>111</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QComboBox {
@@ -86,6 +91,11 @@ QComboBox::item:selected {
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit
@@ -179,6 +189,11 @@ QComboBox::item:selected {
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit
 {
@@ -246,6 +261,11 @@ QComboBox::item:selected {
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit
@@ -315,6 +335,11 @@ QComboBox::item:selected {
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit
 {
@@ -332,6 +357,11 @@ QComboBox::item:selected {
      <width>111</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Symbol</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit
@@ -356,6 +386,7 @@ QComboBox::item:selected {
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI Symbol</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -364,7 +395,7 @@ QComboBox::item:selected {
         background-color: #f5f5f5;
         border: 1px solid #f5f5f5;
         border-radius: 10px;
-        padding: 10px 20px;
+
     }
 </string>
    </property>
