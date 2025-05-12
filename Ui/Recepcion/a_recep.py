@@ -52,8 +52,15 @@ class Recepcion(QDialog):
         if not all([self.resv_2_name.text(), self.resv_2_cant.text(), self.resv_2_fecha.text(), self.resv_2_hora.text()]):
             QMessageBox.warning(self, "Búsqueda vacía", "Por favor, complete todos los campos.")
             return
-
-
+        else:
+            try:
+                self.db.dbcursor.execute("INSERT INTO Users.mesas_resv (nombre, cantidad, fecha, hora) VALUES (%s, %s, %s, %s);", (self.resv_2_name.text(), self.resv_2_cant.text(), self.resv_2_fecha.text(), self.resv_2_hora.text()))
+                self.db.commit()
+                self.b_agregar_resv_2.clicked.connect(self.Reservaciones_2.hide(), self.menu.show())
+            except:
+                QMessageBox.warning(
+                    self, "Error", "No se pudo agregar la reservación. Verifique los datos")
+                return
 
     def upd_mesa(self, n, db):
         button = getattr(self, f'm_{n}')

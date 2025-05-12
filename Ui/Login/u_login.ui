@@ -192,7 +192,7 @@
        background: #2a2a2a;
        border: 2px solid #5d432c;
        border-radius: 10px;
-       padding: 10px;
+       padding-left: 10px;
        color: #c7a17a;
       }
       QLineEdit:focus {
@@ -243,7 +243,7 @@
        background: #2a2a2a;
        border: 2px solid #5d432c;
        border-radius: 10px;
-       padding: 10px;
+       padding-left: 10px;
        color: #c7a17a;
       }
       QLineEdit:focus {
