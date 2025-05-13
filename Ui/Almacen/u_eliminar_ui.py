@@ -128,16 +128,6 @@ class Ui_Dialog(object):
 "      QPushButton:pressed {\n"
 "      }")
         self.eliminar.setObjectName("eliminar")
-        self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(10, 0, 351, 301))
-        self.label.setText("")
-        self.label.setObjectName("label")
-        self.label.raise_()
-        self.productoproveedor_2.raise_()
-        self.tableWidget.raise_()
-        self.buscarcode2.raise_()
-        self.linecodigo4.raise_()
-        self.eliminar.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)

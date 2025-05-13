@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>950</width>
-    <height>648</height>
+    <width>901</width>
+    <height>701</height>
    </rect>
   </property>
   <property name="font">
@@ -141,7 +141,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>110</y>
+     <y>130</y>
      <width>741</width>
      <height>521</height>
     </rect>
@@ -175,7 +175,7 @@ QTabBar::tab {
 }</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>6</number>
    </property>
    <widget class="QWidget" name="BEBIDAS">
     <property name="font">
@@ -848,19 +848,6 @@ background-color: #9a9a9a;
     <string>Agregar</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>951</width>
-     <height>641</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="eliminar">
    <property name="geometry">
     <rect>
@@ -895,7 +882,6 @@ background-color: #9a9a9a;
     <string>Eliminar</string>
    </property>
   </widget>
-  <zorder>label_8</zorder>
   <zorder>tabWidget</zorder>
   <zorder>barrabusqueda</zorder>
   <zorder>lbl_busqueda</zorder>
