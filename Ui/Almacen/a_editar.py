@@ -60,7 +60,6 @@ class Editar(QtWidgets.QDialog):
             return
 
         codigo = self.ui.linecodigo.text().strip()
-
         if not codigo:
             QtWidgets.QMessageBox.warning(self, "Error", "Por favor, ingrese un código antes de actualizar.")
             return
@@ -71,28 +70,52 @@ class Editar(QtWidgets.QDialog):
         cantidad = self.ui.linecantidad_44.text().strip()
         proveedor = self.ui.lineproveedor_44.text().strip()
 
-        if not all([precio, nombre, cantidad, proveedor]):
-            QtWidgets.QMessageBox.warning(self, "Error", "Por favor, complete todos los campos antes de actualizar.")
+        # Construir dinámicamente la consulta SQL solo con los campos no vacíos
+        campos = []
+        valores = []
+
+        if precio:
+            try:
+                precio = float(precio)
+                campos.append("precio = %s")
+                valores.append(precio)
+            except ValueError:
+                QtWidgets.QMessageBox.warning(self, "Error", "Precio debe ser un número.")
+                return
+
+        if nombre:
+            campos.append("nombre = %s")
+            valores.append(nombre)
+
+        if cantidad:
+            try:
+                cantidad = int(cantidad)
+                campos.append("cantidad = %s")
+                valores.append(cantidad)
+            except ValueError:
+                QtWidgets.QMessageBox.warning(self, "Error", "Cantidad debe ser un entero.")
+                return
+
+        if proveedor:
+            campos.append("proveedor = %s")
+            valores.append(proveedor)
+
+        if not campos:
+            QtWidgets.QMessageBox.warning(self, "Error", "No hay campos para actualizar.")
             return
 
-        # Validar que los valores numéricos sean correctos
-        try:
-            precio = float(precio)
-            cantidad = int(cantidad)
-        except ValueError:
-            QtWidgets.QMessageBox.warning(self, "Error", "Precio debe ser un número y cantidad debe ser un entero.")
-            return
+        # Ejecutar consulta SQL para actualizar solo los campos proporcionados
+        set_clause = ", ".join(campos)
+        query = f"UPDATE {self.tabla_encontrada} SET {set_clause} WHERE codigo = %s"
+        valores.append(codigo)
 
-        # Ejecutar consulta SQL para actualizar el producto en la tabla encontrada
         cursor = self.db.dbcursor
-        query = f"UPDATE {self.tabla_encontrada} SET precio = %s, nombre = %s, cantidad = %s, proveedor = %s WHERE codigo = %s"
         try:
-            cursor.execute(query, (precio, nombre, cantidad, proveedor, codigo))
-            if cursor.rowcount > 0:  # Verificar si se actualizó alguna fila
-                # Confirmar los cambios en la base de datos
+            cursor.execute(query, tuple(valores))
+            if cursor.rowcount > 0:
                 self.db.commit()
                 QtWidgets.QMessageBox.information(self, "Éxito", "El producto se actualizó correctamente.")
-                self.actualizarTablaSignal.emit()  # Emitir la señal para actualizar la tabla
+                self.actualizarTablaSignal.emit()
             else:
                 QtWidgets.QMessageBox.warning(self, "Error", "No se encontró ningún producto con ese código para actualizar.")
         except Exception as e:

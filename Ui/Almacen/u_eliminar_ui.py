@@ -23,18 +23,38 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.productoproveedor_2.setFont(font)
         self.productoproveedor_2.setStyleSheet("QLabel {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
+"    border: 1px solid #c7a17a;\n"
 "    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
 "}")
         self.productoproveedor_2.setObjectName("productoproveedor_2")
         self.tableWidget = QtWidgets.QTableWidget(Dialog)
         self.tableWidget.setGeometry(QtCore.QRect(10, 50, 331, 141))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
-        font.setPointSize(9)
+        font.setPointSize(-1)
         self.tableWidget.setFont(font)
-        self.tableWidget.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tableWidget.setStyleSheet("QTableWidget, QTableWidget::item, QHeaderView::section {\n"
+"    background-color: #9a9a9a;\n"
+"    color: #222;\n"
+"    font-family: Segoe UI Symbol;\n"
+"    font-size: 15px;\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal, QScrollBar:vertical {\n"
+"    background: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"    gridline-color: #9a9a9a;\n"
+"}")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(6)
         self.tableWidget.setRowCount(0)
@@ -57,11 +77,18 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.buscarcode2.setFont(font)
         self.buscarcode2.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.buscarcode2.setObjectName("buscarcode2")
         self.linecodigo4 = QtWidgets.QLineEdit(Dialog)
         self.linecodigo4.setGeometry(QtCore.QRect(120, 10, 113, 22))
@@ -69,12 +96,17 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.linecodigo4.setFont(font)
-        self.linecodigo4.setStyleSheet("QLineEdit\n"
-"{\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.linecodigo4.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
         self.linecodigo4.setObjectName("linecodigo4")
         self.eliminar = QtWidgets.QPushButton(Dialog)
         self.eliminar.setGeometry(QtCore.QRect(120, 220, 111, 41))
@@ -83,23 +115,19 @@ class Ui_Dialog(object):
         font.setPointSize(10)
         self.eliminar.setFont(font)
         self.eliminar.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.eliminar.setObjectName("eliminar")
-        self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(0, 0, 351, 301))
-        self.label.setText("")
-        self.label.setObjectName("label")
-        self.label.raise_()
-        self.productoproveedor_2.raise_()
-        self.tableWidget.raise_()
-        self.buscarcode2.raise_()
-        self.linecodigo4.raise_()
-        self.eliminar.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
