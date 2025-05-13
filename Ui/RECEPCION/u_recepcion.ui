@@ -647,7 +647,7 @@ border-left: 2px solid #5d432c;
 
 </string>
      </property>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="resv_widget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -2192,8 +2192,14 @@ border-bottom-right-radius: 20px;</string>
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;</string>
         </property>
+        <property name="text">
+         <string/>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Introduce el codigo</string>
         </property>
        </widget>
       </widget>
@@ -2265,6 +2271,9 @@ border-bottom-left-radius: 20px;</string>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
+        <property name="placeholderText">
+         <string>Cantidad nueva</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="widget_11" native="true">
@@ -2334,6 +2343,9 @@ border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Hora nueva</string>
         </property>
        </widget>
       </widget>
@@ -2405,6 +2417,9 @@ border-bottom-left-radius: 20px;</string>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
+        <property name="placeholderText">
+         <string>Nombre nuevo</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="widget_12" native="true">
@@ -2474,6 +2489,9 @@ border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Fecha nueva</string>
         </property>
        </widget>
       </widget>
@@ -4240,7 +4258,7 @@ color: #333333</string>
   <connection>
    <sender>b_resv_menu</sender>
    <signal>clicked()</signal>
-   <receiver>tableWidget</receiver>
+   <receiver>resv_widget</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">

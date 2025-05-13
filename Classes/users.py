@@ -6,7 +6,6 @@
     def login(self,db,widget):
         db.dbcursor.execute("SELECT rol FROM Users.rol WHERE id_emp = %s AND password = %s", (self._id_emp, self._password)) #Usando el argumento para usar el cursor
         result = db.dbcursor.fetchone()
-        
         try:
             if result[0] == "Recepcion":
                 from Ui.Recepcion.a_recep import a2
@@ -14,6 +13,6 @@
             elif result[0] == "Bodega":
                 from Ui.Almacen.a_almacen import a3
                 a3(db, widget)
-        
-        except:
+        except Exception as e:
+            print(e)
             return True
