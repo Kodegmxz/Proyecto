@@ -59,7 +59,8 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: #f5f5f5</string>
+      <string notr="true">background-color: #f5f5f5;
+border-right: 2px solid #5d432c;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <property name="topMargin">
@@ -97,9 +98,15 @@
             <height>31</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: #f5f5f5;
-border: 1px solid #333333;
+border: 2px solid #5d432c;
 border-radius: 10px;
 color: #333333</string>
           </property>
@@ -168,6 +175,9 @@ color: #333333</string>
             <height>41</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border: 0px</string>
+          </property>
           <widget class="QLabel" name="label_3">
            <property name="geometry">
             <rect>
@@ -198,7 +208,7 @@ padding: 10px 20px;</string>
            </property>
            <property name="font">
             <font>
-             <family>Segoe UI Symbol</family>
+             <family>Segoe UI</family>
             </font>
            </property>
            <property name="styleSheet">
@@ -279,6 +289,9 @@ color: rgb(245, 245, 245)</string>
             <height>41</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border: 0px</string>
+          </property>
           <widget class="QLabel" name="label_4">
            <property name="geometry">
             <rect>
@@ -309,7 +322,7 @@ padding: 10px 20px;</string>
            </property>
            <property name="font">
             <font>
-             <family>Segoe UI Symbol</family>
+             <family>Segoe UI</family>
             </font>
            </property>
            <property name="styleSheet">
@@ -390,6 +403,9 @@ color: rgb(245, 245, 245)</string>
             <height>41</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border: 10px</string>
+          </property>
           <widget class="QLabel" name="label_7">
            <property name="geometry">
             <rect>
@@ -401,7 +417,7 @@ color: rgb(245, 245, 245)</string>
            </property>
            <property name="font">
             <font>
-             <family>Segoe UI Symbol</family>
+             <family>Segoe UI</family>
             </font>
            </property>
            <property name="styleSheet">
@@ -490,12 +506,17 @@ padding: 10px 20px;</string>
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="b_resv_menu">
           <property name="minimumSize">
            <size>
             <width>71</width>
             <height>51</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {background-color: #333333;
@@ -567,6 +588,11 @@ padding: 10px 20px;</string>
             <height>24</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {background-color: #333333;
         border: 1px solid #f5f5f5;
@@ -617,10 +643,11 @@ padding: 10px 20px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: #333333;
-border-color: #f5f5f5;
+border-left: 2px solid #5d432c;
+
 </string>
      </property>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="resv_widget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -630,8 +657,7 @@ border-color: #f5f5f5;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #f5f5f5;
-border: 1px solid #333333</string>
+       <string notr="true">background-color: #f5f5f5;</string>
       </property>
       <column>
        <property name="text">
@@ -689,7 +715,7 @@ border: 1px solid #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="b_cerrar_resv">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -701,6 +727,11 @@ border: 1px solid #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -766,21 +797,27 @@ border: 1px solid #333333</string>
         <widget class="QLabel" name="label_11">
          <property name="minimumSize">
           <size>
-           <width>131</width>
+           <width>151</width>
            <height>31</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>131</width>
+           <width>151</width>
            <height>31</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #f5f5f5;
-border: 1px solid;
+          <string notr="true">background-color: #333333;
+border: 2px solid #5d432c;
 border-radius: 10px;
-color: #333333</string>
+color: #f5f5f5</string>
          </property>
          <property name="text">
           <string>Reservaciones</string>
@@ -835,7 +872,7 @@ color: #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="b_editar_resv">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -847,6 +884,11 @@ color: #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -915,7 +957,7 @@ color: #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="b_agregar_resv">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -927,6 +969,11 @@ color: #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -983,7 +1030,7 @@ color: #333333</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: #333333;
-border-color: #f5f5f5;
+border-left: 2px solid #5d432c;
 </string>
      </property>
      <widget class="QWidget" name="layoutWidget_5">
@@ -1016,7 +1063,7 @@ border-color: #f5f5f5;
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="b_cerrar_resv_2">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1028,6 +1075,11 @@ border-color: #f5f5f5;
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -1093,21 +1145,27 @@ border-color: #f5f5f5;
         <widget class="QLabel" name="label_12">
          <property name="minimumSize">
           <size>
-           <width>131</width>
+           <width>151</width>
            <height>31</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>131</width>
+           <width>151</width>
            <height>31</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #f5f5f5;
-border: 1px solid;
+          <string notr="true">background-color: #333333;
+border: 2px solid #5d432c;
 border-radius: 10px;
-color: #333333</string>
+color: #f5f5f5</string>
          </property>
          <property name="text">
           <string>Crear Reservación</string>
@@ -1162,7 +1220,7 @@ color: #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_8">
+        <widget class="QPushButton" name="b_agregar_resv_2">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1174,6 +1232,11 @@ color: #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #62b13d;
@@ -1188,6 +1251,9 @@ color: #333333</string>
          </property>
          <property name="text">
           <string>Agregar</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1221,8 +1287,16 @@ color: #333333</string>
         <height>261</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+       </font>
+      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #f5f5f5</string>
+       <string notr="true">background-color: #f5f5f5;
+border-radius: 10px;
+border: 2px solid #5d432c;
+</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -1233,6 +1307,9 @@ color: #333333</string>
            <height>41</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px</string>
+         </property>
          <widget class="QLabel" name="label_13">
           <property name="geometry">
            <rect>
@@ -1242,13 +1319,17 @@ color: #333333</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
           </property>
           <property name="text">
            <string>Nombre</string>
@@ -1257,7 +1338,7 @@ border-bottom-left-radius: 10px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="resv_2_name">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1266,10 +1347,15 @@ border-bottom-left-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1298,6 +1384,9 @@ border-bottom-right-radius: 10px;</string>
            <height>41</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px</string>
+         </property>
          <widget class="QLabel" name="label_15">
           <property name="geometry">
            <rect>
@@ -1307,13 +1396,17 @@ border-bottom-right-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
           </property>
           <property name="text">
            <string>Cantidad</string>
@@ -1322,7 +1415,7 @@ border-bottom-left-radius: 10px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="resv_2_cant">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1331,10 +1424,15 @@ border-bottom-left-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1363,6 +1461,9 @@ border-bottom-right-radius: 10px;</string>
            <height>41</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px</string>
+         </property>
          <widget class="QLabel" name="label_16">
           <property name="geometry">
            <rect>
@@ -1372,13 +1473,17 @@ border-bottom-right-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
           </property>
           <property name="text">
            <string>Fecha</string>
@@ -1387,7 +1492,7 @@ border-bottom-left-radius: 10px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_4">
+         <widget class="QLineEdit" name="resv_2_fecha">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1396,10 +1501,15 @@ border-bottom-left-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1428,6 +1538,9 @@ border-bottom-right-radius: 10px;</string>
            <height>41</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px</string>
+         </property>
          <widget class="QLabel" name="label_18">
           <property name="geometry">
            <rect>
@@ -1437,13 +1550,17 @@ border-bottom-right-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
           </property>
           <property name="text">
            <string>Hora</string>
@@ -1452,7 +1569,7 @@ border-bottom-left-radius: 10px;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_6">
+         <widget class="QLineEdit" name="resv_2_hora">
           <property name="geometry">
            <rect>
             <x>80</x>
@@ -1461,10 +1578,15 @@ border-bottom-left-radius: 10px;</string>
             <height>21</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1504,7 +1626,7 @@ border-bottom-right-radius: 10px;</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_9">
+        <widget class="QPushButton" name="b_eliminar_resv_2">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1516,6 +1638,11 @@ border-bottom-right-radius: 10px;</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -1584,7 +1711,7 @@ border-bottom-right-radius: 10px;</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_13">
+        <widget class="QPushButton" name="b_editar_resv_2">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1596,6 +1723,11 @@ border-bottom-right-radius: 10px;</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -1652,8 +1784,7 @@ border-bottom-right-radius: 10px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: #333333;
-border-color: #f5f5f5;
-</string>
+border-left: 2px solid #5d432c;</string>
      </property>
      <widget class="QWidget" name="layoutWidget_9">
       <property name="geometry">
@@ -1685,7 +1816,7 @@ border-color: #f5f5f5;
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_10">
+        <widget class="QPushButton" name="b_cerrar_resv_3">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1697,6 +1828,11 @@ border-color: #f5f5f5;
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -1762,21 +1898,27 @@ border-color: #f5f5f5;
         <widget class="QLabel" name="label_19">
          <property name="minimumSize">
           <size>
-           <width>131</width>
+           <width>151</width>
            <height>31</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>131</width>
+           <width>151</width>
            <height>31</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #f5f5f5;
-border: 1px solid;
+          <string notr="true">background-color: #333333;
+border: 2px solid #5d432c;
 border-radius: 10px;
-color: #333333</string>
+color: #f5f5f5</string>
          </property>
          <property name="text">
           <string>Editar Reservación</string>
@@ -1831,7 +1973,7 @@ color: #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_11">
+        <widget class="QPushButton" name="b_editar_resv_3">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1843,6 +1985,11 @@ color: #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #62b13d;
@@ -1911,7 +2058,7 @@ color: #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_12">
+        <widget class="QPushButton" name="b_eliminar_resv_3">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -1923,6 +2070,11 @@ color: #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -1971,7 +2123,9 @@ color: #333333</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #f5f5f5</string>
+       <string notr="true">background-color: #f5f5f5;
+border: 2px solid #5d432c;
+border-radius: 10px;</string>
       </property>
       <widget class="QWidget" name="widget_10" native="true">
        <property name="geometry">
@@ -1988,6 +2142,9 @@ color: #333333</string>
          <height>41</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px</string>
+       </property>
        <widget class="QLabel" name="label_20">
         <property name="geometry">
          <rect>
@@ -1997,13 +2154,17 @@ color: #333333</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
         </property>
         <property name="text">
          <string>Codigo</string>
@@ -2012,7 +2173,7 @@ border-bottom-left-radius: 10px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="resv_3_codigo">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2021,13 +2182,24 @@ border-bottom-left-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
+        </property>
+        <property name="text">
+         <string/>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Introduce el codigo</string>
         </property>
        </widget>
       </widget>
@@ -2046,6 +2218,9 @@ border-bottom-right-radius: 10px;</string>
          <height>41</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px</string>
+       </property>
        <widget class="QLabel" name="label_24">
         <property name="geometry">
          <rect>
@@ -2055,13 +2230,17 @@ border-bottom-right-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
         </property>
         <property name="text">
          <string>Cantidad</string>
@@ -2070,7 +2249,7 @@ border-bottom-left-radius: 10px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_11">
+       <widget class="QLineEdit" name="resv_3_cantidad">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2079,13 +2258,21 @@ border-bottom-left-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Cantidad nueva</string>
         </property>
        </widget>
       </widget>
@@ -2104,6 +2291,9 @@ border-bottom-right-radius: 10px;</string>
          <height>41</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px</string>
+       </property>
        <widget class="QLabel" name="label_21">
         <property name="geometry">
          <rect>
@@ -2113,13 +2303,17 @@ border-bottom-right-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
         </property>
         <property name="text">
          <string>Hora</string>
@@ -2128,7 +2322,7 @@ border-bottom-left-radius: 10px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
+       <widget class="QLineEdit" name="resv_3_hora">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2137,13 +2331,21 @@ border-bottom-left-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Hora nueva</string>
         </property>
        </widget>
       </widget>
@@ -2162,6 +2364,9 @@ border-bottom-right-radius: 10px;</string>
          <height>41</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px</string>
+       </property>
        <widget class="QLabel" name="label_23">
         <property name="geometry">
          <rect>
@@ -2171,13 +2376,17 @@ border-bottom-right-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
         </property>
         <property name="text">
          <string>Nombre</string>
@@ -2186,7 +2395,7 @@ border-bottom-left-radius: 10px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
+       <widget class="QLineEdit" name="resv_3_name">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2195,13 +2404,21 @@ border-bottom-left-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Nombre nuevo</string>
         </property>
        </widget>
       </widget>
@@ -2220,6 +2437,9 @@ border-bottom-right-radius: 10px;</string>
          <height>41</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px</string>
+       </property>
        <widget class="QLabel" name="label_22">
         <property name="geometry">
          <rect>
@@ -2229,13 +2449,17 @@ border-bottom-right-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
         </property>
         <property name="text">
          <string>Fecha</string>
@@ -2244,7 +2468,7 @@ border-bottom-left-radius: 10px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_9">
+       <widget class="QLineEdit" name="resv_3_fecha">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2253,13 +2477,21 @@ border-bottom-left-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Fecha nueva</string>
         </property>
        </widget>
       </widget>
@@ -2282,7 +2514,7 @@ border-bottom-right-radius: 10px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: #333333;
-border-color: #f5f5f5;
+border-left: 2px solid #5d432c;
 </string>
      </property>
      <widget class="QWidget" name="layoutWidget_18">
@@ -2315,7 +2547,7 @@ border-color: #f5f5f5;
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_17">
+        <widget class="QPushButton" name="b_cerrar_resv_4">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -2327,6 +2559,11 @@ border-color: #f5f5f5;
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #f5f5f5;
@@ -2402,11 +2639,16 @@ border-color: #f5f5f5;
            <height>31</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #f5f5f5;
-border: 1px solid;
+          <string notr="true">background-color: #333333;
+border: 2px solid #5d432c;
 border-radius: 10px;
-color: #333333</string>
+color: #f5f5f5</string>
          </property>
          <property name="text">
           <string>Eliminar Reservación</string>
@@ -2461,7 +2703,7 @@ color: #333333</string>
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_19">
+        <widget class="QPushButton" name="b_eliminar_resv_4">
          <property name="minimumSize">
           <size>
            <width>131</width>
@@ -2473,6 +2715,11 @@ color: #333333</string>
            <width>131</width>
            <height>24</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {background-color: #62b13d;
@@ -2521,7 +2768,9 @@ color: #333333</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #f5f5f5</string>
+       <string notr="true">background-color: #f5f5f5;
+border: 2px solid #5d432c;
+border-radius: 10px;</string>
       </property>
       <widget class="QWidget" name="widget_22" native="true">
        <property name="geometry">
@@ -2538,6 +2787,9 @@ color: #333333</string>
          <height>41</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px</string>
+       </property>
        <widget class="QLabel" name="label_32">
         <property name="geometry">
          <rect>
@@ -2547,13 +2799,17 @@ color: #333333</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #f5f5f5;
 color: #333333;
 border: 1px solid #333333;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
         </property>
         <property name="text">
          <string>Codigo</string>
@@ -2562,7 +2818,7 @@ border-bottom-left-radius: 10px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_17">
+       <widget class="QLineEdit" name="resv_4_codigo">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -2571,10 +2827,15 @@ border-bottom-left-radius: 10px;</string>
           <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">border: 1px solid #333333;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;</string>
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -2599,7 +2860,7 @@ border-bottom-right-radius: 10px;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-left: 1px solid #f5f5f5;
+      <string notr="true">border-left: 2px solid #5d432c;
 background-color: #333333;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -2634,17 +2895,22 @@ background-color: #333333;</string>
               <height>31</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: #f5f5f5;
-border-left: 1px solid;
-border-top: 1px solid;
-border-bottom: 1px solid;
+border-left: 2px solid #5d432c;
+border-top: 2px solid #5d432c;
+border-bottom: 2px solid #5d432c;
 border-right: 0;
 
 border-top-left-radius: 10px;
 border-bottom-left-radius: 10px;
 
-color: #333333</string>
+color: #333333;</string>
             </property>
             <property name="text">
              <string>Encargado:</string>
@@ -2662,12 +2928,17 @@ color: #333333</string>
               <height>31</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: #f5f5f5;
-border-right: 1px solid;
-border-top: 1px solid;
-border-bottom: 1px solid;
-border-left: 0px;
+border-left: 2px solid #5d432c;
+border-top: 2px solid #5d432c;
+border-bottom: 2px solid #5d432c;
+border-right: 0;
 
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
@@ -2705,14 +2976,19 @@ color: #333333</string>
             <height>31</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: #f5f5f5;
+border: 2px solid #5d432c;
 border-radius: 10px;
-border: 1px solid;
 color: #333333</string>
           </property>
           <property name="text">
-           <string>Receción</string>
+           <string>Recepción</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -2799,14 +3075,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -2854,14 +3130,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -2896,14 +3172,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -2925,14 +3201,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -2957,14 +3233,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -2986,14 +3262,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3028,14 +3304,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3087,14 +3363,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3129,14 +3405,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3210,14 +3486,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3239,14 +3515,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3268,14 +3544,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3310,14 +3586,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3339,14 +3615,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3385,14 +3661,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3414,14 +3690,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3443,14 +3719,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3472,14 +3748,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3540,14 +3816,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3595,14 +3871,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3637,14 +3913,14 @@ color: #333333</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {background-color: #6cc644;
-        border: 1px solid #f5f5f5;
+               <string notr="true">QPushButton {background-color: #589f37;
+        border: 1px solid #5d432c;
         border-radius: 10px;
         padding: 10px 20px;
     }
     QPushButton:hover {background-color: #5eaa3b;
     }
-    QPushButton:pressed {background-color: #589f37;
+    QPushButton:pressed {background-color: #6cc644;
     }</string>
               </property>
               <property name="text">
@@ -3692,23 +3968,7 @@ color: #333333</string>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_8</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_2</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>452</x>
-     <y>350</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>429</x>
-     <y>47</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_7</sender>
+   <sender>b_cerrar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_2</receiver>
    <slot>hide()</slot>
@@ -3724,23 +3984,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_11</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_3</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>705</x>
-     <y>395</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>693</x>
-     <y>1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_10</sender>
+   <sender>b_cerrar_resv_3</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_3</receiver>
    <slot>hide()</slot>
@@ -3756,23 +4000,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_19</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_4</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>974</x>
-     <y>207</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>976</x>
-     <y>6</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_17</sender>
+   <sender>b_cerrar_resv_4</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_4</receiver>
    <slot>hide()</slot>
@@ -3788,7 +4016,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>b_cerrar_resv</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones</receiver>
    <slot>hide()</slot>
@@ -3804,7 +4032,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_6</sender>
+   <sender>b_agregar_resv</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_2</receiver>
    <slot>show()</slot>
@@ -3820,7 +4048,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_6</sender>
+   <sender>b_agregar_resv</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones</receiver>
    <slot>hide()</slot>
@@ -3836,7 +4064,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_5</sender>
+   <sender>b_editar_resv</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_3</receiver>
    <slot>show()</slot>
@@ -3852,7 +4080,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_12</sender>
+   <sender>b_eliminar_resv_3</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_4</receiver>
    <slot>show()</slot>
@@ -3868,7 +4096,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_12</sender>
+   <sender>b_eliminar_resv_3</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_3</receiver>
    <slot>hide()</slot>
@@ -3884,7 +4112,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>b_resv_menu</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones</receiver>
    <slot>show()</slot>
@@ -3900,7 +4128,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>b_resv_menu</sender>
    <signal>clicked()</signal>
    <receiver>menu</receiver>
    <slot>hide()</slot>
@@ -3916,7 +4144,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>b_cerrar_resv</sender>
    <signal>clicked()</signal>
    <receiver>menu</receiver>
    <slot>show()</slot>
@@ -3932,7 +4160,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_7</sender>
+   <sender>b_cerrar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones</receiver>
    <slot>show()</slot>
@@ -3948,71 +4176,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_8</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>523</x>
-     <y>354</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>333</x>
-     <y>376</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_13</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_3</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>532</x>
-     <y>393</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>652</x>
-     <y>366</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_13</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>506</x>
-     <y>389</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>327</x>
-     <y>397</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_13</sender>
-   <signal>clicked()</signal>
-   <receiver>Reservaciones_2</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>496</x>
-     <y>389</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>559</x>
-     <y>19</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_9</sender>
+   <sender>b_eliminar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_4</receiver>
    <slot>show()</slot>
@@ -4028,7 +4192,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_9</sender>
+   <sender>b_eliminar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones</receiver>
    <slot>show()</slot>
@@ -4044,7 +4208,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_9</sender>
+   <sender>b_eliminar_resv_2</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_2</receiver>
    <slot>hide()</slot>
@@ -4060,7 +4224,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_6</sender>
+   <sender>b_agregar_resv</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_3</receiver>
    <slot>hide()</slot>
@@ -4076,7 +4240,7 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_6</sender>
+   <sender>b_agregar_resv</sender>
    <signal>clicked()</signal>
    <receiver>Reservaciones_4</receiver>
    <slot>hide()</slot>
@@ -4092,9 +4256,9 @@ color: #333333</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>b_resv_menu</sender>
    <signal>clicked()</signal>
-   <receiver>tableWidget</receiver>
+   <receiver>resv_widget</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -4104,6 +4268,246 @@ color: #333333</string>
     <hint type="destinationlabel">
      <x>158</x>
      <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>865</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>818</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1027</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>584</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1029</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>671</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>575</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>684</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>menu</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>475</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_3</sender>
+   <signal>clicked()</signal>
+   <receiver>menu</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>692</x>
+     <y>464</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv_4</sender>
+   <signal>clicked()</signal>
+   <receiver>menu</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>920</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>454</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>559</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>506</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_editar_resv_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>476</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>653</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>b_cerrar_resv</sender>
+   <signal>clicked()</signal>
+   <receiver>Reservaciones_4</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>302</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>887</x>
+     <y>454</y>
     </hint>
    </hints>
   </connection>

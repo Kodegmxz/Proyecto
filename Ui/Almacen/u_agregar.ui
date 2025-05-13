@@ -32,19 +32,19 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QComboBox {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    background: #2a2a2a;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
-    color: black; /* Asegura que el texto sea visible */
+    color: #c7a17a;
 }
 
 QComboBox QAbstractItemView {
-    background-color: #f5f5f5;
-    color: black; /* Color del texto en el menú desplegable */
+    background: #2a2a2a;;
+    color: #c7a17a;
 }
 QComboBox::item:selected {
-    background-color: #dcdcdc; /* Fondo del texto seleccionado */
-    color: black; /* Color del texto seleccionado */
+    background: #2a2a2a;
+    color: #c7a17a; 
 }</string>
    </property>
    <item>
@@ -98,12 +98,17 @@ QComboBox::item:selected {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit
-{
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+    <string notr="true">QLineEdit {
+       background: #2a2a2a;
+       border: 2px solid #5d432c;
+       border-radius: 10px;
+       color: #c7a17a;
+      }
+      QLineEdit:focus {
+       border-color: #c7a17a;
+      }
+     
+     </string>
    </property>
   </widget>
   <widget class="QLabel" name="titulo_bodega_2">
@@ -112,15 +117,15 @@ QComboBox::item:selected {
      <x>30</x>
      <y>30</y>
      <width>281</width>
-     <height>24</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-	font: 63 italic 10pt &quot;Sitka Small Semibold&quot;;
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+	font: 63 italic 10pt &quot;Sitka Small Semibold&quot; ;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
+ color: #c7a17a;
 }</string>
    </property>
    <property name="text">
@@ -146,9 +151,10 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
 }</string>
    </property>
    <property name="text">
@@ -171,10 +177,14 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
-}</string>
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
+}
+
+
+     </string>
    </property>
    <property name="text">
     <string>Nombre</string>
@@ -195,12 +205,16 @@ QComboBox::item:selected {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit
-{
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+    <string notr="true">QLineEdit {
+       background: #2a2a2a;
+       border: 2px solid #5d432c;
+       border-radius: 10px;
+       color: #c7a17a;
+      }
+      QLineEdit:focus {
+       border-color: #c7a17a;
+      }
+     </string>
    </property>
   </widget>
   <widget class="QLabel" name="Productoprecio_3">
@@ -219,9 +233,10 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
 }</string>
    </property>
    <property name="text">
@@ -244,9 +259,10 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
 }</string>
    </property>
    <property name="text">
@@ -268,12 +284,16 @@ QComboBox::item:selected {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit
-{
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+    <string notr="true">QLineEdit {
+       background: #2a2a2a;
+       border: 2px solid #5d432c;
+       border-radius: 10px;
+       color: #c7a17a;
+      }
+      QLineEdit:focus {
+       border-color: #c7a17a;
+      }
+     </string>
    </property>
   </widget>
   <widget class="QLabel" name="Productoprecio">
@@ -292,9 +312,10 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
 }</string>
    </property>
    <property name="text">
@@ -317,9 +338,10 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #c7a17a;
     border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
 }</string>
    </property>
    <property name="text">
@@ -341,12 +363,17 @@ QComboBox::item:selected {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit
-{
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+    <string notr="true">QLineEdit {
+       background: #2a2a2a;
+       border: 2px solid #5d432c;
+       border-radius: 10px;
+       color: #c7a17a;
+      }
+      QLineEdit:focus {
+       border-color: #c7a17a;
+      }
+     
+     </string>
    </property>
   </widget>
   <widget class="QLineEdit" name="linenombre">
@@ -364,12 +391,17 @@ QComboBox::item:selected {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit
-{
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+    <string notr="true">QLineEdit {
+       background: #2a2a2a;
+       border: 2px solid #5d432c;
+       border-radius: 10px;
+       color: #c7a17a;
+      }
+      QLineEdit:focus {
+       border-color: #c7a17a;
+      }
+     
+     </string>
    </property>
    <property name="text">
     <string/>
@@ -392,45 +424,23 @@ QComboBox::item:selected {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-
-    }
-</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Agregar </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>331</width>
-     <height>391</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <zorder>label_8</zorder>
-  <zorder>comboBox</zorder>
-  <zorder>linecantidad</zorder>
-  <zorder>titulo_bodega_2</zorder>
-  <zorder>productoproveedor</zorder>
-  <zorder>Productoprecio_4</zorder>
-  <zorder>lineprecio</zorder>
-  <zorder>Productoprecio_3</zorder>
-  <zorder>Productoprecio_2</zorder>
-  <zorder>lineproveedor</zorder>
-  <zorder>Productoprecio</zorder>
-  <zorder>productoproveedor_2</zorder>
-  <zorder>linecodigo</zorder>
-  <zorder>linenombre</zorder>
-  <zorder>agregar</zorder>
  </widget>
  <resources/>
  <connections/>

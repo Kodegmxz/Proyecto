@@ -1,11 +1,8 @@
-import sys
+
 import os
-from unittest import result
-from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
-import mysql.connector
 from Ui.Almacen.a_agregar import AgregarProducto
 from Ui.Almacen.a_editar import Editar
 from Ui.Almacen.a_eliminar import Eliminar  # Importar el diálogo de eliminación

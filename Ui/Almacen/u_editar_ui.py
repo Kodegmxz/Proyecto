@@ -23,9 +23,10 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.productoproveedor_2.setFont(font)
         self.productoproveedor_2.setStyleSheet("QLabel {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
+"    border: 1px solid #c7a17a;\n"
 "    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
 "}")
         self.productoproveedor_2.setObjectName("productoproveedor_2")
         self.linecodigo = QtWidgets.QLineEdit(Dialog)
@@ -34,12 +35,16 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.linecodigo.setFont(font)
-        self.linecodigo.setStyleSheet("QLineEdit\n"
-"{\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.linecodigo.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
         self.linecodigo.setObjectName("linecodigo")
         self.buscarcode = QtWidgets.QPushButton(Dialog)
         self.buscarcode.setGeometry(QtCore.QRect(260, 20, 93, 28))
@@ -48,19 +53,45 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.buscarcode.setFont(font)
         self.buscarcode.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.buscarcode.setObjectName("buscarcode")
         self.tableWidget = QtWidgets.QTableWidget(Dialog)
         self.tableWidget.setGeometry(QtCore.QRect(20, 60, 331, 141))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
-        font.setPointSize(9)
+        font.setPointSize(-1)
         self.tableWidget.setFont(font)
-        self.tableWidget.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tableWidget.setStyleSheet("QTableWidget, QTableWidget::item, QHeaderView::section {\n"
+"    background-color: #9a9a9a;\n"
+"    color: #222;\n"
+"    font-family: Segoe UI Symbol;\n"
+"    font-size: 15px;\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal, QScrollBar:vertical {\n"
+"    background: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"    gridline-color: #9a9a9a;\n"
+"}")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(6)
         self.tableWidget.setRowCount(0)
@@ -83,9 +114,10 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.Productoprecio.setFont(font)
         self.Productoprecio.setStyleSheet("QLabel {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
+"    border: 1px solid #c7a17a;\n"
 "    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
 "}")
         self.Productoprecio.setObjectName("Productoprecio")
         self.Productoprecio_3 = QtWidgets.QLabel(Dialog)
@@ -95,9 +127,10 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.Productoprecio_3.setFont(font)
         self.Productoprecio_3.setStyleSheet("QLabel {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
+"    border: 1px solid #c7a17a;\n"
 "    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
 "}")
         self.Productoprecio_3.setObjectName("Productoprecio_3")
         self.linenombre_44 = QtWidgets.QLineEdit(Dialog)
@@ -106,12 +139,16 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.linenombre_44.setFont(font)
-        self.linenombre_44.setStyleSheet("QLineEdit\n"
-"{\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.linenombre_44.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
         self.linenombre_44.setText("")
         self.linenombre_44.setObjectName("linenombre_44")
         self.productoproveedor = QtWidgets.QLabel(Dialog)
@@ -121,9 +158,10 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.productoproveedor.setFont(font)
         self.productoproveedor.setStyleSheet("QLabel {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
+"    border: 1px solid #c7a17a;\n"
 "    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
 "}")
         self.productoproveedor.setObjectName("productoproveedor")
         self.linecantidad_44 = QtWidgets.QLineEdit(Dialog)
@@ -132,12 +170,17 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.linecantidad_44.setFont(font)
-        self.linecantidad_44.setStyleSheet("QLineEdit\n"
-"{\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.linecantidad_44.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
         self.linecantidad_44.setObjectName("linecantidad_44")
         self.lineproveedor_44 = QtWidgets.QLineEdit(Dialog)
         self.lineproveedor_44.setGeometry(QtCore.QRect(180, 280, 113, 22))
@@ -145,12 +188,16 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.lineproveedor_44.setFont(font)
-        self.lineproveedor_44.setStyleSheet("QLineEdit\n"
-"{\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.lineproveedor_44.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
         self.lineproveedor_44.setObjectName("lineproveedor_44")
         self.Productoprecio_4 = QtWidgets.QLabel(Dialog)
         self.Productoprecio_4.setGeometry(QtCore.QRect(80, 220, 81, 20))
@@ -159,9 +206,10 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.Productoprecio_4.setFont(font)
         self.Productoprecio_4.setStyleSheet("QLabel {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
+"    border: 1px solid #c7a17a;\n"
 "    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
 "}")
         self.Productoprecio_4.setObjectName("Productoprecio_4")
         self.lineprecio_44 = QtWidgets.QLineEdit(Dialog)
@@ -170,12 +218,17 @@ class Ui_Dialog(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.lineprecio_44.setFont(font)
-        self.lineprecio_44.setStyleSheet("QLineEdit\n"
-"{\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.lineprecio_44.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
         self.lineprecio_44.setObjectName("lineprecio_44")
         self.actualizar = QtWidgets.QPushButton(Dialog)
         self.actualizar.setGeometry(QtCore.QRect(140, 350, 93, 28))
@@ -184,30 +237,19 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.actualizar.setFont(font)
         self.actualizar.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.actualizar.setObjectName("actualizar")
-        self.label_9 = QtWidgets.QLabel(Dialog)
-        self.label_9.setGeometry(QtCore.QRect(0, 0, 371, 461))
-        self.label_9.setText("")
-        self.label_9.setObjectName("label_9")
-        self.label_9.raise_()
-        self.productoproveedor_2.raise_()
-        self.linecodigo.raise_()
-        self.buscarcode.raise_()
-        self.tableWidget.raise_()
-        self.Productoprecio.raise_()
-        self.Productoprecio_3.raise_()
-        self.linenombre_44.raise_()
-        self.productoproveedor.raise_()
-        self.linecantidad_44.raise_()
-        self.lineproveedor_44.raise_()
-        self.Productoprecio_4.raise_()
-        self.lineprecio_44.raise_()
-        self.actualizar.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)

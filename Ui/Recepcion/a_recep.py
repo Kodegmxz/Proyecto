@@ -1,7 +1,8 @@
+﻿from re import A
 import sys
 import os
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5 import QtWidgets, QtCore
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi
 
 class Recepcion(QDialog):
@@ -12,15 +13,16 @@ class Recepcion(QDialog):
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_recepcion.ui")
         loadUi(ui_a, self)
-        self.color=['#6cc644','#f6c40f','#bd2c00']
+        self.color=['#589f37','#cca20c','#a12000']
         self.color_sub=['#5eaa3b','#d6ab0d','#ad2500']
-        self.color_sub2=['#589f37','#cca20c','#a12000']
+        self.color_sub2=['#6cc644','#f6c40f','#bd2c00']
 
         self.Reservaciones.hide()
         self.Reservaciones_2.hide()
         self.Reservaciones_3.hide()
         self.Reservaciones_4.hide()
-        self.cargar_mesas(db)
+        self.cargar_mesas()
+        self.act_resv_widget()
 
         self.m_1.clicked.connect(lambda: self.upd_mesa(1, db))
         self.m_2.clicked.connect(lambda: self.upd_mesa(2, db))
@@ -44,19 +46,81 @@ class Recepcion(QDialog):
         self.m_20.clicked.connect(lambda: self.upd_mesa(20, db))
         self.m_21.clicked.connect(lambda: self.upd_mesa(21, db))
 
+        self.b_agregar_resv_2.clicked.connect(self.agregar_resv)
+        self.b_editar_resv_3.clicked.connect(self.edt_resv)
+
         self.b_salir_1.clicked.connect(self.salir)
+
+
+    def agregar_resv(self):
+        if not all([self.resv_2_name.text(), self.resv_2_cant.text(), self.resv_2_fecha.text(), self.resv_2_hora.text()]):
+            QMessageBox.warning(self, "Búsqueda vacía", "Por favor, complete todos los campos.")
+            return
+        try:
+            self.db.dbcursor.execute("INSERT INTO Users.mesas_resv (nombre, cantidad, fecha, hora) VALUES (%s, %s, %s, %s);", (self.resv_2_name.text(), self.resv_2_cant.text(), self.resv_2_fecha.text(), self.resv_2_hora.text()))
+            self.db.commit()
+            self.act_resv_widget()
+            self.Reservaciones_2.hide()
+            self.Reservaciones.show()
+        except Exception as e:
+            QMessageBox.warning(self, "Error", "No se pudo agregar la reservación. Verifique los datos")
+            return
+
+    def edt_resv(self):
+        if not all(self.resv_3_codigo.text()):
+            QMessageBox.warning(self, "Búsqueda vacía", "Por favor, introduzca un codigo.")
+            return
+        try:
+            a1= ''
+            a2 = ''
+            a3 = ''
+            a4 = ''
+            n=0
+            v = {}
+            if not self.resv_3_name.text().strip() == '':
+                a1 = 'name = %s,'
+                n=+1
+                v.append(1)
+            if not self.resv_3_cantidad.text().strip() == '':
+                a2 = 'cantidad = %s,'
+                n=+1
+                v.append(2)
+            if not self.resv_3_fecha.text().strip() == '':
+                a3 = 'fecha = %s,'
+                n=+1
+                v.append(3)
+            if not self.resv_3_hora.text().strip() == '':
+                a4 = 'hora = %s,'
+                n = +1
+                v.append(4)
+            
+            for n in range(v):
+                print(v[n])
+            print(f"UPDATE Users.mesas_resv SET {a1}{a2}{a3}{a4} WHERE id_resv = %s;")
+
+
+
+        except Exception as e:
+            print(e)
+            QMessageBox.warning(self, "Error", "Verifique los campos")
+
+    def act_resv_widget(self):
+        self.db.dbcursor.execute("SELECT id_resv, nombre, cantidad, fecha, hora FROM Users.mesas_resv")
+        data = self.db.dbcursor.fetchall()
+        self.resv_widget.setRowCount(len(data))
+        for n, row in enumerate(data):
+            for m, item in enumerate(row):
+                self.resv_widget.setItem(
+                    n, m, QtWidgets.QTableWidgetItem(str(item)))
+        self.resv_widget.resizeColumnsToContents()
 
     def upd_mesa(self, n, db):
         button = getattr(self, f'm_{n}')
         style = button.styleSheet()
         current_color = style.split("QPushButton {background-color:")[1].split(";")[0].strip()
-        print(current_color)
         next_color = self.color[(self.color.index(current_color) + 1) % len(self.color)]
         next_color_sub = self.color_sub[(self.color.index(current_color) + 1) % len(self.color)]
         next_color_sub2 = self.color_sub2[(self.color.index(current_color) + 1) % len(self.color)]
-        print(next_color)
-        print(next_color_sub)
-        print(next_color_sub2)
         style_n = style.replace("QPushButton {background-color: "+current_color+';', "QPushButton {background-color: "+next_color+';')
         style_nsub = style_n.replace("QPushButton:hover {background-color: "+self.color_sub[self.color.index(current_color) % len(self.color)]+';', "QPushButton:hover {background-color: "+next_color_sub+';')
         style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: "+self.color_sub2[self.color.index(current_color) % len(self.color)]+';', "QPushButton:pressed {background-color: "+next_color_sub2+';')
@@ -65,12 +129,11 @@ class Recepcion(QDialog):
 
         button.setStyleSheet(style_nsub2)
 
-    def cargar_mesas(self, db):
-        db.dbcursor.execute("SELECT v1 FROM Users.mesas")
-        data = db.dbcursor.fetchall()
+    def cargar_mesas(self):
+        self.db.dbcursor.execute("SELECT v1 FROM Users.mesas")
+        data = self.db.dbcursor.fetchall()
         for n in range(len(data)):
             dat = str(data[n])
-            print(dat)
             if dat == (f"('{self.color[0]}',)"):
                 c = self.color[0]
                 c_sub= self.color_sub2[0]
@@ -86,18 +149,22 @@ class Recepcion(QDialog):
 
             button = getattr(self, f'm_{n+1}')
             style = button.styleSheet()
-            style_n = style.replace("QPushButton {background-color: #6cc644;", "QPushButton {background-color: "+c+';')
+            style_n = style.replace("QPushButton {background-color: #589f37;", "QPushButton {background-color: "+c+';')
             style_nsub = style_n.replace("QPushButton:hover {background-color: #5eaa3b;", "QPushButton:hover {background-color: "+c_sub+';')
-            style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: #589f37;", "QPushButton:pressed {background-color: "+c_sub2+';')
+            style_nsub2 = style_nsub.replace("QPushButton:pressed {background-color: #6cc644;", "QPushButton:pressed {background-color: "+c_sub2+';')
             button.setStyleSheet(style_nsub2)
 
     def salir(self):
         from Ui.Login.a_login import Login
         mainwindow = Login(self.original_widget, self.db)
         self.original_widget.addWidget(mainwindow)
-        self.original_widget.setFixedWidth(400)
-        self.original_widget.setFixedHeight(500)
+        self.original_widget.setFixedWidth(1091)
+        self.original_widget.setFixedHeight(501)
         self.original_widget.setCurrentIndex(self.original_widget.currentIndex()+1)
+
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Escape:
+            pass
 
 
 
