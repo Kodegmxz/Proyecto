@@ -24,10 +24,10 @@
   <widget class="QLineEdit" name="barrabusqueda">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>130</x>
      <y>70</y>
      <width>341</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -37,11 +37,15 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgb(245, 245, 245);
-}
-</string>
+       background: #2a2a2a;
+       border: 2px solid #5d432c;
+       border-radius: 10px;
+       color: #c7a17a;
+      }
+      QLineEdit:focus {
+       border-color: #c7a17a;
+      }
+     </string>
    </property>
    <property name="text">
     <string/>
@@ -53,7 +57,7 @@
      <x>20</x>
      <y>70</y>
      <width>101</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -63,7 +67,12 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #4078c0</string>
+    <string notr="true">QLabel {
+    border: 1px solid #c7a17a;
+    border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
+}</string>
    </property>
    <property name="text">
     <string>Búsqueda</string>
@@ -85,7 +94,12 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: #4078c0</string>
+    <string notr="true">QLabel {
+    border: 1px solid #c7a17a;
+    border-radius: 10px;
+    color: #c7a17a;
+    text-shadow: 0 0 10px #c7a17a
+}</string>
    </property>
    <property name="text">
     <string>Encargado:  *******</string>
@@ -103,14 +117,18 @@
    <property name="font">
     <font>
      <family>Sitka Small Semibold</family>
-     <pointsize>15</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>16</pointsize>
+     <weight>7</weight>
+     <italic>true</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-color: #4078c0</string>
+    <string notr="true">QLabel {
+	font: 63 italic 16pt &quot;Sitka Small Semibold&quot; ;
+    border-radius: 10px;
+ color: #c7a17a;
+}</string>
    </property>
    <property name="text">
     <string>BODEGA</string>
@@ -136,32 +154,28 @@ color: #4078c0</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QTableWidget {
-    background-color: #f5f5f5; /* Set entire widget background to #f5f5f5 */
-    border: none; /* Remove external border */
+    background-color: #9a9a9a;
     border-radius: 10px;
-    padding: 5px;
-    gridline-color: #ddd; /* Keep gridlines for column distinction */
-}
-QTableWidget::item {
-    background-color: #f5f5f5; /* Set item background to #f5f5f5 */
-    border: none; /* Remove item border */
-    padding: 5px;
+
 }
 QHeaderView::section {
-    background-color: #f5f5f5; /* Set header background to #f5f5f5 */
-    border: 1px solid #ccc; /* Keep header border for distinction */
-    border-radius: 5px;
-    padding: 5px;
+    font-weight: bold;
+	background-color: #9a9a9a;
+
 }
-QTabWidget {
-    background-color: #f5f5f5; /* Set tab widget background to #f5f5f5 */
-    border: none; /* Remove external border */
-    border-radius: 10px;
+
+QTabBar::tab:selected {
+    background: #9a9a9a;
+    color: #222222;
+}
+
+QTabBar::tab {
+    background: #9a9a9a;
+    color: #222222;
 }</string>
    </property>
    <property name="currentIndex">
-
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="BEBIDAS">
     <property name="font">
@@ -188,7 +202,7 @@ QTabWidget {
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -227,14 +241,14 @@ QTabWidget {
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>-10</x>
        <y>0</y>
-       <width>741</width>
+       <width>751</width>
        <height>501</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">background-color: #9a9a9a;</string>
      </property>
      <property name="text">
       <string/>
@@ -257,7 +271,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -303,7 +317,9 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">
+background-color: #9a9a9a;
+</string>
      </property>
      <property name="text">
       <string/>
@@ -326,7 +342,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -372,7 +388,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">background-color: #9a9a9a;</string>
      </property>
      <property name="text">
       <string/>
@@ -395,7 +411,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">background-color: #9a9a9a;</string>
      </property>
      <property name="text">
       <string/>
@@ -411,7 +427,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -462,7 +478,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -508,7 +524,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">background-color: #9a9a9a;</string>
      </property>
      <property name="text">
       <string/>
@@ -537,7 +553,7 @@ QTabWidget {
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -583,7 +599,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">background-color: #9a9a9a;</string>
      </property>
      <property name="text">
       <string/>
@@ -606,7 +622,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true"/>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
@@ -652,7 +668,7 @@ QTabWidget {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(245, 245, 245);</string>
+      <string notr="true">background-color: #9a9a9a;</string>
      </property>
      <property name="text">
       <string/>
@@ -665,7 +681,7 @@ QTabWidget {
   <widget class="QPushButton" name="botonbuscar">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>480</x>
      <y>60</y>
      <width>101</width>
      <height>41</height>
@@ -679,10 +695,18 @@ QTabWidget {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Buscar</string>
@@ -691,7 +715,7 @@ QTabWidget {
   <widget class="QPushButton" name="botonreset">
    <property name="geometry">
     <rect>
-     <x>580</x>
+     <x>590</x>
      <y>60</y>
      <width>101</width>
      <height>41</height>
@@ -705,11 +729,18 @@ QTabWidget {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-
-    background-color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-}</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Reiniciar</string>
@@ -732,12 +763,18 @@ QTabWidget {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Editar</string>
@@ -760,12 +797,18 @@ QTabWidget {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Registro</string>
@@ -788,12 +831,18 @@ QTabWidget {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Agregar</string>
@@ -829,12 +878,18 @@ QTabWidget {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
-        border-radius: 10px;
-        padding: 10px 20px;
-    }
-</string>
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #5d432c, stop:1 #c7a17a);
+       color: white;
+       border-radius: 10px;
+       border: none;
+      }
+      QPushButton:hover {
+       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+         stop:0 #c7a17a, stop:1 #5d432c);
+      }
+      QPushButton:pressed {
+      }</string>
    </property>
    <property name="text">
     <string>Eliminar</string>
