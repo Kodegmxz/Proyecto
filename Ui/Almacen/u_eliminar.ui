@@ -208,25 +208,6 @@ QTableWidget {
     <string>Eliminar</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>351</width>
-     <height>301</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <zorder>label</zorder>
-  <zorder>productoproveedor_2</zorder>
-  <zorder>tableWidget</zorder>
-  <zorder>buscarcode2</zorder>
-  <zorder>linecodigo4</zorder>
-  <zorder>eliminar</zorder>
  </widget>
  <resources/>
  <connections/>

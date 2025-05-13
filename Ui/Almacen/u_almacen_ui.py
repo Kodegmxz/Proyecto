@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(950, 648)
+        Form.resize(901, 701)
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         Form.setFont(font)
@@ -79,7 +79,7 @@ class Ui_Form(object):
         self.titulo_bodega.setAlignment(QtCore.Qt.AlignCenter)
         self.titulo_bodega.setObjectName("titulo_bodega")
         self.tabWidget = QtWidgets.QTabWidget(Form)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 110, 741, 521))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 130, 741, 521))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
@@ -419,10 +419,6 @@ class Ui_Form(object):
 "      QPushButton:pressed {\n"
 "      }")
         self.agregar_2.setObjectName("agregar_2")
-        self.label_8 = QtWidgets.QLabel(Form)
-        self.label_8.setGeometry(QtCore.QRect(0, 0, 951, 641))
-        self.label_8.setText("")
-        self.label_8.setObjectName("label_8")
         self.eliminar = QtWidgets.QPushButton(Form)
         self.eliminar.setGeometry(QtCore.QRect(770, 480, 121, 71))
         font = QtGui.QFont()
@@ -443,7 +439,6 @@ class Ui_Form(object):
 "      QPushButton:pressed {\n"
 "      }")
         self.eliminar.setObjectName("eliminar")
-        self.label_8.raise_()
         self.tabWidget.raise_()
         self.barrabusqueda.raise_()
         self.lbl_busqueda.raise_()
@@ -457,7 +452,7 @@ class Ui_Form(object):
         self.eliminar.raise_()
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(6)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
