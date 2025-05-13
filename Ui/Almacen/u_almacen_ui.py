@@ -20,25 +20,34 @@ class Ui_Form(object):
         Form.setFont(font)
         Form.setStyleSheet("background-color: rgb(51, 51, 51);")
         self.barrabusqueda = QtWidgets.QLineEdit(Form)
-        self.barrabusqueda.setGeometry(QtCore.QRect(120, 70, 341, 21))
+        self.barrabusqueda.setGeometry(QtCore.QRect(130, 70, 341, 31))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.barrabusqueda.setFont(font)
         self.barrabusqueda.setStyleSheet("QLineEdit {\n"
-"    border: 1px solid #ccc;\n"
-"    border-radius: 10px;\n"
-"    background-color: rgb(245, 245, 245);\n"
-"}\n"
-"")
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
         self.barrabusqueda.setText("")
         self.barrabusqueda.setObjectName("barrabusqueda")
         self.lbl_busqueda = QtWidgets.QLabel(Form)
-        self.lbl_busqueda.setGeometry(QtCore.QRect(20, 70, 101, 21))
+        self.lbl_busqueda.setGeometry(QtCore.QRect(20, 70, 101, 31))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(12)
         self.lbl_busqueda.setFont(font)
-        self.lbl_busqueda.setStyleSheet("color: #4078c0")
+        self.lbl_busqueda.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
         self.lbl_busqueda.setObjectName("lbl_busqueda")
         self.ENCARGADO = QtWidgets.QLabel(Form)
         self.ENCARGADO.setGeometry(QtCore.QRect(20, 30, 221, 31))
@@ -46,18 +55,27 @@ class Ui_Form(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(12)
         self.ENCARGADO.setFont(font)
-        self.ENCARGADO.setStyleSheet("color: #4078c0")
+        self.ENCARGADO.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
         self.ENCARGADO.setObjectName("ENCARGADO")
         self.titulo_bodega = QtWidgets.QLabel(Form)
         self.titulo_bodega.setGeometry(QtCore.QRect(0, 0, 721, 24))
         font = QtGui.QFont()
         font.setFamily("Sitka Small Semibold")
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(True)
+        font.setWeight(7)
         self.titulo_bodega.setFont(font)
-        self.titulo_bodega.setStyleSheet("\n"
-"color: #4078c0")
+        self.titulo_bodega.setStyleSheet("QLabel {\n"
+"    font: 63 italic 16pt \"Sitka Small Semibold\" ;\n"
+"    border-radius: 10px;\n"
+" color: #c7a17a;\n"
+"}")
         self.titulo_bodega.setAlignment(QtCore.Qt.AlignCenter)
         self.titulo_bodega.setObjectName("titulo_bodega")
         self.tabWidget = QtWidgets.QTabWidget(Form)
@@ -67,27 +85,24 @@ class Ui_Form(object):
         font.setPointSize(9)
         self.tabWidget.setFont(font)
         self.tabWidget.setStyleSheet("QTableWidget {\n"
-"    background-color: #f5f5f5; /* Set entire widget background to #f5f5f5 */\n"
-"    border: none; /* Remove external border */\n"
+"    background-color: #9a9a9a;\n"
 "    border-radius: 10px;\n"
-"    padding: 5px;\n"
-"    gridline-color: #ddd; /* Keep gridlines for column distinction */\n"
-"}\n"
-"QTableWidget::item {\n"
-"    background-color: #f5f5f5; /* Set item background to #f5f5f5 */\n"
-"    border: none; /* Remove item border */\n"
-"    padding: 5px;\n"
+"\n"
 "}\n"
 "QHeaderView::section {\n"
-"    background-color: #f5f5f5; /* Set header background to #f5f5f5 */\n"
-"    border: 1px solid #ccc; /* Keep header border for distinction */\n"
-"    border-radius: 5px;\n"
-"    padding: 5px;\n"
+"    font-weight: bold;\n"
+"    background-color: #9a9a9a;\n"
+"\n"
 "}\n"
-"QTabWidget {\n"
-"    background-color: #f5f5f5; /* Set tab widget background to #f5f5f5 */\n"
-"    border: none; /* Remove external border */\n"
-"    border-radius: 10px;\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    background: #9a9a9a;\n"
+"    color: #222222;\n"
+"}\n"
+"\n"
+"QTabBar::tab {\n"
+"    background: #9a9a9a;\n"
+"    color: #222222;\n"
 "}")
         self.tabWidget.setObjectName("tabWidget")
         self.BEBIDAS = QtWidgets.QWidget()
@@ -101,7 +116,7 @@ class Ui_Form(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.tabla_bebidas.setFont(font)
-        self.tabla_bebidas.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_bebidas.setStyleSheet("")
         self.tabla_bebidas.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_bebidas.setObjectName("tabla_bebidas")
         self.tabla_bebidas.setColumnCount(6)
@@ -119,8 +134,8 @@ class Ui_Form(object):
         item = QtWidgets.QTableWidgetItem()
         self.tabla_bebidas.setHorizontalHeaderItem(5, item)
         self.label = QtWidgets.QLabel(self.BEBIDAS)
-        self.label.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label.setGeometry(QtCore.QRect(-10, 0, 751, 501))
+        self.label.setStyleSheet("background-color: #9a9a9a;")
         self.label.setText("")
         self.label.setObjectName("label")
         self.label.raise_()
@@ -130,7 +145,7 @@ class Ui_Form(object):
         self.BEBIDASA.setObjectName("BEBIDASA")
         self.tabla_bebidasa = QtWidgets.QTableWidget(self.BEBIDASA)
         self.tabla_bebidasa.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_bebidasa.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_bebidasa.setStyleSheet("")
         self.tabla_bebidasa.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_bebidasa.setObjectName("tabla_bebidasa")
         self.tabla_bebidasa.setColumnCount(6)
@@ -149,7 +164,9 @@ class Ui_Form(object):
         self.tabla_bebidasa.setHorizontalHeaderItem(5, item)
         self.label_2 = QtWidgets.QLabel(self.BEBIDASA)
         self.label_2.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_2.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label_2.setStyleSheet("\n"
+"background-color: #9a9a9a;\n"
+"")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.label_2.raise_()
@@ -159,7 +176,7 @@ class Ui_Form(object):
         self.CARNES.setObjectName("CARNES")
         self.tabla_carnes = QtWidgets.QTableWidget(self.CARNES)
         self.tabla_carnes.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_carnes.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_carnes.setStyleSheet("")
         self.tabla_carnes.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_carnes.setObjectName("tabla_carnes")
         self.tabla_carnes.setColumnCount(6)
@@ -178,7 +195,7 @@ class Ui_Form(object):
         self.tabla_carnes.setHorizontalHeaderItem(5, item)
         self.label_3 = QtWidgets.QLabel(self.CARNES)
         self.label_3.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_3.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label_3.setStyleSheet("background-color: #9a9a9a;")
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
         self.label_3.raise_()
@@ -188,12 +205,12 @@ class Ui_Form(object):
         self.condimentos.setObjectName("condimentos")
         self.label_7 = QtWidgets.QLabel(self.condimentos)
         self.label_7.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_7.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label_7.setStyleSheet("background-color: #9a9a9a;")
         self.label_7.setText("")
         self.label_7.setObjectName("label_7")
         self.tabla_condimentos = QtWidgets.QTableWidget(self.condimentos)
         self.tabla_condimentos.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_condimentos.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_condimentos.setStyleSheet("")
         self.tabla_condimentos.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_condimentos.setObjectName("tabla_condimentos")
         self.tabla_condimentos.setColumnCount(6)
@@ -215,7 +232,7 @@ class Ui_Form(object):
         self.Frutasyverduras.setObjectName("Frutasyverduras")
         self.tabla_frutasyverduras = QtWidgets.QTableWidget(self.Frutasyverduras)
         self.tabla_frutasyverduras.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_frutasyverduras.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_frutasyverduras.setStyleSheet("")
         self.tabla_frutasyverduras.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_frutasyverduras.setObjectName("tabla_frutasyverduras")
         self.tabla_frutasyverduras.setColumnCount(6)
@@ -234,7 +251,7 @@ class Ui_Form(object):
         self.tabla_frutasyverduras.setHorizontalHeaderItem(5, item)
         self.label_4 = QtWidgets.QLabel(self.Frutasyverduras)
         self.label_4.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_4.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label_4.setStyleSheet("background-color: #9a9a9a;")
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
         self.label_4.raise_()
@@ -248,7 +265,7 @@ class Ui_Form(object):
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.tabla_lacteos.setFont(font)
-        self.tabla_lacteos.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_lacteos.setStyleSheet("")
         self.tabla_lacteos.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_lacteos.setObjectName("tabla_lacteos")
         self.tabla_lacteos.setColumnCount(6)
@@ -267,7 +284,7 @@ class Ui_Form(object):
         self.tabla_lacteos.setHorizontalHeaderItem(5, item)
         self.label_6 = QtWidgets.QLabel(self.Lacteos)
         self.label_6.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_6.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label_6.setStyleSheet("background-color: #9a9a9a;")
         self.label_6.setText("")
         self.label_6.setObjectName("label_6")
         self.label_6.raise_()
@@ -277,7 +294,7 @@ class Ui_Form(object):
         self.PANADERIA.setObjectName("PANADERIA")
         self.tabla_panaderia = QtWidgets.QTableWidget(self.PANADERIA)
         self.tabla_panaderia.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_panaderia.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.tabla_panaderia.setStyleSheet("")
         self.tabla_panaderia.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tabla_panaderia.setObjectName("tabla_panaderia")
         self.tabla_panaderia.setColumnCount(6)
@@ -296,36 +313,51 @@ class Ui_Form(object):
         self.tabla_panaderia.setHorizontalHeaderItem(5, item)
         self.label_5 = QtWidgets.QLabel(self.PANADERIA)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_5.setStyleSheet("background-color: rgb(245, 245, 245);")
+        self.label_5.setStyleSheet("background-color: #9a9a9a;")
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label_5.raise_()
         self.tabla_panaderia.raise_()
         self.tabWidget.addTab(self.PANADERIA, "")
         self.botonbuscar = QtWidgets.QPushButton(Form)
-        self.botonbuscar.setGeometry(QtCore.QRect(470, 60, 101, 41))
+        self.botonbuscar.setGeometry(QtCore.QRect(480, 60, 101, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.botonbuscar.setFont(font)
         self.botonbuscar.setStyleSheet("QPushButton {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.botonbuscar.setObjectName("botonbuscar")
         self.botonreset = QtWidgets.QPushButton(Form)
-        self.botonreset.setGeometry(QtCore.QRect(580, 60, 101, 41))
+        self.botonreset.setGeometry(QtCore.QRect(590, 60, 101, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
         self.botonreset.setFont(font)
         self.botonreset.setStyleSheet("QPushButton {\n"
-"\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #f5f5f5;\n"
-"    border-radius: 10px;\n"
-"}")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.botonreset.setObjectName("botonreset")
         self.editar = QtWidgets.QPushButton(Form)
         self.editar.setGeometry(QtCore.QRect(770, 210, 121, 71))
@@ -334,12 +366,18 @@ class Ui_Form(object):
         font.setPointSize(10)
         self.editar.setFont(font)
         self.editar.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"        padding: 10px 20px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.editar.setObjectName("editar")
         self.Registro = QtWidgets.QPushButton(Form)
         self.Registro.setGeometry(QtCore.QRect(770, 300, 121, 71))
@@ -348,12 +386,18 @@ class Ui_Form(object):
         font.setPointSize(10)
         self.Registro.setFont(font)
         self.Registro.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"        padding: 10px 20px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.Registro.setObjectName("Registro")
         self.agregar_2 = QtWidgets.QPushButton(Form)
         self.agregar_2.setGeometry(QtCore.QRect(770, 390, 121, 71))
@@ -362,12 +406,18 @@ class Ui_Form(object):
         font.setPointSize(10)
         self.agregar_2.setFont(font)
         self.agregar_2.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"        padding: 10px 20px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.agregar_2.setObjectName("agregar_2")
         self.label_8 = QtWidgets.QLabel(Form)
         self.label_8.setGeometry(QtCore.QRect(0, 0, 951, 641))
@@ -380,12 +430,18 @@ class Ui_Form(object):
         font.setPointSize(10)
         self.eliminar.setFont(font)
         self.eliminar.setStyleSheet("QPushButton {\n"
-"        background-color: #f5f5f5;\n"
-"        border: 1px solid #f5f5f5;\n"
-"        border-radius: 10px;\n"
-"        padding: 10px 20px;\n"
-"    }\n"
-"")
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
         self.eliminar.setObjectName("eliminar")
         self.label_8.raise_()
         self.tabWidget.raise_()
@@ -401,7 +457,7 @@ class Ui_Form(object):
         self.eliminar.raise_()
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(3)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

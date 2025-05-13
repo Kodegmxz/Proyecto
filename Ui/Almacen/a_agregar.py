@@ -3,6 +3,9 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import pyqtSignal  # Importar pyqtSignal
 from .u_agregar_ui import Ui_Dialog
+import logging
+
+logging.basicConfig(filename="errores.log", level=logging.ERROR)
 
 class AgregarProducto(QtWidgets.QDialog):
     # Definir la señal
@@ -66,4 +69,5 @@ class AgregarProducto(QtWidgets.QDialog):
             
             self.close()
         except Exception as e:
+            logging.error(f"Error al agregar producto: {e}")
             QMessageBox.critical(self, "Error", f"Ocurrió un error al agregar el producto: {e}")
