@@ -16,7 +16,6 @@ class Almacen(QtWidgets.QWidget):
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_almacen.ui")
         loadUi(ui_a, self)
-
         # Conectar botones a sus funciones
         self.botonbuscar.clicked.connect(self.buscar_producto)
         self.botonreset.clicked.connect(self.resetear_tabla)
@@ -25,8 +24,7 @@ class Almacen(QtWidgets.QWidget):
         self.buscareliminar.clicked.connect(self.buscarcodeeliminar)
         self.eliminar.clicked.connect(self.eliminar_producto)
         self.agregar.clicked.connect(self.agregar_producto)
-
-
+        # self.salir.clicked.connect(self.salir)  # <-- Línea eliminada
 
         self.cargar_datos_iniciales()
         self.wagregar.hide()
@@ -273,7 +271,7 @@ class Almacen(QtWidgets.QWidget):
         # Obtener los valores de los campos de entrada
         precio = self.precioeditar.text().strip()
         nombre = self.nombreeditar.text().strip()
-        cantidad = self.candtidadeditar.text().strip()
+        cantidad = self.cantidadeditar.text().strip()
         proveedor = self.proveedoreeditar.text().strip()
 
         campos = []
@@ -325,7 +323,7 @@ class Almacen(QtWidgets.QWidget):
                 self.codigoeditar.clear()
                 self.precioeditar.clear()
                 self.nombreeditar.clear()
-                self.candtidadeditar.clear()
+                self.cantidadeditar.clear()
                 self.proveedoreeditar.clear()
                 self.tableeditar.setRowCount(0)
             else:

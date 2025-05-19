@@ -18,7 +18,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
+    <width>1091</width>
     <height>501</height>
    </size>
   </property>
@@ -36,10 +36,10 @@
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>1</x>
+     <x>-9</x>
      <y>0</y>
-     <width>1110</width>
-     <height>503</height>
+     <width>1101</width>
+     <height>501</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -953,7 +953,7 @@ border-left: 2px solid #5d432c;
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="proveedoreditar">
+         <widget class="QLineEdit" name="proveedoreeditar">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -2549,6 +2549,19 @@ font: 63 italic 10pt &quot;Sitka Small Semibold&quot; ;
            </widget>
           </item>
           <item>
+           <spacer name="horizontalSpacer_37">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QLabel" name="nombreencargado">
             <property name="minimumSize">
              <size>
@@ -2693,6 +2706,19 @@ font: 63 italic 10pt &quot;Sitka Small Semibold&quot; ;
            <string>Búsqueda</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_38">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <widget class="QLineEdit" name="barrabusqueda">
