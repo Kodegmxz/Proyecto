@@ -36,9 +36,9 @@
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>1</x>
      <y>0</y>
-     <width>1020</width>
+     <width>1110</width>
      <height>503</height>
     </rect>
    </property>
@@ -2471,7 +2471,7 @@ QComboBox::item:selected {
      <widget class="QWidget" name="wprincipal" native="true">
       <property name="minimumSize">
        <size>
-        <width>1</width>
+        <width>100</width>
         <height>501</height>
        </size>
       </property>
@@ -2549,7 +2549,7 @@ font: 63 italic 10pt &quot;Sitka Small Semibold&quot; ;
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_9">
+           <widget class="QLabel" name="nombreencargado">
             <property name="minimumSize">
              <size>
               <width>431</width>

@@ -206,11 +206,17 @@ class Almacen(QtWidgets.QWidget):
             cursor.execute(query, (codigo, precio, nombre, cantidad, proveedor, fecha_ingreso))
             self.db.db.commit()
             QMessageBox.information(self, "Éxito", "Producto agregado correctamente.")
-            
+
             # Emitir la señal para notificar que se agregó un producto
             self.producto_agregado.emit()
-            
-            self.close()
+
+            # self.close()  # <-- Quita o comenta esta línea
+            # Opcional: limpia los campos para permitir agregar otro producto
+            self.linecodigo.clear()
+            self.lineprecio.clear()
+            self.linenombre.clear()
+            self.linecantidad.clear()
+            self.lineproveedor.clear()
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Ocurrió un error al agregar el producto: {e}")
 
@@ -314,6 +320,14 @@ class Almacen(QtWidgets.QWidget):
             if cursor.rowcount > 0:
                 self.db.commit()
                 QtWidgets.QMessageBox.information(self, "Éxito", "El producto se actualizó correctamente.")
+
+                # Limpiar campos y tabla de edición
+                self.codigoeditar.clear()
+                self.precioeditar.clear()
+                self.nombreeditar.clear()
+                self.candtidadeditar.clear()
+                self.proveedoreeditar.clear()
+                self.tableeditar.setRowCount(0)
             else:
                 QtWidgets.QMessageBox.warning(self, "Error", "No se encontró ningún producto con ese código para actualizar.")
         except Exception as e:
@@ -387,18 +401,18 @@ class Almacen(QtWidgets.QWidget):
             if cursor.rowcount > 0:  # Verificar si se eliminó alguna fila
                 self.db.commit()  # Confirmar los cambios en la base de datos
                 QtWidgets.QMessageBox.information(self, "Éxito", f"El producto con código {codigo} ha sido eliminado.")
+
+                # Limpiar el tableWidget y el campo de texto
+                self.tableeliminar.setRowCount(0)
+                self.codigoeliminar.clear()
             else:
                 QtWidgets.QMessageBox.warning(self, "Error", "No se encontró ningún producto con ese código para eliminar.")
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Ocurrió un error al eliminar el producto: {e}")
 
-        # Limpiar el tableWidget y el campo de texto
-        self.tableeliminar.setRowCount(0)
-        self.codigoeliminar.clear()
-
 def a3(db, widget): 
     almacen_w = Almacen(widget, db)
     widget.addWidget(almacen_w)
-    widget.setFixedWidth(931)
-    widget.setFixedHeight(641)
+    widget.setFixedWidth(1091)
+    widget.setFixedHeight(501)
     widget.setCurrentIndex(widget.currentIndex() + 1)
