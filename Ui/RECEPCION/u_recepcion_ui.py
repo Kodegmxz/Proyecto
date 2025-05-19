@@ -25,7 +25,8 @@ class Ui_Dialog(object):
         self.menu = QtWidgets.QWidget(Dialog)
         self.menu.setMinimumSize(QtCore.QSize(111, 501))
         self.menu.setMaximumSize(QtCore.QSize(111, 501))
-        self.menu.setStyleSheet("background-color: #f5f5f5")
+        self.menu.setStyleSheet("background-color: #f5f5f5;\n"
+"border-right: 2px solid #5d432c;")
         self.menu.setObjectName("menu")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.menu)
         self.verticalLayout_3.setContentsMargins(-1, 10, -1, 15)
@@ -37,8 +38,12 @@ class Ui_Dialog(object):
         self.label = QtWidgets.QLabel(self.menu)
         self.label.setMinimumSize(QtCore.QSize(71, 31))
         self.label.setMaximumSize(QtCore.QSize(71, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        self.label.setFont(font)
         self.label.setStyleSheet("background-color: #f5f5f5;\n"
-"border: 1px solid #333333;\n"
+"border: 2px solid #5d432c;\n"
 "border-radius: 10px;\n"
 "color: #333333")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
@@ -56,6 +61,7 @@ class Ui_Dialog(object):
         self.widget_2 = QtWidgets.QWidget(self.menu)
         self.widget_2.setMinimumSize(QtCore.QSize(71, 41))
         self.widget_2.setMaximumSize(QtCore.QSize(71, 41))
+        self.widget_2.setStyleSheet("border: 0px")
         self.widget_2.setObjectName("widget_2")
         self.label_3 = QtWidgets.QLabel(self.widget_2)
         self.label_3.setGeometry(QtCore.QRect(0, 0, 71, 31))
@@ -68,7 +74,7 @@ class Ui_Dialog(object):
         self.label_6 = QtWidgets.QLabel(self.widget_2)
         self.label_6.setGeometry(QtCore.QRect(10, 10, 51, 31))
         font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
+        font.setFamily("Segoe UI")
         self.label_6.setFont(font)
         self.label_6.setStyleSheet("background-color: #333333;\n"
 "border: 1px solid;\n"
@@ -90,6 +96,7 @@ class Ui_Dialog(object):
         self.widget_4 = QtWidgets.QWidget(self.menu)
         self.widget_4.setMinimumSize(QtCore.QSize(71, 41))
         self.widget_4.setMaximumSize(QtCore.QSize(71, 41))
+        self.widget_4.setStyleSheet("border: 0px")
         self.widget_4.setObjectName("widget_4")
         self.label_4 = QtWidgets.QLabel(self.widget_4)
         self.label_4.setGeometry(QtCore.QRect(0, 0, 71, 31))
@@ -102,7 +109,7 @@ class Ui_Dialog(object):
         self.label_8 = QtWidgets.QLabel(self.widget_4)
         self.label_8.setGeometry(QtCore.QRect(10, 10, 51, 31))
         font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
+        font.setFamily("Segoe UI")
         self.label_8.setFont(font)
         self.label_8.setStyleSheet("background-color: #333333;\n"
 "border: 1px solid;\n"
@@ -124,11 +131,12 @@ class Ui_Dialog(object):
         self.widget_5 = QtWidgets.QWidget(self.menu)
         self.widget_5.setMinimumSize(QtCore.QSize(71, 41))
         self.widget_5.setMaximumSize(QtCore.QSize(71, 41))
+        self.widget_5.setStyleSheet("border: 10px")
         self.widget_5.setObjectName("widget_5")
         self.label_7 = QtWidgets.QLabel(self.widget_5)
         self.label_7.setGeometry(QtCore.QRect(10, 10, 51, 31))
         font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
+        font.setFamily("Segoe UI")
         self.label_7.setFont(font)
         self.label_7.setStyleSheet("background-color: #333333;\n"
 "border: 1px solid;\n"
@@ -157,9 +165,12 @@ class Ui_Dialog(object):
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
         spacerItem12 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_11.addItem(spacerItem12)
-        self.pushButton = QtWidgets.QPushButton(self.menu)
-        self.pushButton.setMinimumSize(QtCore.QSize(71, 51))
-        self.pushButton.setStyleSheet("QPushButton {background-color: #333333;\n"
+        self.b_resv_menu = QtWidgets.QPushButton(self.menu)
+        self.b_resv_menu.setMinimumSize(QtCore.QSize(71, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_resv_menu.setFont(font)
+        self.b_resv_menu.setStyleSheet("QPushButton {background-color: #333333;\n"
 "        border: 1px solid #f5f5f5;\n"
 "        border-radius: 10px;\n"
 "        color: rgb(245, 245, 245)\n"
@@ -168,20 +179,21 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #2a2a2a;\n"
 "    }")
-        self.pushButton.setCheckable(True)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout_11.addWidget(self.pushButton)
+        self.b_resv_menu.setCheckable(True)
+        self.b_resv_menu.setObjectName("b_resv_menu")
+        self.horizontalLayout_11.addWidget(self.b_resv_menu)
         spacerItem13 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_11.addItem(spacerItem13)
         self.verticalLayout_3.addLayout(self.horizontalLayout_11)
-        spacerItem14 = QtWidgets.QSpacerItem(25, 15, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_3.addItem(spacerItem14)
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
-        spacerItem15 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_12.addItem(spacerItem15)
+        spacerItem14 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_12.addItem(spacerItem14)
         self.b_salir_1 = QtWidgets.QPushButton(self.menu)
         self.b_salir_1.setMinimumSize(QtCore.QSize(71, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_salir_1.setFont(font)
         self.b_salir_1.setStyleSheet("QPushButton {background-color: #333333;\n"
 "        border: 1px solid #f5f5f5;\n"
 "        border-radius: 10px;\n"
@@ -193,46 +205,49 @@ class Ui_Dialog(object):
 "    }")
         self.b_salir_1.setObjectName("b_salir_1")
         self.horizontalLayout_12.addWidget(self.b_salir_1)
-        spacerItem16 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_12.addItem(spacerItem16)
+        spacerItem15 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_12.addItem(spacerItem15)
         self.verticalLayout_3.addLayout(self.horizontalLayout_12)
         self.horizontalLayout_3.addWidget(self.menu)
         self.Reservaciones = QtWidgets.QWidget(Dialog)
         self.Reservaciones.setMinimumSize(QtCore.QSize(271, 501))
         self.Reservaciones.setMaximumSize(QtCore.QSize(271, 501))
         self.Reservaciones.setStyleSheet("background-color: #333333;\n"
-"border-color: #f5f5f5;\n"
+"border-left: 2px solid #5d432c;\n"
+"\n"
 "")
         self.Reservaciones.setObjectName("Reservaciones")
-        self.tableWidget = QtWidgets.QTableWidget(self.Reservaciones)
-        self.tableWidget.setGeometry(QtCore.QRect(10, 60, 251, 301))
-        self.tableWidget.setStyleSheet("background-color: #f5f5f5;\n"
-"border: 1px solid #333333")
-        self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(5)
-        self.tableWidget.setRowCount(0)
+        self.resv_widget = QtWidgets.QTableWidget(self.Reservaciones)
+        self.resv_widget.setGeometry(QtCore.QRect(10, 60, 251, 301))
+        self.resv_widget.setStyleSheet("background-color: #f5f5f5;")
+        self.resv_widget.setObjectName("resv_widget")
+        self.resv_widget.setColumnCount(5)
+        self.resv_widget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, item)
+        self.resv_widget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, item)
+        self.resv_widget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, item)
+        self.resv_widget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, item)
+        self.resv_widget.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, item)
+        self.resv_widget.setHorizontalHeaderItem(4, item)
         self.layoutWidget_2 = QtWidgets.QWidget(self.Reservaciones)
         self.layoutWidget_2.setGeometry(QtCore.QRect(0, 460, 271, 26))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        spacerItem17 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem17)
-        self.pushButton_4 = QtWidgets.QPushButton(self.layoutWidget_2)
-        self.pushButton_4.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_4.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_4.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem16 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem16)
+        self.b_cerrar_resv = QtWidgets.QPushButton(self.layoutWidget_2)
+        self.b_cerrar_resv.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_cerrar_resv.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_cerrar_resv.setFont(font)
+        self.b_cerrar_resv.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -241,42 +256,49 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.horizontalLayout_5.addWidget(self.pushButton_4)
-        spacerItem18 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem18)
+        self.b_cerrar_resv.setObjectName("b_cerrar_resv")
+        self.horizontalLayout_5.addWidget(self.b_cerrar_resv)
+        spacerItem17 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem17)
         self.layoutWidget = QtWidgets.QWidget(self.Reservaciones)
         self.layoutWidget.setGeometry(QtCore.QRect(0, 10, 271, 33))
         self.layoutWidget.setObjectName("layoutWidget")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem19)
+        spacerItem18 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem18)
         self.label_11 = QtWidgets.QLabel(self.layoutWidget)
-        self.label_11.setMinimumSize(QtCore.QSize(131, 31))
-        self.label_11.setMaximumSize(QtCore.QSize(131, 31))
-        self.label_11.setStyleSheet("background-color: #f5f5f5;\n"
-"border: 1px solid;\n"
+        self.label_11.setMinimumSize(QtCore.QSize(151, 31))
+        self.label_11.setMaximumSize(QtCore.QSize(151, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("background-color: #333333;\n"
+"border: 2px solid #5d432c;\n"
 "border-radius: 10px;\n"
-"color: #333333")
+"color: #f5f5f5")
         self.label_11.setAlignment(QtCore.Qt.AlignCenter)
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_4.addWidget(self.label_11)
-        spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem20)
+        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem19)
         self.layoutWidget_3 = QtWidgets.QWidget(self.Reservaciones)
         self.layoutWidget_3.setGeometry(QtCore.QRect(0, 420, 271, 26))
         self.layoutWidget_3.setObjectName("layoutWidget_3")
         self.horizontalLayout_13 = QtWidgets.QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
-        spacerItem21 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_13.addItem(spacerItem21)
-        self.pushButton_5 = QtWidgets.QPushButton(self.layoutWidget_3)
-        self.pushButton_5.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_5.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_5.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem20 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem20)
+        self.b_editar_resv = QtWidgets.QPushButton(self.layoutWidget_3)
+        self.b_editar_resv.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_editar_resv.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_editar_resv.setFont(font)
+        self.b_editar_resv.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -285,22 +307,25 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.horizontalLayout_13.addWidget(self.pushButton_5)
-        spacerItem22 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_13.addItem(spacerItem22)
+        self.b_editar_resv.setObjectName("b_editar_resv")
+        self.horizontalLayout_13.addWidget(self.b_editar_resv)
+        spacerItem21 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem21)
         self.layoutWidget_4 = QtWidgets.QWidget(self.Reservaciones)
         self.layoutWidget_4.setGeometry(QtCore.QRect(0, 380, 271, 26))
         self.layoutWidget_4.setObjectName("layoutWidget_4")
         self.horizontalLayout_14 = QtWidgets.QHBoxLayout(self.layoutWidget_4)
         self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
-        spacerItem23 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_14.addItem(spacerItem23)
-        self.pushButton_6 = QtWidgets.QPushButton(self.layoutWidget_4)
-        self.pushButton_6.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_6.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_6.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem22 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_14.addItem(spacerItem22)
+        self.b_agregar_resv = QtWidgets.QPushButton(self.layoutWidget_4)
+        self.b_agregar_resv.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_agregar_resv.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_agregar_resv.setFont(font)
+        self.b_agregar_resv.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -309,16 +334,16 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_6.setObjectName("pushButton_6")
-        self.horizontalLayout_14.addWidget(self.pushButton_6)
-        spacerItem24 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_14.addItem(spacerItem24)
+        self.b_agregar_resv.setObjectName("b_agregar_resv")
+        self.horizontalLayout_14.addWidget(self.b_agregar_resv)
+        spacerItem23 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_14.addItem(spacerItem23)
         self.horizontalLayout_3.addWidget(self.Reservaciones)
         self.Reservaciones_2 = QtWidgets.QWidget(Dialog)
         self.Reservaciones_2.setMinimumSize(QtCore.QSize(271, 501))
         self.Reservaciones_2.setMaximumSize(QtCore.QSize(271, 501))
         self.Reservaciones_2.setStyleSheet("background-color: #333333;\n"
-"border-color: #f5f5f5;\n"
+"border-left: 2px solid #5d432c;\n"
 "")
         self.Reservaciones_2.setObjectName("Reservaciones_2")
         self.layoutWidget_5 = QtWidgets.QWidget(self.Reservaciones_2)
@@ -327,12 +352,15 @@ class Ui_Dialog(object):
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout(self.layoutWidget_5)
         self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
-        spacerItem25 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_15.addItem(spacerItem25)
-        self.pushButton_7 = QtWidgets.QPushButton(self.layoutWidget_5)
-        self.pushButton_7.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_7.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_7.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem24 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_15.addItem(spacerItem24)
+        self.b_cerrar_resv_2 = QtWidgets.QPushButton(self.layoutWidget_5)
+        self.b_cerrar_resv_2.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_cerrar_resv_2.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_cerrar_resv_2.setFont(font)
+        self.b_cerrar_resv_2.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -341,42 +369,49 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_7.setObjectName("pushButton_7")
-        self.horizontalLayout_15.addWidget(self.pushButton_7)
-        spacerItem26 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_15.addItem(spacerItem26)
+        self.b_cerrar_resv_2.setObjectName("b_cerrar_resv_2")
+        self.horizontalLayout_15.addWidget(self.b_cerrar_resv_2)
+        spacerItem25 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_15.addItem(spacerItem25)
         self.layoutWidget_6 = QtWidgets.QWidget(self.Reservaciones_2)
         self.layoutWidget_6.setGeometry(QtCore.QRect(0, 10, 271, 33))
         self.layoutWidget_6.setObjectName("layoutWidget_6")
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout(self.layoutWidget_6)
         self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
-        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_16.addItem(spacerItem27)
+        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_16.addItem(spacerItem26)
         self.label_12 = QtWidgets.QLabel(self.layoutWidget_6)
-        self.label_12.setMinimumSize(QtCore.QSize(131, 31))
-        self.label_12.setMaximumSize(QtCore.QSize(131, 31))
-        self.label_12.setStyleSheet("background-color: #f5f5f5;\n"
-"border: 1px solid;\n"
+        self.label_12.setMinimumSize(QtCore.QSize(151, 31))
+        self.label_12.setMaximumSize(QtCore.QSize(151, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        self.label_12.setFont(font)
+        self.label_12.setStyleSheet("background-color: #333333;\n"
+"border: 2px solid #5d432c;\n"
 "border-radius: 10px;\n"
-"color: #333333")
+"color: #f5f5f5")
         self.label_12.setAlignment(QtCore.Qt.AlignCenter)
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_16.addWidget(self.label_12)
-        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_16.addItem(spacerItem28)
+        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_16.addItem(spacerItem27)
         self.layoutWidget_7 = QtWidgets.QWidget(self.Reservaciones_2)
         self.layoutWidget_7.setGeometry(QtCore.QRect(0, 340, 271, 26))
         self.layoutWidget_7.setObjectName("layoutWidget_7")
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.layoutWidget_7)
         self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
-        spacerItem29 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_17.addItem(spacerItem29)
-        self.pushButton_8 = QtWidgets.QPushButton(self.layoutWidget_7)
-        self.pushButton_8.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_8.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_8.setStyleSheet("QPushButton {background-color: #62b13d;\n"
+        spacerItem28 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem28)
+        self.b_agregar_resv_2 = QtWidgets.QPushButton(self.layoutWidget_7)
+        self.b_agregar_resv_2.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_agregar_resv_2.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_agregar_resv_2.setFont(font)
+        self.b_agregar_resv_2.setStyleSheet("QPushButton {background-color: #62b13d;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -385,106 +420,137 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
-        self.pushButton_8.setObjectName("pushButton_8")
-        self.horizontalLayout_17.addWidget(self.pushButton_8)
-        spacerItem30 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_17.addItem(spacerItem30)
+        self.b_agregar_resv_2.setCheckable(True)
+        self.b_agregar_resv_2.setObjectName("b_agregar_resv_2")
+        self.horizontalLayout_17.addWidget(self.b_agregar_resv_2)
+        spacerItem29 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem29)
         self.widget = QtWidgets.QWidget(self.Reservaciones_2)
         self.widget.setGeometry(QtCore.QRect(10, 60, 249, 261))
-        self.widget.setStyleSheet("background-color: #f5f5f5")
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.widget.setFont(font)
+        self.widget.setStyleSheet("background-color: #f5f5f5;\n"
+"border-radius: 10px;\n"
+"border: 2px solid #5d432c;\n"
+"")
         self.widget.setObjectName("widget")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.widget_3 = QtWidgets.QWidget(self.widget)
         self.widget_3.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_3.setStyleSheet("border: 0px")
         self.widget_3.setObjectName("widget_3")
         self.label_13 = QtWidgets.QLabel(self.widget_3)
         self.label_13.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_13.setFont(font)
         self.label_13.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_13.setAlignment(QtCore.Qt.AlignCenter)
         self.label_13.setObjectName("label_13")
-        self.lineEdit = QtWidgets.QLineEdit(self.widget_3)
-        self.lineEdit.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit.setObjectName("lineEdit")
+        self.resv_2_name = QtWidgets.QLineEdit(self.widget_3)
+        self.resv_2_name.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_2_name.setFont(font)
+        self.resv_2_name.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_2_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_2_name.setObjectName("resv_2_name")
         self.verticalLayout_4.addWidget(self.widget_3)
-        spacerItem31 = QtWidgets.QSpacerItem(20, 11, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem31)
+        spacerItem30 = QtWidgets.QSpacerItem(20, 11, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem30)
         self.widget_6 = QtWidgets.QWidget(self.widget)
         self.widget_6.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_6.setStyleSheet("border: 0px")
         self.widget_6.setObjectName("widget_6")
         self.label_15 = QtWidgets.QLabel(self.widget_6)
         self.label_15.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_15.setFont(font)
         self.label_15.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_15.setAlignment(QtCore.Qt.AlignCenter)
         self.label_15.setObjectName("label_15")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.widget_6)
-        self.lineEdit_3.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_3.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_3.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.resv_2_cant = QtWidgets.QLineEdit(self.widget_6)
+        self.resv_2_cant.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_2_cant.setFont(font)
+        self.resv_2_cant.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_2_cant.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_2_cant.setObjectName("resv_2_cant")
         self.verticalLayout_4.addWidget(self.widget_6)
-        spacerItem32 = QtWidgets.QSpacerItem(20, 12, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem32)
+        spacerItem31 = QtWidgets.QSpacerItem(20, 12, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem31)
         self.widget_7 = QtWidgets.QWidget(self.widget)
         self.widget_7.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_7.setStyleSheet("border: 0px")
         self.widget_7.setObjectName("widget_7")
         self.label_16 = QtWidgets.QLabel(self.widget_7)
         self.label_16.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_16.setFont(font)
         self.label_16.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_16.setAlignment(QtCore.Qt.AlignCenter)
         self.label_16.setObjectName("label_16")
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.widget_7)
-        self.lineEdit_4.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_4.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_4.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.resv_2_fecha = QtWidgets.QLineEdit(self.widget_7)
+        self.resv_2_fecha.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_2_fecha.setFont(font)
+        self.resv_2_fecha.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_2_fecha.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_2_fecha.setObjectName("resv_2_fecha")
         self.verticalLayout_4.addWidget(self.widget_7)
-        spacerItem33 = QtWidgets.QSpacerItem(20, 11, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem33)
+        spacerItem32 = QtWidgets.QSpacerItem(20, 11, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem32)
         self.widget_8 = QtWidgets.QWidget(self.widget)
         self.widget_8.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_8.setStyleSheet("border: 0px")
         self.widget_8.setObjectName("widget_8")
         self.label_18 = QtWidgets.QLabel(self.widget_8)
         self.label_18.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_18.setFont(font)
         self.label_18.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_18.setAlignment(QtCore.Qt.AlignCenter)
         self.label_18.setObjectName("label_18")
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.widget_8)
-        self.lineEdit_6.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_6.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_6.setObjectName("lineEdit_6")
+        self.resv_2_hora = QtWidgets.QLineEdit(self.widget_8)
+        self.resv_2_hora.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_2_hora.setFont(font)
+        self.resv_2_hora.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_2_hora.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_2_hora.setObjectName("resv_2_hora")
         self.verticalLayout_4.addWidget(self.widget_8)
         self.layoutWidget_8 = QtWidgets.QWidget(self.Reservaciones_2)
         self.layoutWidget_8.setGeometry(QtCore.QRect(0, 420, 271, 26))
@@ -492,12 +558,15 @@ class Ui_Dialog(object):
         self.horizontalLayout_18 = QtWidgets.QHBoxLayout(self.layoutWidget_8)
         self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_18.setObjectName("horizontalLayout_18")
-        spacerItem34 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_18.addItem(spacerItem34)
-        self.pushButton_9 = QtWidgets.QPushButton(self.layoutWidget_8)
-        self.pushButton_9.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_9.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_9.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem33 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem33)
+        self.b_eliminar_resv_2 = QtWidgets.QPushButton(self.layoutWidget_8)
+        self.b_eliminar_resv_2.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_eliminar_resv_2.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_eliminar_resv_2.setFont(font)
+        self.b_eliminar_resv_2.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -506,22 +575,25 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_9.setObjectName("pushButton_9")
-        self.horizontalLayout_18.addWidget(self.pushButton_9)
-        spacerItem35 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_18.addItem(spacerItem35)
+        self.b_eliminar_resv_2.setObjectName("b_eliminar_resv_2")
+        self.horizontalLayout_18.addWidget(self.b_eliminar_resv_2)
+        spacerItem34 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem34)
         self.layoutWidget_13 = QtWidgets.QWidget(self.Reservaciones_2)
         self.layoutWidget_13.setGeometry(QtCore.QRect(0, 380, 271, 26))
         self.layoutWidget_13.setObjectName("layoutWidget_13")
         self.horizontalLayout_23 = QtWidgets.QHBoxLayout(self.layoutWidget_13)
         self.horizontalLayout_23.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_23.setObjectName("horizontalLayout_23")
-        spacerItem36 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_23.addItem(spacerItem36)
-        self.pushButton_13 = QtWidgets.QPushButton(self.layoutWidget_13)
-        self.pushButton_13.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_13.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_13.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem35 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_23.addItem(spacerItem35)
+        self.b_editar_resv_2 = QtWidgets.QPushButton(self.layoutWidget_13)
+        self.b_editar_resv_2.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_editar_resv_2.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_editar_resv_2.setFont(font)
+        self.b_editar_resv_2.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -530,17 +602,16 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_13.setObjectName("pushButton_13")
-        self.horizontalLayout_23.addWidget(self.pushButton_13)
-        spacerItem37 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_23.addItem(spacerItem37)
+        self.b_editar_resv_2.setObjectName("b_editar_resv_2")
+        self.horizontalLayout_23.addWidget(self.b_editar_resv_2)
+        spacerItem36 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_23.addItem(spacerItem36)
         self.horizontalLayout_3.addWidget(self.Reservaciones_2)
         self.Reservaciones_3 = QtWidgets.QWidget(Dialog)
         self.Reservaciones_3.setMinimumSize(QtCore.QSize(271, 501))
         self.Reservaciones_3.setMaximumSize(QtCore.QSize(271, 501))
         self.Reservaciones_3.setStyleSheet("background-color: #333333;\n"
-"border-color: #f5f5f5;\n"
-"")
+"border-left: 2px solid #5d432c;")
         self.Reservaciones_3.setObjectName("Reservaciones_3")
         self.layoutWidget_9 = QtWidgets.QWidget(self.Reservaciones_3)
         self.layoutWidget_9.setGeometry(QtCore.QRect(0, 460, 271, 26))
@@ -548,12 +619,15 @@ class Ui_Dialog(object):
         self.horizontalLayout_19 = QtWidgets.QHBoxLayout(self.layoutWidget_9)
         self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_19.setObjectName("horizontalLayout_19")
-        spacerItem38 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_19.addItem(spacerItem38)
-        self.pushButton_10 = QtWidgets.QPushButton(self.layoutWidget_9)
-        self.pushButton_10.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_10.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_10.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem37 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_19.addItem(spacerItem37)
+        self.b_cerrar_resv_3 = QtWidgets.QPushButton(self.layoutWidget_9)
+        self.b_cerrar_resv_3.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_cerrar_resv_3.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_cerrar_resv_3.setFont(font)
+        self.b_cerrar_resv_3.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -562,42 +636,49 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_10.setObjectName("pushButton_10")
-        self.horizontalLayout_19.addWidget(self.pushButton_10)
-        spacerItem39 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_19.addItem(spacerItem39)
+        self.b_cerrar_resv_3.setObjectName("b_cerrar_resv_3")
+        self.horizontalLayout_19.addWidget(self.b_cerrar_resv_3)
+        spacerItem38 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_19.addItem(spacerItem38)
         self.layoutWidget_10 = QtWidgets.QWidget(self.Reservaciones_3)
         self.layoutWidget_10.setGeometry(QtCore.QRect(0, 10, 271, 33))
         self.layoutWidget_10.setObjectName("layoutWidget_10")
         self.horizontalLayout_20 = QtWidgets.QHBoxLayout(self.layoutWidget_10)
         self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_20.setObjectName("horizontalLayout_20")
-        spacerItem40 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_20.addItem(spacerItem40)
+        spacerItem39 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_20.addItem(spacerItem39)
         self.label_19 = QtWidgets.QLabel(self.layoutWidget_10)
-        self.label_19.setMinimumSize(QtCore.QSize(131, 31))
-        self.label_19.setMaximumSize(QtCore.QSize(131, 31))
-        self.label_19.setStyleSheet("background-color: #f5f5f5;\n"
-"border: 1px solid;\n"
+        self.label_19.setMinimumSize(QtCore.QSize(151, 31))
+        self.label_19.setMaximumSize(QtCore.QSize(151, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        self.label_19.setFont(font)
+        self.label_19.setStyleSheet("background-color: #333333;\n"
+"border: 2px solid #5d432c;\n"
 "border-radius: 10px;\n"
-"color: #333333")
+"color: #f5f5f5")
         self.label_19.setAlignment(QtCore.Qt.AlignCenter)
         self.label_19.setObjectName("label_19")
         self.horizontalLayout_20.addWidget(self.label_19)
-        spacerItem41 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_20.addItem(spacerItem41)
+        spacerItem40 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_20.addItem(spacerItem40)
         self.layoutWidget_11 = QtWidgets.QWidget(self.Reservaciones_3)
         self.layoutWidget_11.setGeometry(QtCore.QRect(0, 380, 271, 26))
         self.layoutWidget_11.setObjectName("layoutWidget_11")
         self.horizontalLayout_21 = QtWidgets.QHBoxLayout(self.layoutWidget_11)
         self.horizontalLayout_21.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_21.setObjectName("horizontalLayout_21")
-        spacerItem42 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_21.addItem(spacerItem42)
-        self.pushButton_11 = QtWidgets.QPushButton(self.layoutWidget_11)
-        self.pushButton_11.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_11.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_11.setStyleSheet("QPushButton {background-color: #62b13d;\n"
+        spacerItem41 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_21.addItem(spacerItem41)
+        self.b_editar_resv_3 = QtWidgets.QPushButton(self.layoutWidget_11)
+        self.b_editar_resv_3.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_editar_resv_3.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_editar_resv_3.setFont(font)
+        self.b_editar_resv_3.setStyleSheet("QPushButton {background-color: #62b13d;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -606,22 +687,25 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
-        self.pushButton_11.setObjectName("pushButton_11")
-        self.horizontalLayout_21.addWidget(self.pushButton_11)
-        spacerItem43 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_21.addItem(spacerItem43)
+        self.b_editar_resv_3.setObjectName("b_editar_resv_3")
+        self.horizontalLayout_21.addWidget(self.b_editar_resv_3)
+        spacerItem42 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_21.addItem(spacerItem42)
         self.layoutWidget_12 = QtWidgets.QWidget(self.Reservaciones_3)
         self.layoutWidget_12.setGeometry(QtCore.QRect(0, 420, 271, 26))
         self.layoutWidget_12.setObjectName("layoutWidget_12")
         self.horizontalLayout_22 = QtWidgets.QHBoxLayout(self.layoutWidget_12)
         self.horizontalLayout_22.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_22.setObjectName("horizontalLayout_22")
-        spacerItem44 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_22.addItem(spacerItem44)
-        self.pushButton_12 = QtWidgets.QPushButton(self.layoutWidget_12)
-        self.pushButton_12.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_12.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_12.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem43 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_22.addItem(spacerItem43)
+        self.b_eliminar_resv_3 = QtWidgets.QPushButton(self.layoutWidget_12)
+        self.b_eliminar_resv_3.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_eliminar_resv_3.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_eliminar_resv_3.setFont(font)
+        self.b_eliminar_resv_3.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -630,125 +714,158 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_12.setObjectName("pushButton_12")
-        self.horizontalLayout_22.addWidget(self.pushButton_12)
-        spacerItem45 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_22.addItem(spacerItem45)
+        self.b_eliminar_resv_3.setObjectName("b_eliminar_resv_3")
+        self.horizontalLayout_22.addWidget(self.b_eliminar_resv_3)
+        spacerItem44 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_22.addItem(spacerItem44)
         self.widget_9 = QtWidgets.QWidget(self.Reservaciones_3)
         self.widget_9.setGeometry(QtCore.QRect(10, 60, 249, 281))
-        self.widget_9.setStyleSheet("background-color: #f5f5f5")
+        self.widget_9.setStyleSheet("background-color: #f5f5f5;\n"
+"border: 2px solid #5d432c;\n"
+"border-radius: 10px;")
         self.widget_9.setObjectName("widget_9")
         self.widget_10 = QtWidgets.QWidget(self.widget_9)
         self.widget_10.setGeometry(QtCore.QRect(10, 10, 231, 41))
         self.widget_10.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_10.setStyleSheet("border: 0px")
         self.widget_10.setObjectName("widget_10")
         self.label_20 = QtWidgets.QLabel(self.widget_10)
         self.label_20.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_20.setFont(font)
         self.label_20.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_20.setAlignment(QtCore.Qt.AlignCenter)
         self.label_20.setObjectName("label_20")
-        self.lineEdit_7 = QtWidgets.QLineEdit(self.widget_10)
-        self.lineEdit_7.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_7.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_7.setObjectName("lineEdit_7")
+        self.resv_3_codigo = QtWidgets.QLineEdit(self.widget_10)
+        self.resv_3_codigo.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_3_codigo.setFont(font)
+        self.resv_3_codigo.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_3_codigo.setText("")
+        self.resv_3_codigo.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_3_codigo.setObjectName("resv_3_codigo")
         self.widget_14 = QtWidgets.QWidget(self.widget_9)
         self.widget_14.setGeometry(QtCore.QRect(10, 130, 231, 41))
         self.widget_14.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_14.setStyleSheet("border: 0px")
         self.widget_14.setObjectName("widget_14")
         self.label_24 = QtWidgets.QLabel(self.widget_14)
         self.label_24.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_24.setFont(font)
         self.label_24.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_24.setAlignment(QtCore.Qt.AlignCenter)
         self.label_24.setObjectName("label_24")
-        self.lineEdit_11 = QtWidgets.QLineEdit(self.widget_14)
-        self.lineEdit_11.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_11.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_11.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_11.setObjectName("lineEdit_11")
+        self.resv_3_cantidad = QtWidgets.QLineEdit(self.widget_14)
+        self.resv_3_cantidad.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_3_cantidad.setFont(font)
+        self.resv_3_cantidad.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_3_cantidad.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_3_cantidad.setObjectName("resv_3_cantidad")
         self.widget_11 = QtWidgets.QWidget(self.widget_9)
         self.widget_11.setGeometry(QtCore.QRect(10, 230, 231, 41))
         self.widget_11.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_11.setStyleSheet("border: 0px")
         self.widget_11.setObjectName("widget_11")
         self.label_21 = QtWidgets.QLabel(self.widget_11)
         self.label_21.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_21.setFont(font)
         self.label_21.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_21.setAlignment(QtCore.Qt.AlignCenter)
         self.label_21.setObjectName("label_21")
-        self.lineEdit_8 = QtWidgets.QLineEdit(self.widget_11)
-        self.lineEdit_8.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_8.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_8.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_8.setObjectName("lineEdit_8")
+        self.resv_3_hora = QtWidgets.QLineEdit(self.widget_11)
+        self.resv_3_hora.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_3_hora.setFont(font)
+        self.resv_3_hora.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_3_hora.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_3_hora.setObjectName("resv_3_hora")
         self.widget_13 = QtWidgets.QWidget(self.widget_9)
         self.widget_13.setGeometry(QtCore.QRect(10, 80, 231, 41))
         self.widget_13.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_13.setStyleSheet("border: 0px")
         self.widget_13.setObjectName("widget_13")
         self.label_23 = QtWidgets.QLabel(self.widget_13)
         self.label_23.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_23.setFont(font)
         self.label_23.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_23.setAlignment(QtCore.Qt.AlignCenter)
         self.label_23.setObjectName("label_23")
-        self.lineEdit_10 = QtWidgets.QLineEdit(self.widget_13)
-        self.lineEdit_10.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_10.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_10.setObjectName("lineEdit_10")
+        self.resv_3_name = QtWidgets.QLineEdit(self.widget_13)
+        self.resv_3_name.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_3_name.setFont(font)
+        self.resv_3_name.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_3_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_3_name.setObjectName("resv_3_name")
         self.widget_12 = QtWidgets.QWidget(self.widget_9)
         self.widget_12.setGeometry(QtCore.QRect(10, 180, 231, 41))
         self.widget_12.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_12.setStyleSheet("border: 0px")
         self.widget_12.setObjectName("widget_12")
         self.label_22 = QtWidgets.QLabel(self.widget_12)
         self.label_22.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_22.setFont(font)
         self.label_22.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_22.setAlignment(QtCore.Qt.AlignCenter)
         self.label_22.setObjectName("label_22")
-        self.lineEdit_9 = QtWidgets.QLineEdit(self.widget_12)
-        self.lineEdit_9.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_9.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_9.setObjectName("lineEdit_9")
+        self.resv_3_fecha = QtWidgets.QLineEdit(self.widget_12)
+        self.resv_3_fecha.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_3_fecha.setFont(font)
+        self.resv_3_fecha.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_3_fecha.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_3_fecha.setObjectName("resv_3_fecha")
         self.horizontalLayout_3.addWidget(self.Reservaciones_3)
         self.Reservaciones_4 = QtWidgets.QWidget(Dialog)
         self.Reservaciones_4.setMinimumSize(QtCore.QSize(271, 501))
         self.Reservaciones_4.setMaximumSize(QtCore.QSize(271, 501))
         self.Reservaciones_4.setStyleSheet("background-color: #333333;\n"
-"border-color: #f5f5f5;\n"
+"border-left: 2px solid #5d432c;\n"
 "")
         self.Reservaciones_4.setObjectName("Reservaciones_4")
         self.layoutWidget_18 = QtWidgets.QWidget(self.Reservaciones_4)
@@ -757,12 +874,15 @@ class Ui_Dialog(object):
         self.horizontalLayout_28 = QtWidgets.QHBoxLayout(self.layoutWidget_18)
         self.horizontalLayout_28.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_28.setObjectName("horizontalLayout_28")
-        spacerItem46 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_28.addItem(spacerItem46)
-        self.pushButton_17 = QtWidgets.QPushButton(self.layoutWidget_18)
-        self.pushButton_17.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_17.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_17.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
+        spacerItem45 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_28.addItem(spacerItem45)
+        self.b_cerrar_resv_4 = QtWidgets.QPushButton(self.layoutWidget_18)
+        self.b_cerrar_resv_4.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_cerrar_resv_4.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_cerrar_resv_4.setFont(font)
+        self.b_cerrar_resv_4.setStyleSheet("QPushButton {background-color: #f5f5f5;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -771,42 +891,48 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #eaeaea;\n"
 "    }")
-        self.pushButton_17.setObjectName("pushButton_17")
-        self.horizontalLayout_28.addWidget(self.pushButton_17)
-        spacerItem47 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_28.addItem(spacerItem47)
+        self.b_cerrar_resv_4.setObjectName("b_cerrar_resv_4")
+        self.horizontalLayout_28.addWidget(self.b_cerrar_resv_4)
+        spacerItem46 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_28.addItem(spacerItem46)
         self.layoutWidget_19 = QtWidgets.QWidget(self.Reservaciones_4)
         self.layoutWidget_19.setGeometry(QtCore.QRect(0, 10, 271, 33))
         self.layoutWidget_19.setObjectName("layoutWidget_19")
         self.horizontalLayout_29 = QtWidgets.QHBoxLayout(self.layoutWidget_19)
         self.horizontalLayout_29.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_29.setObjectName("horizontalLayout_29")
-        spacerItem48 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_29.addItem(spacerItem48)
+        spacerItem47 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_29.addItem(spacerItem47)
         self.label_31 = QtWidgets.QLabel(self.layoutWidget_19)
         self.label_31.setMinimumSize(QtCore.QSize(131, 31))
         self.label_31.setMaximumSize(QtCore.QSize(131, 31))
-        self.label_31.setStyleSheet("background-color: #f5f5f5;\n"
-"border: 1px solid;\n"
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_31.setFont(font)
+        self.label_31.setStyleSheet("background-color: #333333;\n"
+"border: 2px solid #5d432c;\n"
 "border-radius: 10px;\n"
-"color: #333333")
+"color: #f5f5f5")
         self.label_31.setAlignment(QtCore.Qt.AlignCenter)
         self.label_31.setObjectName("label_31")
         self.horizontalLayout_29.addWidget(self.label_31)
-        spacerItem49 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_29.addItem(spacerItem49)
+        spacerItem48 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_29.addItem(spacerItem48)
         self.layoutWidget_21 = QtWidgets.QWidget(self.Reservaciones_4)
         self.layoutWidget_21.setGeometry(QtCore.QRect(0, 200, 271, 26))
         self.layoutWidget_21.setObjectName("layoutWidget_21")
         self.horizontalLayout_31 = QtWidgets.QHBoxLayout(self.layoutWidget_21)
         self.horizontalLayout_31.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_31.setObjectName("horizontalLayout_31")
-        spacerItem50 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_31.addItem(spacerItem50)
-        self.pushButton_19 = QtWidgets.QPushButton(self.layoutWidget_21)
-        self.pushButton_19.setMinimumSize(QtCore.QSize(131, 24))
-        self.pushButton_19.setMaximumSize(QtCore.QSize(131, 24))
-        self.pushButton_19.setStyleSheet("QPushButton {background-color: #62b13d;\n"
+        spacerItem49 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_31.addItem(spacerItem49)
+        self.b_eliminar_resv_4 = QtWidgets.QPushButton(self.layoutWidget_21)
+        self.b_eliminar_resv_4.setMinimumSize(QtCore.QSize(131, 24))
+        self.b_eliminar_resv_4.setMaximumSize(QtCore.QSize(131, 24))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.b_eliminar_resv_4.setFont(font)
+        self.b_eliminar_resv_4.setStyleSheet("QPushButton {background-color: #62b13d;\n"
 "        border: 1px solid #333333;\n"
 "        border-radius: 10px;\n"
 "        color: #333333\n"
@@ -815,40 +941,48 @@ class Ui_Dialog(object):
 "    }\n"
 "    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
-        self.pushButton_19.setObjectName("pushButton_19")
-        self.horizontalLayout_31.addWidget(self.pushButton_19)
-        spacerItem51 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_31.addItem(spacerItem51)
+        self.b_eliminar_resv_4.setObjectName("b_eliminar_resv_4")
+        self.horizontalLayout_31.addWidget(self.b_eliminar_resv_4)
+        spacerItem50 = QtWidgets.QSpacerItem(131, 24, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_31.addItem(spacerItem50)
         self.widget_21 = QtWidgets.QWidget(self.Reservaciones_4)
         self.widget_21.setGeometry(QtCore.QRect(10, 120, 249, 61))
-        self.widget_21.setStyleSheet("background-color: #f5f5f5")
+        self.widget_21.setStyleSheet("background-color: #f5f5f5;\n"
+"border: 2px solid #5d432c;\n"
+"border-radius: 10px;")
         self.widget_21.setObjectName("widget_21")
         self.widget_22 = QtWidgets.QWidget(self.widget_21)
         self.widget_22.setGeometry(QtCore.QRect(10, 10, 231, 41))
         self.widget_22.setMinimumSize(QtCore.QSize(231, 41))
+        self.widget_22.setStyleSheet("border: 0px")
         self.widget_22.setObjectName("widget_22")
         self.label_32 = QtWidgets.QLabel(self.widget_22)
         self.label_32.setGeometry(QtCore.QRect(0, 0, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_32.setFont(font)
         self.label_32.setStyleSheet("background-color: #f5f5f5;\n"
 "color: #333333;\n"
 "border: 1px solid #333333;\n"
-"\n"
-"border-top-left-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"border-top-right-radius: 20px;\n"
+"border-bottom-right-radius: 20px;")
         self.label_32.setAlignment(QtCore.Qt.AlignCenter)
         self.label_32.setObjectName("label_32")
-        self.lineEdit_17 = QtWidgets.QLineEdit(self.widget_22)
-        self.lineEdit_17.setGeometry(QtCore.QRect(80, 0, 151, 21))
-        self.lineEdit_17.setStyleSheet("border: 1px solid #333333;\n"
-"border-top-right-radius: 10px;\n"
-"border-bottom-right-radius: 10px;")
-        self.lineEdit_17.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_17.setObjectName("lineEdit_17")
+        self.resv_4_codigo = QtWidgets.QLineEdit(self.widget_22)
+        self.resv_4_codigo.setGeometry(QtCore.QRect(80, 0, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.resv_4_codigo.setFont(font)
+        self.resv_4_codigo.setStyleSheet("border: 1px solid #333333;\n"
+"border-top-left-radius: 20px;\n"
+"border-bottom-left-radius: 20px;")
+        self.resv_4_codigo.setAlignment(QtCore.Qt.AlignCenter)
+        self.resv_4_codigo.setObjectName("resv_4_codigo")
         self.horizontalLayout_3.addWidget(self.Reservaciones_4)
         self.content = QtWidgets.QWidget(Dialog)
         self.content.setMinimumSize(QtCore.QSize(1, 501))
         self.content.setMaximumSize(QtCore.QSize(1001, 501))
-        self.content.setStyleSheet("border-left: 1px solid #f5f5f5;\n"
+        self.content.setStyleSheet("border-left: 2px solid #5d432c;\n"
 "background-color: #333333;")
         self.content.setObjectName("content")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.content)
@@ -856,121 +990,132 @@ class Ui_Dialog(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        spacerItem52 = QtWidgets.QSpacerItem(38, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem52)
+        spacerItem51 = QtWidgets.QSpacerItem(38, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem51)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label_2 = QtWidgets.QLabel(self.content)
         self.label_2.setMinimumSize(QtCore.QSize(101, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_2.setFont(font)
         self.label_2.setStyleSheet("background-color: #f5f5f5;\n"
-"border-left: 1px solid;\n"
-"border-top: 1px solid;\n"
-"border-bottom: 1px solid;\n"
+"border-left: 2px solid #5d432c;\n"
+"border-top: 2px solid #5d432c;\n"
+"border-bottom: 2px solid #5d432c;\n"
 "border-right: 0;\n"
 "\n"
 "border-top-left-radius: 10px;\n"
 "border-bottom-left-radius: 10px;\n"
 "\n"
-"color: #333333")
+"color: #333333;")
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout.addWidget(self.label_2)
-        self.label_9 = QtWidgets.QLabel(self.content)
-        self.label_9.setMinimumSize(QtCore.QSize(431, 31))
-        self.label_9.setStyleSheet("background-color: #f5f5f5;\n"
-"border-right: 1px solid;\n"
-"border-top: 1px solid;\n"
-"border-bottom: 1px solid;\n"
-"border-left: 0px;\n"
+        self.encargado_name = QtWidgets.QLabel(self.content)
+        self.encargado_name.setMinimumSize(QtCore.QSize(281, 31))
+        self.encargado_name.setMaximumSize(QtCore.QSize(281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.encargado_name.setFont(font)
+        self.encargado_name.setStyleSheet("background-color: #f5f5f5;\n"
+"border-left: 2px solid #5d432c;\n"
+"border-top: 2px solid #5d432c;\n"
+"border-bottom: 2px solid #5d432c;\n"
+"border-right: 0;\n"
 "\n"
 "border-top-right-radius: 10px;\n"
 "border-bottom-right-radius: 10px;\n"
 "\n"
 "color: #333333")
-        self.label_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_9.setObjectName("label_9")
-        self.horizontalLayout.addWidget(self.label_9)
+        self.encargado_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.encargado_name.setObjectName("encargado_name")
+        self.horizontalLayout.addWidget(self.encargado_name)
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
-        spacerItem53 = QtWidgets.QSpacerItem(78, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem53)
+        spacerItem52 = QtWidgets.QSpacerItem(78, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem52)
         self.label_10 = QtWidgets.QLabel(self.content)
-        self.label_10.setMinimumSize(QtCore.QSize(181, 31))
+        self.label_10.setMinimumSize(QtCore.QSize(141, 31))
+        self.label_10.setMaximumSize(QtCore.QSize(141, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        self.label_10.setFont(font)
         self.label_10.setStyleSheet("background-color: #f5f5f5;\n"
+"border: 2px solid #5d432c;\n"
 "border-radius: 10px;\n"
-"border: 1px solid;\n"
 "color: #333333")
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_2.addWidget(self.label_10)
-        spacerItem54 = QtWidgets.QSpacerItem(38, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem54)
+        spacerItem53 = QtWidgets.QSpacerItem(38, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem53)
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
-        spacerItem55 = QtWidgets.QSpacerItem(17, 75, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem55)
+        spacerItem54 = QtWidgets.QSpacerItem(17, 75, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem54)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setSpacing(0)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        spacerItem56 = QtWidgets.QSpacerItem(13, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem56)
+        spacerItem55 = QtWidgets.QSpacerItem(13, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem55)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        spacerItem57 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem57, 0, 7, 1, 1)
+        spacerItem56 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem56, 0, 7, 1, 1)
         self.m_4 = QtWidgets.QPushButton(self.content)
         self.m_4.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_4.setFont(font)
-        self.m_4.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_4.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_4.setObjectName("m_4")
         self.gridLayout.addWidget(self.m_4, 0, 6, 1, 1)
+        spacerItem57 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem57, 0, 9, 1, 1)
         spacerItem58 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem58, 0, 9, 1, 1)
-        spacerItem59 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem59, 0, 11, 1, 1)
+        self.gridLayout.addItem(spacerItem58, 0, 11, 1, 1)
         self.m_2 = QtWidgets.QPushButton(self.content)
         self.m_2.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_2.setFont(font)
-        self.m_2.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_2.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_2.setObjectName("m_2")
         self.gridLayout.addWidget(self.m_2, 0, 2, 1, 1)
-        spacerItem60 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem60, 0, 1, 1, 1)
+        spacerItem59 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem59, 0, 1, 1, 1)
         self.m_3 = QtWidgets.QPushButton(self.content)
         self.m_3.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_3.setFont(font)
-        self.m_3.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_3.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_3.setObjectName("m_3")
         self.gridLayout.addWidget(self.m_3, 0, 4, 1, 1)
@@ -979,14 +1124,14 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_1.setFont(font)
-        self.m_1.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_1.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_1.setCheckable(True)
         self.m_1.setObjectName("m_1")
@@ -996,14 +1141,14 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_6.setFont(font)
-        self.m_6.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_6.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_6.setObjectName("m_6")
         self.gridLayout.addWidget(self.m_6, 0, 10, 1, 1)
@@ -1012,40 +1157,40 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_7.setFont(font)
-        self.m_7.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_7.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_7.setObjectName("m_7")
         self.gridLayout.addWidget(self.m_7, 0, 12, 1, 1)
-        spacerItem61 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem61, 0, 3, 1, 1)
+        spacerItem60 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem60, 0, 3, 1, 1)
         self.m_5 = QtWidgets.QPushButton(self.content)
         self.m_5.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_5.setFont(font)
-        self.m_5.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_5.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_5.setObjectName("m_5")
         self.gridLayout.addWidget(self.m_5, 0, 8, 1, 1)
-        spacerItem62 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem62, 0, 5, 1, 1)
+        spacerItem61 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem61, 0, 5, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
-        spacerItem63 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem63)
+        spacerItem62 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem62)
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.m_8 = QtWidgets.QPushButton(self.content)
@@ -1053,56 +1198,56 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_8.setFont(font)
-        self.m_8.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_8.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_8.setObjectName("m_8")
         self.gridLayout_2.addWidget(self.m_8, 0, 0, 1, 1)
-        spacerItem64 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem64, 0, 1, 1, 1)
+        spacerItem63 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem63, 0, 1, 1, 1)
         self.m_12 = QtWidgets.QPushButton(self.content)
         self.m_12.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_12.setFont(font)
-        self.m_12.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_12.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_12.setObjectName("m_12")
         self.gridLayout_2.addWidget(self.m_12, 0, 8, 1, 1)
+        spacerItem64 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem64, 0, 9, 1, 1)
         spacerItem65 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem65, 0, 9, 1, 1)
+        self.gridLayout_2.addItem(spacerItem65, 0, 7, 1, 1)
         spacerItem66 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem66, 0, 7, 1, 1)
+        self.gridLayout_2.addItem(spacerItem66, 0, 3, 1, 1)
         spacerItem67 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem67, 0, 3, 1, 1)
-        spacerItem68 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem68, 0, 5, 1, 1)
+        self.gridLayout_2.addItem(spacerItem67, 0, 5, 1, 1)
         self.m_11 = QtWidgets.QPushButton(self.content)
         self.m_11.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_11.setFont(font)
-        self.m_11.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_11.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_11.setObjectName("m_11")
         self.gridLayout_2.addWidget(self.m_11, 0, 6, 1, 1)
@@ -1111,14 +1256,14 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_10.setFont(font)
-        self.m_10.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_10.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_10.setObjectName("m_10")
         self.gridLayout_2.addWidget(self.m_10, 0, 4, 1, 1)
@@ -1127,32 +1272,32 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_9.setFont(font)
-        self.m_9.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_9.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_9.setObjectName("m_9")
         self.gridLayout_2.addWidget(self.m_9, 0, 2, 1, 1)
-        spacerItem69 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem69, 0, 11, 1, 1)
+        spacerItem68 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem68, 0, 11, 1, 1)
         self.m_13 = QtWidgets.QPushButton(self.content)
         self.m_13.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_13.setFont(font)
-        self.m_13.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_13.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_13.setObjectName("m_13")
         self.gridLayout_2.addWidget(self.m_13, 0, 10, 1, 1)
@@ -1161,20 +1306,20 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_14.setFont(font)
-        self.m_14.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_14.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_14.setObjectName("m_14")
         self.gridLayout_2.addWidget(self.m_14, 0, 12, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_2)
-        spacerItem70 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem70)
+        spacerItem69 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem69)
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.m_19 = QtWidgets.QPushButton(self.content)
@@ -1182,14 +1327,14 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_19.setFont(font)
-        self.m_19.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_19.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_19.setObjectName("m_19")
         self.gridLayout_3.addWidget(self.m_19, 0, 9, 1, 1)
@@ -1198,14 +1343,14 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_15.setFont(font)
-        self.m_15.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_15.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_15.setObjectName("m_15")
         self.gridLayout_3.addWidget(self.m_15, 0, 0, 1, 1)
@@ -1214,14 +1359,14 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_20.setFont(font)
-        self.m_20.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_20.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_20.setObjectName("m_20")
         self.gridLayout_3.addWidget(self.m_20, 0, 11, 1, 1)
@@ -1230,113 +1375,114 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_18.setFont(font)
-        self.m_18.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_18.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_18.setObjectName("m_18")
         self.gridLayout_3.addWidget(self.m_18, 0, 7, 1, 1)
+        spacerItem70 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem70, 0, 8, 1, 1)
         spacerItem71 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem71, 0, 8, 1, 1)
+        self.gridLayout_3.addItem(spacerItem71, 0, 1, 1, 1)
         spacerItem72 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem72, 0, 1, 1, 1)
-        spacerItem73 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem73, 0, 4, 1, 1)
+        self.gridLayout_3.addItem(spacerItem72, 0, 4, 1, 1)
         self.m_16 = QtWidgets.QPushButton(self.content)
         self.m_16.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_16.setFont(font)
-        self.m_16.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_16.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_16.setObjectName("m_16")
         self.gridLayout_3.addWidget(self.m_16, 0, 3, 1, 1)
+        spacerItem73 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem73, 0, 6, 1, 1)
         spacerItem74 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem74, 0, 6, 1, 1)
-        spacerItem75 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem75, 0, 12, 1, 1)
+        self.gridLayout_3.addItem(spacerItem74, 0, 12, 1, 1)
         self.m_17 = QtWidgets.QPushButton(self.content)
         self.m_17.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_17.setFont(font)
-        self.m_17.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_17.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_17.setObjectName("m_17")
         self.gridLayout_3.addWidget(self.m_17, 0, 5, 1, 1)
-        spacerItem76 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem76, 0, 10, 1, 1)
+        spacerItem75 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem75, 0, 10, 1, 1)
         self.m_21 = QtWidgets.QPushButton(self.content)
         self.m_21.setMinimumSize(QtCore.QSize(71, 71))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.m_21.setFont(font)
-        self.m_21.setStyleSheet("QPushButton {background-color: #6cc644;\n"
-"        border: 1px solid #f5f5f5;\n"
+        self.m_21.setStyleSheet("QPushButton {background-color: #589f37;\n"
+"        border: 1px solid #5d432c;\n"
 "        border-radius: 10px;\n"
 "        padding: 10px 20px;\n"
 "    }\n"
 "    QPushButton:hover {background-color: #5eaa3b;\n"
 "    }\n"
-"    QPushButton:pressed {background-color: #589f37;\n"
+"    QPushButton:pressed {background-color: #6cc644;\n"
 "    }")
         self.m_21.setObjectName("m_21")
         self.gridLayout_3.addWidget(self.m_21, 0, 13, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout_3)
         self.horizontalLayout_6.addLayout(self.verticalLayout)
-        spacerItem77 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem77)
+        spacerItem76 = QtWidgets.QSpacerItem(18, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem76)
         self.verticalLayout_2.addLayout(self.horizontalLayout_6)
-        spacerItem78 = QtWidgets.QSpacerItem(17, 74, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem78)
+        spacerItem77 = QtWidgets.QSpacerItem(17, 74, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem77)
         self.horizontalLayout_3.addWidget(self.content)
 
         self.retranslateUi(Dialog)
-        self.pushButton_8.clicked.connect(self.Reservaciones_2.hide) # type: ignore
-        self.pushButton_7.clicked.connect(self.Reservaciones_2.hide) # type: ignore
-        self.pushButton_11.clicked.connect(self.Reservaciones_3.hide) # type: ignore
-        self.pushButton_10.clicked.connect(self.Reservaciones_3.hide) # type: ignore
-        self.pushButton_19.clicked.connect(self.Reservaciones_4.hide) # type: ignore
-        self.pushButton_17.clicked.connect(self.Reservaciones_4.hide) # type: ignore
-        self.pushButton_4.clicked.connect(self.Reservaciones.hide) # type: ignore
-        self.pushButton_6.clicked.connect(self.Reservaciones_2.show) # type: ignore
-        self.pushButton_6.clicked.connect(self.Reservaciones.hide) # type: ignore
-        self.pushButton_5.clicked.connect(self.Reservaciones_3.show) # type: ignore
-        self.pushButton_12.clicked.connect(self.Reservaciones_4.show) # type: ignore
-        self.pushButton_12.clicked.connect(self.Reservaciones_3.hide) # type: ignore
-        self.pushButton.clicked.connect(self.Reservaciones.show) # type: ignore
-        self.pushButton.clicked.connect(self.menu.hide) # type: ignore
-        self.pushButton_4.clicked.connect(self.menu.show) # type: ignore
-        self.pushButton_7.clicked.connect(self.Reservaciones.show) # type: ignore
-        self.pushButton_8.clicked.connect(self.Reservaciones.show) # type: ignore
-        self.pushButton_13.clicked.connect(self.Reservaciones_3.show) # type: ignore
-        self.pushButton_13.clicked.connect(self.Reservaciones.show) # type: ignore
-        self.pushButton_13.clicked.connect(self.Reservaciones_2.hide) # type: ignore
-        self.pushButton_9.clicked.connect(self.Reservaciones_4.show) # type: ignore
-        self.pushButton_9.clicked.connect(self.Reservaciones.show) # type: ignore
-        self.pushButton_9.clicked.connect(self.Reservaciones_2.hide) # type: ignore
-        self.pushButton_6.clicked.connect(self.Reservaciones_3.hide) # type: ignore
-        self.pushButton_6.clicked.connect(self.Reservaciones_4.hide) # type: ignore
-        self.pushButton.clicked.connect(self.tableWidget.update) # type: ignore
+        self.b_cerrar_resv_2.clicked.connect(self.Reservaciones_2.hide) # type: ignore
+        self.b_cerrar_resv_3.clicked.connect(self.Reservaciones_3.hide) # type: ignore
+        self.b_cerrar_resv_4.clicked.connect(self.Reservaciones_4.hide) # type: ignore
+        self.b_cerrar_resv.clicked.connect(self.Reservaciones.hide) # type: ignore
+        self.b_agregar_resv.clicked.connect(self.Reservaciones_2.show) # type: ignore
+        self.b_agregar_resv.clicked.connect(self.Reservaciones.hide) # type: ignore
+        self.b_editar_resv.clicked.connect(self.Reservaciones_3.show) # type: ignore
+        self.b_eliminar_resv_3.clicked.connect(self.Reservaciones_4.show) # type: ignore
+        self.b_eliminar_resv_3.clicked.connect(self.Reservaciones_3.hide) # type: ignore
+        self.b_resv_menu.clicked.connect(self.Reservaciones.show) # type: ignore
+        self.b_resv_menu.clicked.connect(self.menu.hide) # type: ignore
+        self.b_cerrar_resv.clicked.connect(self.menu.show) # type: ignore
+        self.b_cerrar_resv_2.clicked.connect(self.Reservaciones.show) # type: ignore
+        self.b_eliminar_resv_2.clicked.connect(self.Reservaciones_4.show) # type: ignore
+        self.b_eliminar_resv_2.clicked.connect(self.Reservaciones.show) # type: ignore
+        self.b_eliminar_resv_2.clicked.connect(self.Reservaciones_2.hide) # type: ignore
+        self.b_agregar_resv.clicked.connect(self.Reservaciones_3.hide) # type: ignore
+        self.b_agregar_resv.clicked.connect(self.Reservaciones_4.hide) # type: ignore
+        self.b_resv_menu.clicked.connect(self.resv_widget.update) # type: ignore
+        self.b_editar_resv.clicked.connect(self.Reservaciones_4.hide) # type: ignore
+        self.b_cerrar_resv_2.clicked.connect(self.menu.hide) # type: ignore
+        self.b_editar_resv_2.clicked.connect(self.Reservaciones_2.hide) # type: ignore
+        self.b_editar_resv_2.clicked.connect(self.Reservaciones.show) # type: ignore
+        self.b_editar_resv_2.clicked.connect(self.Reservaciones_3.show) # type: ignore
+        self.b_cerrar_resv.clicked.connect(self.Reservaciones_2.hide) # type: ignore
+        self.b_cerrar_resv.clicked.connect(self.Reservaciones_3.hide) # type: ignore
+        self.b_cerrar_resv.clicked.connect(self.Reservaciones_4.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -1346,47 +1492,57 @@ class Ui_Dialog(object):
         self.label_6.setText(_translate("Dialog", "Disp."))
         self.label_8.setText(_translate("Dialog", "Resv."))
         self.label_7.setText(_translate("Dialog", "Ocu."))
-        self.pushButton.setText(_translate("Dialog", "Resv."))
+        self.b_resv_menu.setText(_translate("Dialog", "Resv."))
         self.b_salir_1.setText(_translate("Dialog", "Salir"))
-        item = self.tableWidget.horizontalHeaderItem(0)
+        item = self.resv_widget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "Código"))
-        item = self.tableWidget.horizontalHeaderItem(1)
+        item = self.resv_widget.horizontalHeaderItem(1)
         item.setText(_translate("Dialog", "Nombre"))
-        item = self.tableWidget.horizontalHeaderItem(2)
+        item = self.resv_widget.horizontalHeaderItem(2)
         item.setText(_translate("Dialog", "Codigo"))
-        item = self.tableWidget.horizontalHeaderItem(3)
+        item = self.resv_widget.horizontalHeaderItem(3)
         item.setText(_translate("Dialog", "Fecha"))
-        item = self.tableWidget.horizontalHeaderItem(4)
+        item = self.resv_widget.horizontalHeaderItem(4)
         item.setText(_translate("Dialog", "Hora"))
-        self.pushButton_4.setText(_translate("Dialog", "Cerrar"))
+        self.b_cerrar_resv.setText(_translate("Dialog", "Cerrar"))
         self.label_11.setText(_translate("Dialog", "Reservaciones"))
-        self.pushButton_5.setText(_translate("Dialog", "Editar/Eliminar Resv."))
-        self.pushButton_6.setText(_translate("Dialog", "Agregar Resv."))
-        self.pushButton_7.setText(_translate("Dialog", "Cerrar"))
+        self.b_editar_resv.setText(_translate("Dialog", "Editar/Eliminar Resv."))
+        self.b_agregar_resv.setText(_translate("Dialog", "Agregar Resv."))
+        self.b_cerrar_resv_2.setText(_translate("Dialog", "Cerrar"))
         self.label_12.setText(_translate("Dialog", "Crear Reservación"))
-        self.pushButton_8.setText(_translate("Dialog", "Agregar"))
+        self.b_agregar_resv_2.setText(_translate("Dialog", "Agregar"))
         self.label_13.setText(_translate("Dialog", "Nombre"))
+        self.resv_2_name.setPlaceholderText(_translate("Dialog", "Nombre a registrar"))
         self.label_15.setText(_translate("Dialog", "Cantidad"))
+        self.resv_2_cant.setPlaceholderText(_translate("Dialog", "Cantidad de personas"))
         self.label_16.setText(_translate("Dialog", "Fecha"))
+        self.resv_2_fecha.setPlaceholderText(_translate("Dialog", "Fecha de reservacion"))
         self.label_18.setText(_translate("Dialog", "Hora"))
-        self.pushButton_9.setText(_translate("Dialog", "Eliminar Resv."))
-        self.pushButton_13.setText(_translate("Dialog", "Editar Resv."))
-        self.pushButton_10.setText(_translate("Dialog", "Cerrar"))
+        self.resv_2_hora.setPlaceholderText(_translate("Dialog", "Hora de reservacion"))
+        self.b_eliminar_resv_2.setText(_translate("Dialog", "Eliminar Resv."))
+        self.b_editar_resv_2.setText(_translate("Dialog", "Editar Resv."))
+        self.b_cerrar_resv_3.setText(_translate("Dialog", "Cerrar"))
         self.label_19.setText(_translate("Dialog", "Editar Reservación"))
-        self.pushButton_11.setText(_translate("Dialog", "Editar"))
-        self.pushButton_12.setText(_translate("Dialog", "Eliminar"))
+        self.b_editar_resv_3.setText(_translate("Dialog", "Editar"))
+        self.b_eliminar_resv_3.setText(_translate("Dialog", "Eliminar"))
         self.label_20.setText(_translate("Dialog", "Codigo"))
+        self.resv_3_codigo.setPlaceholderText(_translate("Dialog", "Codigo de reservacion"))
         self.label_24.setText(_translate("Dialog", "Cantidad"))
+        self.resv_3_cantidad.setPlaceholderText(_translate("Dialog", "Cantidad nueva"))
         self.label_21.setText(_translate("Dialog", "Hora"))
+        self.resv_3_hora.setPlaceholderText(_translate("Dialog", "Hora nueva"))
         self.label_23.setText(_translate("Dialog", "Nombre"))
+        self.resv_3_name.setPlaceholderText(_translate("Dialog", "Nombre nuevo"))
         self.label_22.setText(_translate("Dialog", "Fecha"))
-        self.pushButton_17.setText(_translate("Dialog", "Cerrar"))
+        self.resv_3_fecha.setPlaceholderText(_translate("Dialog", "Fecha nueva"))
+        self.b_cerrar_resv_4.setText(_translate("Dialog", "Cerrar"))
         self.label_31.setText(_translate("Dialog", "Eliminar Reservación"))
-        self.pushButton_19.setText(_translate("Dialog", "Eliminar"))
+        self.b_eliminar_resv_4.setText(_translate("Dialog", "Eliminar"))
         self.label_32.setText(_translate("Dialog", "Codigo"))
+        self.resv_4_codigo.setPlaceholderText(_translate("Dialog", "Codigo de reservacion"))
         self.label_2.setText(_translate("Dialog", "Encargado:"))
-        self.label_9.setText(_translate("Dialog", "Nombre del encargado"))
-        self.label_10.setText(_translate("Dialog", "Receción"))
+        self.encargado_name.setText(_translate("Dialog", "Jose Jafeth Gonzalez Lopez"))
+        self.label_10.setText(_translate("Dialog", "Recepción"))
         self.m_4.setText(_translate("Dialog", "4"))
         self.m_2.setText(_translate("Dialog", "2"))
         self.m_3.setText(_translate("Dialog", "3"))

@@ -14,16 +14,20 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1200, 501)
-        Dialog.setMinimumSize(QtCore.QSize(1200, 501))
-        Dialog.setMaximumSize(QtCore.QSize(1200, 519))
+        Dialog.resize(1091, 501)
+        Dialog.setMinimumSize(QtCore.QSize(1091, 501))
+        Dialog.setMaximumSize(QtCore.QSize(1200, 501))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         Dialog.setFont(font)
         Dialog.setStyleSheet("background-color: rgb(51, 51, 51);")
-        self.horizontalLayout_19 = QtWidgets.QHBoxLayout(Dialog)
+        self.widget = QtWidgets.QWidget(Dialog)
+        self.widget.setGeometry(QtCore.QRect(0, 0, 1020, 503))
+        self.widget.setObjectName("widget")
+        self.horizontalLayout_19 = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_19.setObjectName("horizontalLayout_19")
-        self.wopciones = QtWidgets.QWidget(Dialog)
+        self.wopciones = QtWidgets.QWidget(self.widget)
         self.wopciones.setMinimumSize(QtCore.QSize(171, 500))
         self.wopciones.setMaximumSize(QtCore.QSize(171, 501))
         self.wopciones.setStyleSheet("background-color: #333333;\n"
@@ -99,13 +103,13 @@ class Ui_Dialog(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         spacerItem7 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem7)
-        self.eliminar = QtWidgets.QPushButton(self.wopciones)
-        self.eliminar.setMinimumSize(QtCore.QSize(80, 75))
+        self.eliminar_3 = QtWidgets.QPushButton(self.wopciones)
+        self.eliminar_3.setMinimumSize(QtCore.QSize(80, 75))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(10)
-        self.eliminar.setFont(font)
-        self.eliminar.setStyleSheet("QPushButton {\n"
+        self.eliminar_3.setFont(font)
+        self.eliminar_3.setStyleSheet("QPushButton {\n"
 "       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
 "         stop:0 #5d432c, stop:1 #c7a17a);\n"
 "       color: white;\n"
@@ -118,8 +122,8 @@ class Ui_Dialog(object):
 "      }\n"
 "      QPushButton:pressed {\n"
 "      }")
-        self.eliminar.setObjectName("eliminar")
-        self.horizontalLayout_3.addWidget(self.eliminar)
+        self.eliminar_3.setObjectName("eliminar_3")
+        self.horizontalLayout_3.addWidget(self.eliminar_3)
         spacerItem8 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem8)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
@@ -156,7 +160,7 @@ class Ui_Dialog(object):
         spacerItem12 = QtWidgets.QSpacerItem(20, 51, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem12)
         self.horizontalLayout_19.addWidget(self.wopciones)
-        self.weliminar = QtWidgets.QWidget(Dialog)
+        self.weliminar = QtWidgets.QWidget(self.widget)
         self.weliminar.setMinimumSize(QtCore.QSize(271, 501))
         self.weliminar.setMaximumSize(QtCore.QSize(271, 501))
         self.weliminar.setStyleSheet("background-color: #333333;\n"
@@ -172,14 +176,14 @@ class Ui_Dialog(object):
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
         spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_16.addItem(spacerItem13)
-        self.eliminar_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget_9)
-        self.eliminar_2.setMinimumSize(QtCore.QSize(111, 41))
-        self.eliminar_2.setMaximumSize(QtCore.QSize(111, 41))
+        self.eliminar = QtWidgets.QPushButton(self.horizontalLayoutWidget_9)
+        self.eliminar.setMinimumSize(QtCore.QSize(111, 41))
+        self.eliminar.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(10)
-        self.eliminar_2.setFont(font)
-        self.eliminar_2.setStyleSheet("QPushButton {\n"
+        self.eliminar.setFont(font)
+        self.eliminar.setStyleSheet("QPushButton {\n"
 "       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
 "         stop:0 #5d432c, stop:1 #c7a17a);\n"
 "       color: white;\n"
@@ -192,8 +196,8 @@ class Ui_Dialog(object):
 "      }\n"
 "      QPushButton:pressed {\n"
 "      }")
-        self.eliminar_2.setObjectName("eliminar_2")
-        self.horizontalLayout_16.addWidget(self.eliminar_2)
+        self.eliminar.setObjectName("eliminar")
+        self.horizontalLayout_16.addWidget(self.eliminar)
         spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_16.addItem(spacerItem14)
         self.horizontalLayoutWidget_10 = QtWidgets.QWidget(self.weliminar)
@@ -358,7 +362,7 @@ class Ui_Dialog(object):
         spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_15.addItem(spacerItem20)
         self.horizontalLayout_19.addWidget(self.weliminar)
-        self.weditar = QtWidgets.QWidget(Dialog)
+        self.weditar = QtWidgets.QWidget(self.widget)
         self.weditar.setMinimumSize(QtCore.QSize(271, 501))
         self.weditar.setMaximumSize(QtCore.QSize(271, 501))
         self.weditar.setStyleSheet("background-color: #333333;\n"
@@ -367,7 +371,7 @@ class Ui_Dialog(object):
 "")
         self.weditar.setObjectName("weditar")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.weditar)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(140, 260, 101, 111))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(140, 260, 101, 112))
         self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -706,7 +710,7 @@ class Ui_Dialog(object):
         spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_14.addItem(spacerItem28)
         self.horizontalLayout_19.addWidget(self.weditar)
-        self.wagregar = QtWidgets.QWidget(Dialog)
+        self.wagregar = QtWidgets.QWidget(self.widget)
         self.wagregar.setMinimumSize(QtCore.QSize(271, 501))
         self.wagregar.setMaximumSize(QtCore.QSize(271, 501))
         self.wagregar.setStyleSheet("background-color: #333333;\n"
@@ -1056,7 +1060,7 @@ class Ui_Dialog(object):
         spacerItem48 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_10.addItem(spacerItem48)
         self.horizontalLayout_19.addWidget(self.wagregar)
-        self.wprincipal = QtWidgets.QWidget(Dialog)
+        self.wprincipal = QtWidgets.QWidget(self.widget)
         self.wprincipal.setMinimumSize(QtCore.QSize(1, 501))
         self.wprincipal.setMaximumSize(QtCore.QSize(920, 501))
         self.wprincipal.setStyleSheet("")
@@ -1218,11 +1222,11 @@ class Ui_Dialog(object):
         self.horizontalLayout_7.addWidget(self.botonreset)
         spacerItem54 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem54)
-        self.widget = QtWidgets.QWidget(self.wprincipal)
-        self.widget.setGeometry(QtCore.QRect(60, 110, 801, 381))
-        self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.widget.setObjectName("widget")
-        self.tabWidget = QtWidgets.QTabWidget(self.widget)
+        self.widget1 = QtWidgets.QWidget(self.wprincipal)
+        self.widget1.setGeometry(QtCore.QRect(60, 110, 801, 381))
+        self.widget1.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.widget1.setObjectName("widget1")
+        self.tabWidget = QtWidgets.QTabWidget(self.widget1)
         self.tabWidget.setGeometry(QtCore.QRect(30, 20, 741, 351))
         self.tabWidget.setMinimumSize(QtCore.QSize(741, 351))
         font = QtGui.QFont()
@@ -1475,8 +1479,8 @@ class Ui_Dialog(object):
         self.cerrar_2.clicked.connect(self.weditar.hide) # type: ignore
         self.editar.clicked.connect(self.wopciones.hide) # type: ignore
         self.editar.clicked.connect(self.weditar.show) # type: ignore
-        self.eliminar.clicked.connect(self.wopciones.hide) # type: ignore
-        self.eliminar.clicked.connect(self.weliminar.show) # type: ignore
+        self.eliminar_3.clicked.connect(self.wopciones.hide) # type: ignore
+        self.eliminar_3.clicked.connect(self.weliminar.show) # type: ignore
         self.cerrar_3.clicked.connect(self.weliminar.hide) # type: ignore
         self.cerrar_3.clicked.connect(self.wopciones.show) # type: ignore
         self.cerrar_2.clicked.connect(self.wopciones.show) # type: ignore
@@ -1496,9 +1500,9 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Form"))
         self.agregar_2.setText(_translate("Dialog", "Agregar"))
         self.editar.setText(_translate("Dialog", "Editar"))
-        self.eliminar.setText(_translate("Dialog", "Eliminar"))
+        self.eliminar_3.setText(_translate("Dialog", "Eliminar"))
         self.salir.setText(_translate("Dialog", "SALIR"))
-        self.eliminar_2.setText(_translate("Dialog", "Eliminar"))
+        self.eliminar.setText(_translate("Dialog", "Eliminar"))
         self.cerrar_3.setText(_translate("Dialog", "Cerrar"))
         item = self.tableeliminar.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "Código"))

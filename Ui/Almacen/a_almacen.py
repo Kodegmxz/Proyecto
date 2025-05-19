@@ -1,18 +1,18 @@
-
 import os
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication , QMessageBox
 from PyQt5.uic import loadUi
 from datetime import datetime
-from Ui.Almacen.a_editar import Editar
-from Ui.Almacen.a_eliminar import Eliminar  # Importar el diálogo de eliminación
+from PyQt5.QtCore import pyqtSignal  # Agrega esta línea
 
 
 class Almacen(QtWidgets.QWidget):
+    producto_agregado = pyqtSignal()  # Agrega esta línea
+
     def __init__(self, widget, db):
         super(Almacen, self).__init__()
-        self.widget = widget  # Guardar referencia al widget
-        self.db = db  # Guardar referencia a la base de datos
+        self.widget = widget
+        self.db = db
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_almacen.ui")
         loadUi(ui_a, self)
@@ -20,10 +20,10 @@ class Almacen(QtWidgets.QWidget):
         # Conectar botones a sus funciones
         self.botonbuscar.clicked.connect(self.buscar_producto)
         self.botonreset.clicked.connect(self.resetear_tabla)
-        self.ui.buscareditar.clicked.connect(self.buscar_producto_por_codigo)
-        self.ui.actualizar.clicked.connect(self.actualizar_producto)
-        self.ui.buscareliminar.clicked.connect(self.buscarcodeeliminar)
-        self.ui.eliminar.clicked.connect(self.eliminar_producto)
+        self.buscareditar.clicked.connect(self.buscar_producto_por_codigo)
+        self.actualizar.clicked.connect(self.actualizar_producto)
+        self.buscareliminar.clicked.connect(self.buscarcodeeliminar)
+        self.eliminar.clicked.connect(self.eliminar_producto)
         self.agregar.clicked.connect(self.agregar_producto)
 
 
@@ -164,59 +164,59 @@ class Almacen(QtWidgets.QWidget):
 
 
     def agregar_producto(self):
-            # Obtener los valores de los campos
-            codigo = self.ui.linecodigo.text().strip()
-            precio = self.ui.lineprecio.text().strip()
-            nombre = self.ui.linenombre.text().strip()
-            cantidad = self.ui.linecantidad.text().strip()
-            proveedor = self.ui.lineproveedor.text().strip()
-            tabla = self.ui.comboBox.currentText()
+        # Obtener los valores de los campos
+        codigo = self.linecodigo.text().strip()
+        precio = self.lineprecio.text().strip()
+        nombre = self.linenombre.text().strip()
+        cantidad = self.linecantidad.text().strip()
+        proveedor = self.lineproveedor.text().strip()
+        tabla = self.comboBox.currentText()
 
-            # Validar que todos los campos estén llenos
-            if not all([codigo, precio, nombre, cantidad, proveedor]):
-                QMessageBox.warning(self, "Campos vacíos", "Por favor, complete todos los campos.")
-                return
+        # Validar que todos los campos estén llenos
+        if not all([codigo, precio, nombre, cantidad, proveedor]):
+            QMessageBox.warning(self, "Campos vacíos", "Por favor, complete todos los campos.")
+            return
 
-            # Mapear el texto del ComboBox a los nombres de las tablas
-            tablas = {
-                "Bebidas": "b_bebidas",
-                "Bebidas A.": "b_bebidasA",
-                "Carnes": "b_carnes",
-                "Condimentos": "b_condimentos",
-                "Frutas y Verduras": "b_fya",
-                "Panadería": "b_panaderia",
-                "Lácteos": "b_lacteos",
-            }
+        # Mapear el texto del ComboBox a los nombres de las tablas
+        tablas = {
+            "Bebidas": "b_bebidas",
+            "Bebidas A.": "b_bebidasA",
+            "Carnes": "b_carnes",
+            "Condimentos": "b_condimentos",
+            "Frutas y Verduras": "b_fya",
+            "Panadería": "b_panaderia",
+            "Lácteos": "b_lacteos",
+        }
 
-            nombre_tabla = tablas.get(tabla)
-            if not nombre_tabla:
-                QMessageBox.warning(self, "Error", "No se pudo determinar la tabla de destino.")
-                return
+        nombre_tabla = tablas.get(tabla)
+        if not nombre_tabla:
+            QMessageBox.warning(self, "Error", "No se pudo determinar la tabla de destino.")
+            return
 
-            # Obtener la fecha actual para el campo 'ingreso'
-            fecha_ingreso = datetime.now().strftime("%Y-%m-%d")
+        # Obtener la fecha actual para el campo 'ingreso'
+        fecha_ingreso = datetime.now().strftime("%Y-%m-%d")
 
-            # Ejecutar la consulta SQL para insertar los datos
-            cursor = self.db.dbcursor
-            query = f"""
-                INSERT INTO {nombre_tabla} (codigo, precio, nombre, cantidad, proveedor, ingreso)
-                VALUES (%s, %s, %s, %s, %s, %s)
-            """
-            try:
-                cursor.execute(query, (codigo, precio, nombre, cantidad, proveedor, fecha_ingreso))
-                self.db.db.commit()
-                QMessageBox.information(self, "Éxito", "Producto agregado correctamente.")
-                
-                # Emitir la señal para notificar que se agregó un producto
-                self.producto_agregado.emit()
-                
-                self.close()
-            except Exception as e:
-                QMessageBox.critical(self, "Error", f"Ocurrió un error al agregar el producto: {e}")
+        # Ejecutar la consulta SQL para insertar los datos
+        cursor = self.db.dbcursor
+        query = f"""
+            INSERT INTO {nombre_tabla} (codigo, precio, nombre, cantidad, proveedor, ingreso)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """
+        try:
+            cursor.execute(query, (codigo, precio, nombre, cantidad, proveedor, fecha_ingreso))
+            self.db.db.commit()
+            QMessageBox.information(self, "Éxito", "Producto agregado correctamente.")
+            
+            # Emitir la señal para notificar que se agregó un producto
+            self.producto_agregado.emit()
+            
+            self.close()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Ocurrió un error al agregar el producto: {e}")
 
 
     def buscar_producto_por_codigo(self):
-        codigo = self.ui.linecodigo.text().strip()
+        codigo = self.codigoeditar.text().strip()
 
         if not codigo:
             QtWidgets.QMessageBox.warning(self, "Error", "Por favor, ingrese un código antes de buscar.")
@@ -249,27 +249,26 @@ class Almacen(QtWidgets.QWidget):
             return
 
         # Mostrar los datos en el tableWidget
-        self.ui.tableeditar.setRowCount(1)
-        self.ui.tableeditar.setColumnCount(6)
+        self.tableeditar.setRowCount(1)
+        self.tableeditar.setColumnCount(6)
         for col_idx, value in enumerate(resultado):
-            self.ui.tableeditar.setItem(0, col_idx, QtWidgets.QTableWidgetItem(str(value)))
+            self.tableeditar.setItem(0, col_idx, QtWidgets.QTableWidgetItem(str(value)))
 
     def actualizar_producto(self):
         if not hasattr(self, 'tabla_encontrada') or not self.tabla_encontrada:
             QtWidgets.QMessageBox.warning(self, "Error", "Primero debe buscar un producto antes de actualizar.")
             return
 
-        codigo = self.ui.linecodigo.text().strip()
+        codigo = self.codigoeditar.text().strip()
         if not codigo:
             QtWidgets.QMessageBox.warning(self, "Error", "Por favor, ingrese un código antes de actualizar.")
             return
 
         # Obtener los valores de los campos de entrada
-        precio = self.ui.precioeditar.text().strip()
-        nombre = self.ui.nombreeditar.text().strip()
-        cantidad = self.ui.candtidadeditar.text().strip()
-        proveedor = self.ui.proveedoreeditar.text().strip()
-
+        precio = self.precioeditar.text().strip()
+        nombre = self.nombreeditar.text().strip()
+        cantidad = self.candtidadeditar.text().strip()
+        proveedor = self.proveedoreeditar.text().strip()
 
         campos = []
         valores = []
@@ -315,7 +314,6 @@ class Almacen(QtWidgets.QWidget):
             if cursor.rowcount > 0:
                 self.db.commit()
                 QtWidgets.QMessageBox.information(self, "Éxito", "El producto se actualizó correctamente.")
-
             else:
                 QtWidgets.QMessageBox.warning(self, "Error", "No se encontró ningún producto con ese código para actualizar.")
         except Exception as e:
@@ -323,7 +321,7 @@ class Almacen(QtWidgets.QWidget):
 
 
     def buscarcodeeliminar(self):
-        codigo = self.ui.codigoeliminar.text().strip()
+        codigo = self.codigoeliminar.text().strip()
 
         if not codigo:
             QtWidgets.QMessageBox.warning(self, "Error", "Por favor, ingrese un código antes de buscar.")
@@ -356,10 +354,10 @@ class Almacen(QtWidgets.QWidget):
             return
 
         # Mostrar los datos en el tableWidget
-        self.ui.talbeeliminar.setRowCount(1)
-        self.ui.tableeliminar.setColumnCount(6)
+        self.tableeliminar.setRowCount(1)
+        self.tableeliminar.setColumnCount(6)
         for col_idx, value in enumerate(resultado):
-            self.ui.tableeliminar.setItem(0, col_idx, QtWidgets.QTableWidgetItem(str(value)))
+            self.tableeliminar.setItem(0, col_idx, QtWidgets.QTableWidgetItem(str(value)))
 
     def eliminar_producto(self):
         # Verificar si se encontró una tabla y un producto
@@ -368,7 +366,7 @@ class Almacen(QtWidgets.QWidget):
             return
 
         # Obtener el código del producto
-        codigo = self.ui.codigoeliminar.text().strip()
+        codigo = self.codigoeliminar.text().strip()
 
         # Confirmar la eliminación
         confirmacion = QtWidgets.QMessageBox.question(
@@ -395,8 +393,8 @@ class Almacen(QtWidgets.QWidget):
             QtWidgets.QMessageBox.critical(self, "Error", f"Ocurrió un error al eliminar el producto: {e}")
 
         # Limpiar el tableWidget y el campo de texto
-        self.ui.tableeliminar.setRowCount(0)
-        self.ui.codigoeliminar.clear()
+        self.tableeliminar.setRowCount(0)
+        self.codigoeliminar.clear()
 
 def a3(db, widget): 
     almacen_w = Almacen(widget, db)
