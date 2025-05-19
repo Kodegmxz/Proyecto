@@ -33,13 +33,13 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(51, 51, 51);</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>-9</x>
      <y>0</y>
-     <width>1101</width>
-     <height>501</height>
+     <width>1110</width>
+     <height>503</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -324,7 +324,7 @@ border-left: 2px solid #5d432c;
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="salir">
+          <widget class="QPushButton" name="saliralm">
            <property name="minimumSize">
             <size>
              <width>80</width>
@@ -2849,7 +2849,7 @@ font: 63 italic 10pt &quot;Sitka Small Semibold&quot; ;
       <widget class="QWidget" name="widget" native="true">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>10</x>
          <y>110</y>
          <width>801</width>
          <height>381</height>
@@ -2902,79 +2902,8 @@ QTabBar::tab {
 }</string>
         </property>
         <property name="currentIndex">
-         <number>6</number>
+         <number>0</number>
         </property>
-        <widget class="QWidget" name="BEBIDASA">
-         <attribute name="title">
-          <string>Bebidas A.</string>
-         </attribute>
-         <widget class="QTableWidget" name="tabla_bebidasa">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>711</width>
-            <height>481</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-          <column>
-           <property name="text">
-            <string>Código</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Precio</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Producto</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Cantidad</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Último Ingreso</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Proveedor</string>
-           </property>
-          </column>
-         </widget>
-         <widget class="QLabel" name="label_2">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>741</width>
-            <height>501</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">
-background-color: #9a9a9a;
-</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-         <zorder>label_2</zorder>
-         <zorder>tabla_bebidasa</zorder>
-        </widget>
         <widget class="QWidget" name="BEBIDAS">
          <property name="font">
           <font>
@@ -3054,6 +2983,77 @@ background-color: #9a9a9a;
          </widget>
          <zorder>label</zorder>
          <zorder>tabla_bebidas</zorder>
+        </widget>
+        <widget class="QWidget" name="BEBIDASA">
+         <attribute name="title">
+          <string>Bebidas A.</string>
+         </attribute>
+         <widget class="QTableWidget" name="tabla_bebidasa">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>711</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <column>
+           <property name="text">
+            <string>Código</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Precio</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Producto</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cantidad</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Último Ingreso</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Proveedor</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>741</width>
+            <height>501</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+background-color: #9a9a9a;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <zorder>label_2</zorder>
+         <zorder>tabla_bebidasa</zorder>
         </widget>
         <widget class="QWidget" name="CARNES">
          <attribute name="title">
@@ -3698,54 +3698,6 @@ background-color: #9a9a9a;
     <hint type="destinationlabel">
      <x>809</x>
      <y>425</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>cerrar_3</sender>
-   <signal>clicked()</signal>
-   <receiver>tabWidget</receiver>
-   <slot>update()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>367</x>
-     <y>466</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1122</x>
-     <y>162</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>cerrar_2</sender>
-   <signal>clicked()</signal>
-   <receiver>tabWidget</receiver>
-   <slot>update()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>572</x>
-     <y>446</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1118</x>
-     <y>151</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>cerrar</sender>
-   <signal>clicked()</signal>
-   <receiver>tabWidget</receiver>
-   <slot>update()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>913</x>
-     <y>456</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1152</x>
-     <y>150</y>
     </hint>
    </hints>
   </connection>

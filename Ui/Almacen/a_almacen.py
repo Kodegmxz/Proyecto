@@ -4,27 +4,37 @@ from PyQt5.QtWidgets import QDialog, QApplication , QMessageBox
 from PyQt5.uic import loadUi
 from datetime import datetime
 from PyQt5.QtCore import pyqtSignal  # Agrega esta línea
+from PyQt5 import QtCore  # Asegúrate de tener esta importación
 
 
 class Almacen(QtWidgets.QWidget):
-    producto_agregado = pyqtSignal()  # Agrega esta línea
+    producto_agregado = pyqtSignal()
+    producto_actualizado = pyqtSignal()
+    producto_eliminado = pyqtSignal()  # <-- Agrega esta línea
 
     def __init__(self, widget, db):
         super(Almacen, self).__init__()
         self.widget = widget
         self.db = db
+        self.original_widget = widget  # Guarda el widget original para usarlo en salir
         dir_a = os.path.dirname(os.path.abspath(__file__))
         ui_a = os.path.join(dir_a, "u_almacen.ui")
         loadUi(ui_a, self)
         # Conectar botones a sus funciones
         self.botonbuscar.clicked.connect(self.buscar_producto)
+        self.barrabusqueda.textChanged.connect(self.buscar_producto)
         self.botonreset.clicked.connect(self.resetear_tabla)
         self.buscareditar.clicked.connect(self.buscar_producto_por_codigo)
         self.actualizar.clicked.connect(self.actualizar_producto)
         self.buscareliminar.clicked.connect(self.buscarcodeeliminar)
         self.eliminar.clicked.connect(self.eliminar_producto)
         self.agregar.clicked.connect(self.agregar_producto)
-        # self.salir.clicked.connect(self.salir)  # <-- Línea eliminada
+        self.saliralm.clicked.connect(self.salir)
+
+        # Conectar señales para recargar la tabla activa
+        self.producto_agregado.connect(self.recargar_tabla_activa)
+        self.producto_actualizado.connect(self.recargar_tabla_activa)
+        self.producto_eliminado.connect(self.recargar_tabla_activa)
 
         self.cargar_datos_iniciales()
         self.wagregar.hide()
@@ -76,28 +86,19 @@ class Almacen(QtWidgets.QWidget):
 
             # Configurar la tabla
             table.setRowCount(len(resultados))
-            table.setColumnCount(6)  # Asumimos 6 columnas
-
-            # Insertar los datos en la tabla
+            table.setColumnCount(6)
             for row_idx, row_data in enumerate(resultados):
                 for col_idx, value in enumerate(row_data):
                     table.setItem(row_idx, col_idx, QtWidgets.QTableWidgetItem(str(value)))
 
     def buscar_producto(self):
-        # Obtener el texto de búsqueda
         texto_busqueda = self.barrabusqueda.text().strip().lower()
-
-        # Validar que el texto de búsqueda no esté vacío
-        if not texto_busqueda:
-            QtWidgets.QMessageBox.warning(self, "Búsqueda vacía", "Por favor, ingrese un texto para buscar.")
-            return
 
         # Obtener la pestaña activa
         tab_widget = self.tabWidget
         tab_index = tab_widget.currentIndex()
         tab = tab_widget.widget(tab_index)
 
-        # Diccionario que asocia pestañas con nombres de tablas en la base de datos
         tablas = {
             0: "b_bebidas",
             1: "b_bebidasA",
@@ -113,25 +114,27 @@ class Almacen(QtWidgets.QWidget):
             QtWidgets.QMessageBox.warning(self, "Error", "No se pudo determinar la tabla activa.")
             return
 
-        # Ejecutar consulta SQL para buscar los datos
         cursor = self.db.dbcursor
-        query = f"""
-            SELECT codigo, precio, nombre, cantidad, ingreso, proveedor 
-            FROM {nombre_tabla} 
-            WHERE LOWER(codigo) LIKE %s 
-               OR LOWER(nombre) LIKE %s 
-               OR LOWER(proveedor) LIKE %s
-        """
-        cursor.execute(query, (f"%{texto_busqueda}%", f"%{texto_busqueda}%", f"%{texto_busqueda}%"))
+
+        if not texto_busqueda:
+            # Si el campo está vacío, muestra todos los productos
+            query = f"SELECT codigo, precio, nombre, cantidad, ingreso, proveedor FROM {nombre_tabla}"
+            cursor.execute(query)
+        else:
+            query = f"""
+                SELECT codigo, precio, nombre, cantidad, ingreso, proveedor 
+                FROM {nombre_tabla} 
+                WHERE LOWER(codigo) LIKE %s 
+                   OR LOWER(nombre) LIKE %s 
+                   OR LOWER(proveedor) LIKE %s
+            """
+            cursor.execute(query, (f"%{texto_busqueda}%", f"%{texto_busqueda}%", f"%{texto_busqueda}%"))
         resultados = cursor.fetchall()
 
-        # Buscar la tabla dentro de la pestaña activa
         table = tab.findChild(QtWidgets.QTableWidget)
         if table:
-            # Configurar la tabla con los resultados
             table.setRowCount(len(resultados))
-            table.setColumnCount(6)  # Asumimos 6 columnas
-
+            table.setColumnCount(6)
             for row_idx, row_data in enumerate(resultados):
                 for col_idx, value in enumerate(row_data):
                     table.setItem(row_idx, col_idx, QtWidgets.QTableWidgetItem(str(value)))
@@ -245,14 +248,13 @@ class Almacen(QtWidgets.QWidget):
             cursor.execute(query, (codigo,))
             resultado = cursor.fetchone()
             if resultado:
-                self.tabla_encontrada = tabla  # Guardar la tabla encontrada
+                self.tabla_encontrada = tabla
                 break
 
         if not resultado:
             QtWidgets.QMessageBox.information(self, "Sin resultados", "No se encontró ningún producto con ese código en las tablas.")
             return
 
-        # Mostrar los datos en el tableWidget
         self.tableeditar.setRowCount(1)
         self.tableeditar.setColumnCount(6)
         for col_idx, value in enumerate(resultado):
@@ -268,7 +270,6 @@ class Almacen(QtWidgets.QWidget):
             QtWidgets.QMessageBox.warning(self, "Error", "Por favor, ingrese un código antes de actualizar.")
             return
 
-        # Obtener los valores de los campos de entrada
         precio = self.precioeditar.text().strip()
         nombre = self.nombreeditar.text().strip()
         cantidad = self.cantidadeditar.text().strip()
@@ -307,7 +308,6 @@ class Almacen(QtWidgets.QWidget):
             QtWidgets.QMessageBox.warning(self, "Error", "No hay campos para actualizar.")
             return
 
-        # Ejecutar consulta SQL para actualizar solo los campos proporcionados
         set_clause = ", ".join(campos)
         query = f"UPDATE {self.tabla_encontrada} SET {set_clause} WHERE codigo = %s"
         valores.append(codigo)
@@ -318,8 +318,7 @@ class Almacen(QtWidgets.QWidget):
             if cursor.rowcount > 0:
                 self.db.commit()
                 QtWidgets.QMessageBox.information(self, "Éxito", "El producto se actualizó correctamente.")
-
-                # Limpiar campos y tabla de edición
+                self.producto_actualizado.emit()
                 self.codigoeditar.clear()
                 self.precioeditar.clear()
                 self.nombreeditar.clear()
@@ -339,7 +338,6 @@ class Almacen(QtWidgets.QWidget):
             QtWidgets.QMessageBox.warning(self, "Error", "Por favor, ingrese un código antes de buscar.")
             return
 
-        # Ejecutar consulta SQL para buscar el producto por código en todas las tablas
         tablas = [
             "b_bebidas",
             "b_bebidasA",
@@ -391,22 +389,49 @@ class Almacen(QtWidgets.QWidget):
         if confirmacion == QtWidgets.QMessageBox.No:
             return
 
-        # Ejecutar la consulta SQL para eliminar el producto
         cursor = self.db.dbcursor
         query = f"DELETE FROM {self.tabla_encontrada} WHERE codigo = %s"
         try:
             cursor.execute(query, (codigo,))
-            if cursor.rowcount > 0:  # Verificar si se eliminó alguna fila
-                self.db.commit()  # Confirmar los cambios en la base de datos
+            if cursor.rowcount > 0:
+                self.db.commit()
                 QtWidgets.QMessageBox.information(self, "Éxito", f"El producto con código {codigo} ha sido eliminado.")
-
-                # Limpiar el tableWidget y el campo de texto
+                self.producto_eliminado.emit()
                 self.tableeliminar.setRowCount(0)
                 self.codigoeliminar.clear()
             else:
                 QtWidgets.QMessageBox.warning(self, "Error", "No se encontró ningún producto con ese código para eliminar.")
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"Ocurrió un error al eliminar el producto: {e}")
+
+    def salir(self):
+        from Ui.Login.a_login import Login
+        mainwindow = Login(self.original_widget, self.db)
+        self.original_widget.addWidget(mainwindow)
+        self.original_widget.setFixedWidth(1091)
+        self.original_widget.setFixedHeight(501)
+        self.original_widget.setCurrentIndex(self.original_widget.currentIndex() + 1)
+
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Escape:
+            self.salir()
+        else:
+            super().keyPressEvent(event)
+
+    def recargar_tabla_activa(self):
+        tab_index = self.tabWidget.currentIndex()
+        tablas = {
+            0: "b_bebidas",
+            1: "b_bebidasA",
+            2: "b_carnes",
+            3: "b_condimentos",
+            4: "b_fya",
+            5: "b_lacteos",
+            6: "b_panaderia"
+        }
+        nombre_tabla = tablas.get(tab_index)
+        if nombre_tabla:
+            self.cargar_datos_tabla_personalizada(tab_index, nombre_tabla)
 
 def a3(db, widget): 
     almacen_w = Almacen(widget, db)
