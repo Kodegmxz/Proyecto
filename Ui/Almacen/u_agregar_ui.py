@@ -233,6 +233,9 @@ class Ui_Dialog(object):
 "      QPushButton:pressed {\n"
 "      }")
         self.agregar.setObjectName("agregar")
+        self.widget = QtWidgets.QWidget(Dialog)
+        self.widget.setGeometry(QtCore.QRect(80, 250, 120, 80))
+        self.widget.setObjectName("widget")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)

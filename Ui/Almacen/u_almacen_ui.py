@@ -11,16 +11,1151 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(901, 701)
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(1200, 501)
+        Dialog.setMinimumSize(QtCore.QSize(1200, 501))
+        Dialog.setMaximumSize(QtCore.QSize(1200, 519))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
-        Form.setFont(font)
-        Form.setStyleSheet("background-color: rgb(51, 51, 51);")
-        self.barrabusqueda = QtWidgets.QLineEdit(Form)
-        self.barrabusqueda.setGeometry(QtCore.QRect(130, 70, 341, 31))
+        Dialog.setFont(font)
+        Dialog.setStyleSheet("background-color: rgb(51, 51, 51);")
+        self.horizontalLayout_19 = QtWidgets.QHBoxLayout(Dialog)
+        self.horizontalLayout_19.setObjectName("horizontalLayout_19")
+        self.wopciones = QtWidgets.QWidget(Dialog)
+        self.wopciones.setMinimumSize(QtCore.QSize(171, 500))
+        self.wopciones.setMaximumSize(QtCore.QSize(171, 501))
+        self.wopciones.setStyleSheet("background-color: #333333;\n"
+"border-left: 2px solid #5d432c;\n"
+"\n"
+"")
+        self.wopciones.setObjectName("wopciones")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.wopciones)
+        self.verticalLayout.setObjectName("verticalLayout")
+        spacerItem = QtWidgets.QSpacerItem(20, 51, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        spacerItem1 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem1)
+        self.agregar_2 = QtWidgets.QPushButton(self.wopciones)
+        self.agregar_2.setMinimumSize(QtCore.QSize(80, 75))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.agregar_2.setFont(font)
+        self.agregar_2.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.agregar_2.setObjectName("agregar_2")
+        self.horizontalLayout_4.addWidget(self.agregar_2)
+        spacerItem2 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem2)
+        self.verticalLayout.addLayout(self.horizontalLayout_4)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 14, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem3)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem4 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem4)
+        self.editar = QtWidgets.QPushButton(self.wopciones)
+        self.editar.setMinimumSize(QtCore.QSize(80, 75))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.editar.setFont(font)
+        self.editar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.editar.setObjectName("editar")
+        self.horizontalLayout.addWidget(self.editar)
+        spacerItem5 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem5)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        spacerItem6 = QtWidgets.QSpacerItem(20, 15, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem6)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem7 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem7)
+        self.eliminar = QtWidgets.QPushButton(self.wopciones)
+        self.eliminar.setMinimumSize(QtCore.QSize(80, 75))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.eliminar.setFont(font)
+        self.eliminar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.eliminar.setObjectName("eliminar")
+        self.horizontalLayout_3.addWidget(self.eliminar)
+        spacerItem8 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem8)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        spacerItem9 = QtWidgets.QSpacerItem(20, 44, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem9)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        spacerItem10 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem10)
+        self.salir = QtWidgets.QPushButton(self.wopciones)
+        self.salir.setMinimumSize(QtCore.QSize(80, 45))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.salir.setFont(font)
+        self.salir.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.salir.setObjectName("salir")
+        self.horizontalLayout_2.addWidget(self.salir)
+        spacerItem11 = QtWidgets.QSpacerItem(28, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem11)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        spacerItem12 = QtWidgets.QSpacerItem(20, 51, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem12)
+        self.horizontalLayout_19.addWidget(self.wopciones)
+        self.weliminar = QtWidgets.QWidget(Dialog)
+        self.weliminar.setMinimumSize(QtCore.QSize(271, 501))
+        self.weliminar.setMaximumSize(QtCore.QSize(271, 501))
+        self.weliminar.setStyleSheet("background-color: #333333;\n"
+"border-left: 2px solid #5d432c;\n"
+"\n"
+"")
+        self.weliminar.setObjectName("weliminar")
+        self.horizontalLayoutWidget_9 = QtWidgets.QWidget(self.weliminar)
+        self.horizontalLayoutWidget_9.setGeometry(QtCore.QRect(-1, 380, 271, 51))
+        self.horizontalLayoutWidget_9.setObjectName("horizontalLayoutWidget_9")
+        self.horizontalLayout_16 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_9)
+        self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
+        spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_16.addItem(spacerItem13)
+        self.eliminar_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget_9)
+        self.eliminar_2.setMinimumSize(QtCore.QSize(111, 41))
+        self.eliminar_2.setMaximumSize(QtCore.QSize(111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.eliminar_2.setFont(font)
+        self.eliminar_2.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.eliminar_2.setObjectName("eliminar_2")
+        self.horizontalLayout_16.addWidget(self.eliminar_2)
+        spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_16.addItem(spacerItem14)
+        self.horizontalLayoutWidget_10 = QtWidgets.QWidget(self.weliminar)
+        self.horizontalLayoutWidget_10.setGeometry(QtCore.QRect(-1, 430, 271, 51))
+        self.horizontalLayoutWidget_10.setObjectName("horizontalLayoutWidget_10")
+        self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_10)
+        self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_17.setObjectName("horizontalLayout_17")
+        spacerItem15 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem15)
+        self.cerrar_3 = QtWidgets.QPushButton(self.horizontalLayoutWidget_10)
+        self.cerrar_3.setMinimumSize(QtCore.QSize(111, 41))
+        self.cerrar_3.setMaximumSize(QtCore.QSize(111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.cerrar_3.setFont(font)
+        self.cerrar_3.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.cerrar_3.setObjectName("cerrar_3")
+        self.horizontalLayout_17.addWidget(self.cerrar_3)
+        spacerItem16 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem16)
+        self.tableeliminar = QtWidgets.QTableWidget(self.weliminar)
+        self.tableeliminar.setGeometry(QtCore.QRect(10, 110, 251, 141))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(-1)
+        self.tableeliminar.setFont(font)
+        self.tableeliminar.setStyleSheet("QTableWidget, QTableWidget::item, QHeaderView::section {\n"
+"    background-color: #9a9a9a;\n"
+"    color: #222;\n"
+"    font-family: Segoe UI Symbol;\n"
+"    font-size: 15px;\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal, QScrollBar:vertical {\n"
+"    background: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"    gridline-color: #9a9a9a;\n"
+"}")
+        self.tableeliminar.setObjectName("tableeliminar")
+        self.tableeliminar.setColumnCount(6)
+        self.tableeliminar.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeliminar.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeliminar.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeliminar.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeliminar.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeliminar.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeliminar.setHorizontalHeaderItem(5, item)
+        self.layoutWidget_4 = QtWidgets.QWidget(self.weliminar)
+        self.layoutWidget_4.setGeometry(QtCore.QRect(0, 70, 271, 28))
+        self.layoutWidget_4.setObjectName("layoutWidget_4")
+        self.horizontalLayout_18 = QtWidgets.QHBoxLayout(self.layoutWidget_4)
+        self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_18.setObjectName("horizontalLayout_18")
+        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem17)
+        self.productoproveedor_5 = QtWidgets.QLabel(self.layoutWidget_4)
+        self.productoproveedor_5.setMinimumSize(QtCore.QSize(61, 21))
+        self.productoproveedor_5.setMaximumSize(QtCore.QSize(61, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.productoproveedor_5.setFont(font)
+        self.productoproveedor_5.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.productoproveedor_5.setObjectName("productoproveedor_5")
+        self.horizontalLayout_18.addWidget(self.productoproveedor_5)
+        self.codigoeliminar = QtWidgets.QLineEdit(self.layoutWidget_4)
+        self.codigoeliminar.setMinimumSize(QtCore.QSize(121, 21))
+        self.codigoeliminar.setMaximumSize(QtCore.QSize(121, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.codigoeliminar.setFont(font)
+        self.codigoeliminar.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
+        self.codigoeliminar.setObjectName("codigoeliminar")
+        self.horizontalLayout_18.addWidget(self.codigoeliminar)
+        self.buscareliminar = QtWidgets.QPushButton(self.layoutWidget_4)
+        self.buscareliminar.setMinimumSize(QtCore.QSize(41, 21))
+        self.buscareliminar.setMaximumSize(QtCore.QSize(41, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.buscareliminar.setFont(font)
+        self.buscareliminar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.buscareliminar.setObjectName("buscareliminar")
+        self.horizontalLayout_18.addWidget(self.buscareliminar)
+        spacerItem18 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem18)
+        self.horizontalLayoutWidget_8 = QtWidgets.QWidget(self.weliminar)
+        self.horizontalLayoutWidget_8.setGeometry(QtCore.QRect(0, 10, 271, 51))
+        self.horizontalLayoutWidget_8.setObjectName("horizontalLayoutWidget_8")
+        self.horizontalLayout_15 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_8)
+        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
+        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_15.addItem(spacerItem19)
+        self.titulo_bodega_4 = QtWidgets.QLabel(self.horizontalLayoutWidget_8)
+        self.titulo_bodega_4.setMinimumSize(QtCore.QSize(221, 31))
+        self.titulo_bodega_4.setMaximumSize(QtCore.QSize(221, 31))
+        self.titulo_bodega_4.setStyleSheet("QLabel {\n"
+"    font: 63 italic 10pt \"Sitka Small Semibold\" ;\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+" color: #c7a17a;\n"
+"}")
+        self.titulo_bodega_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.titulo_bodega_4.setObjectName("titulo_bodega_4")
+        self.horizontalLayout_15.addWidget(self.titulo_bodega_4)
+        spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_15.addItem(spacerItem20)
+        self.horizontalLayout_19.addWidget(self.weliminar)
+        self.weditar = QtWidgets.QWidget(Dialog)
+        self.weditar.setMinimumSize(QtCore.QSize(271, 501))
+        self.weditar.setMaximumSize(QtCore.QSize(271, 501))
+        self.weditar.setStyleSheet("background-color: #333333;\n"
+"border-left: 2px solid #5d432c;\n"
+"\n"
+"")
+        self.weditar.setObjectName("weditar")
+        self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.weditar)
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(140, 260, 101, 111))
+        self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.nombreeditar = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.nombreeditar.setMinimumSize(QtCore.QSize(0, 23))
+        self.nombreeditar.setMaximumSize(QtCore.QSize(16777215, 23))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.nombreeditar.setFont(font)
+        self.nombreeditar.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
+        self.nombreeditar.setText("")
+        self.nombreeditar.setObjectName("nombreeditar")
+        self.verticalLayout_4.addWidget(self.nombreeditar)
+        self.cantidadeditar = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.cantidadeditar.setMinimumSize(QtCore.QSize(0, 23))
+        self.cantidadeditar.setMaximumSize(QtCore.QSize(16777215, 23))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.cantidadeditar.setFont(font)
+        self.cantidadeditar.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
+        self.cantidadeditar.setText("")
+        self.cantidadeditar.setObjectName("cantidadeditar")
+        self.verticalLayout_4.addWidget(self.cantidadeditar)
+        self.proveedoreditar = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.proveedoreditar.setMinimumSize(QtCore.QSize(0, 23))
+        self.proveedoreditar.setMaximumSize(QtCore.QSize(16777215, 23))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.proveedoreditar.setFont(font)
+        self.proveedoreditar.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
+        self.proveedoreditar.setText("")
+        self.proveedoreditar.setObjectName("proveedoreditar")
+        self.verticalLayout_4.addWidget(self.proveedoreditar)
+        self.precioeditar = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.precioeditar.setMinimumSize(QtCore.QSize(0, 23))
+        self.precioeditar.setMaximumSize(QtCore.QSize(16777215, 23))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.precioeditar.setFont(font)
+        self.precioeditar.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
+        self.precioeditar.setText("")
+        self.precioeditar.setObjectName("precioeditar")
+        self.verticalLayout_4.addWidget(self.precioeditar)
+        self.horizontalLayoutWidget_5 = QtWidgets.QWidget(self.weditar)
+        self.horizontalLayoutWidget_5.setGeometry(QtCore.QRect(0, 10, 271, 51))
+        self.horizontalLayoutWidget_5.setObjectName("horizontalLayoutWidget_5")
+        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_5)
+        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_11.addItem(spacerItem21)
+        self.titulo_bodega_3 = QtWidgets.QLabel(self.horizontalLayoutWidget_5)
+        self.titulo_bodega_3.setMinimumSize(QtCore.QSize(221, 31))
+        self.titulo_bodega_3.setMaximumSize(QtCore.QSize(221, 31))
+        self.titulo_bodega_3.setStyleSheet("QLabel {\n"
+"    font: 63 italic 10pt \"Sitka Small Semibold\" ;\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+" color: #c7a17a;\n"
+"}")
+        self.titulo_bodega_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.titulo_bodega_3.setObjectName("titulo_bodega_3")
+        self.horizontalLayout_11.addWidget(self.titulo_bodega_3)
+        spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_11.addItem(spacerItem22)
+        self.layoutWidget_3 = QtWidgets.QWidget(self.weditar)
+        self.layoutWidget_3.setGeometry(QtCore.QRect(30, 260, 91, 111))
+        self.layoutWidget_3.setObjectName("layoutWidget_3")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.layoutWidget_3)
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.Productoprecio_5 = QtWidgets.QLabel(self.layoutWidget_3)
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.Productoprecio_5.setFont(font)
+        self.Productoprecio_5.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.Productoprecio_5.setObjectName("Productoprecio_5")
+        self.verticalLayout_5.addWidget(self.Productoprecio_5)
+        self.Productoprecio_6 = QtWidgets.QLabel(self.layoutWidget_3)
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.Productoprecio_6.setFont(font)
+        self.Productoprecio_6.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.Productoprecio_6.setObjectName("Productoprecio_6")
+        self.verticalLayout_5.addWidget(self.Productoprecio_6)
+        self.productoproveedor_2 = QtWidgets.QLabel(self.layoutWidget_3)
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.productoproveedor_2.setFont(font)
+        self.productoproveedor_2.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.productoproveedor_2.setObjectName("productoproveedor_2")
+        self.verticalLayout_5.addWidget(self.productoproveedor_2)
+        self.Productoprecio_7 = QtWidgets.QLabel(self.layoutWidget_3)
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.Productoprecio_7.setFont(font)
+        self.Productoprecio_7.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.Productoprecio_7.setObjectName("Productoprecio_7")
+        self.verticalLayout_5.addWidget(self.Productoprecio_7)
+        self.horizontalLayoutWidget_6 = QtWidgets.QWidget(self.weditar)
+        self.horizontalLayoutWidget_6.setGeometry(QtCore.QRect(-1, 380, 271, 51))
+        self.horizontalLayoutWidget_6.setObjectName("horizontalLayoutWidget_6")
+        self.horizontalLayout_12 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_6)
+        self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_12.setObjectName("horizontalLayout_12")
+        spacerItem23 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_12.addItem(spacerItem23)
+        self.actualizar = QtWidgets.QPushButton(self.horizontalLayoutWidget_6)
+        self.actualizar.setMinimumSize(QtCore.QSize(111, 41))
+        self.actualizar.setMaximumSize(QtCore.QSize(111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.actualizar.setFont(font)
+        self.actualizar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.actualizar.setObjectName("actualizar")
+        self.horizontalLayout_12.addWidget(self.actualizar)
+        spacerItem24 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_12.addItem(spacerItem24)
+        self.horizontalLayoutWidget_7 = QtWidgets.QWidget(self.weditar)
+        self.horizontalLayoutWidget_7.setGeometry(QtCore.QRect(-1, 430, 271, 51))
+        self.horizontalLayoutWidget_7.setObjectName("horizontalLayoutWidget_7")
+        self.horizontalLayout_13 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_7)
+        self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
+        spacerItem25 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem25)
+        self.cerrar_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget_7)
+        self.cerrar_2.setMinimumSize(QtCore.QSize(111, 41))
+        self.cerrar_2.setMaximumSize(QtCore.QSize(111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.cerrar_2.setFont(font)
+        self.cerrar_2.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.cerrar_2.setObjectName("cerrar_2")
+        self.horizontalLayout_13.addWidget(self.cerrar_2)
+        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem26)
+        self.tableeditar = QtWidgets.QTableWidget(self.weditar)
+        self.tableeditar.setGeometry(QtCore.QRect(10, 110, 251, 141))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(-1)
+        self.tableeditar.setFont(font)
+        self.tableeditar.setStyleSheet("QTableWidget, QTableWidget::item, QHeaderView::section {\n"
+"    background-color: #9a9a9a;\n"
+"    color: #222;\n"
+"    font-family: Segoe UI Symbol;\n"
+"    font-size: 15px;\n"
+"}\n"
+"\n"
+"QTableCornerButton::section {\n"
+"    background-color: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal, QScrollBar:vertical {\n"
+"    background: #9a9a9a;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"    gridline-color: #9a9a9a;\n"
+"}")
+        self.tableeditar.setObjectName("tableeditar")
+        self.tableeditar.setColumnCount(6)
+        self.tableeditar.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeditar.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeditar.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeditar.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeditar.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeditar.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableeditar.setHorizontalHeaderItem(5, item)
+        self.layoutWidget = QtWidgets.QWidget(self.weditar)
+        self.layoutWidget.setGeometry(QtCore.QRect(0, 70, 271, 28))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.horizontalLayout_14 = QtWidgets.QHBoxLayout(self.layoutWidget)
+        self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_14.setObjectName("horizontalLayout_14")
+        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_14.addItem(spacerItem27)
+        self.productoproveedor_4 = QtWidgets.QLabel(self.layoutWidget)
+        self.productoproveedor_4.setMinimumSize(QtCore.QSize(61, 21))
+        self.productoproveedor_4.setMaximumSize(QtCore.QSize(61, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.productoproveedor_4.setFont(font)
+        self.productoproveedor_4.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.productoproveedor_4.setObjectName("productoproveedor_4")
+        self.horizontalLayout_14.addWidget(self.productoproveedor_4)
+        self.codigoeditar = QtWidgets.QLineEdit(self.layoutWidget)
+        self.codigoeditar.setMinimumSize(QtCore.QSize(121, 21))
+        self.codigoeditar.setMaximumSize(QtCore.QSize(121, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.codigoeditar.setFont(font)
+        self.codigoeditar.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
+        self.codigoeditar.setObjectName("codigoeditar")
+        self.horizontalLayout_14.addWidget(self.codigoeditar)
+        self.buscareditar = QtWidgets.QPushButton(self.layoutWidget)
+        self.buscareditar.setMinimumSize(QtCore.QSize(41, 21))
+        self.buscareditar.setMaximumSize(QtCore.QSize(41, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(9)
+        self.buscareditar.setFont(font)
+        self.buscareditar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.buscareditar.setObjectName("buscareditar")
+        self.horizontalLayout_14.addWidget(self.buscareditar)
+        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_14.addItem(spacerItem28)
+        self.horizontalLayout_19.addWidget(self.weditar)
+        self.wagregar = QtWidgets.QWidget(Dialog)
+        self.wagregar.setMinimumSize(QtCore.QSize(271, 501))
+        self.wagregar.setMaximumSize(QtCore.QSize(271, 501))
+        self.wagregar.setStyleSheet("background-color: #333333;\n"
+"border-left: 2px solid #5d432c;\n"
+"\n"
+"")
+        self.wagregar.setObjectName("wagregar")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.wagregar)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(140, 110, 121, 200))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        spacerItem29 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem29)
+        self.linenombre = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.linenombre.setMinimumSize(QtCore.QSize(111, 21))
+        self.linenombre.setMaximumSize(QtCore.QSize(111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.linenombre.setFont(font)
+        self.linenombre.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
+        self.linenombre.setText("")
+        self.linenombre.setObjectName("linenombre")
+        self.verticalLayout_2.addWidget(self.linenombre)
+        spacerItem30 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem30)
+        self.linecantidad = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.linecantidad.setMinimumSize(QtCore.QSize(111, 21))
+        self.linecantidad.setMaximumSize(QtCore.QSize(111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.linecantidad.setFont(font)
+        self.linecantidad.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
+        self.linecantidad.setText("")
+        self.linecantidad.setObjectName("linecantidad")
+        self.verticalLayout_2.addWidget(self.linecantidad)
+        spacerItem31 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem31)
+        self.linecodigo = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.linecodigo.setMinimumSize(QtCore.QSize(111, 21))
+        self.linecodigo.setMaximumSize(QtCore.QSize(111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.linecodigo.setFont(font)
+        self.linecodigo.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     \n"
+"     ")
+        self.linecodigo.setText("")
+        self.linecodigo.setObjectName("linecodigo")
+        self.verticalLayout_2.addWidget(self.linecodigo)
+        spacerItem32 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem32)
+        self.lineproveedor = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.lineproveedor.setMinimumSize(QtCore.QSize(111, 21))
+        self.lineproveedor.setMaximumSize(QtCore.QSize(111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.lineproveedor.setFont(font)
+        self.lineproveedor.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
+        self.lineproveedor.setText("")
+        self.lineproveedor.setObjectName("lineproveedor")
+        self.verticalLayout_2.addWidget(self.lineproveedor)
+        spacerItem33 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem33)
+        self.lineprecio = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.lineprecio.setMinimumSize(QtCore.QSize(111, 21))
+        self.lineprecio.setMaximumSize(QtCore.QSize(111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.lineprecio.setFont(font)
+        self.lineprecio.setStyleSheet("QLineEdit {\n"
+"       background: #2a2a2a;\n"
+"       border: 2px solid #5d432c;\n"
+"       border-radius: 10px;\n"
+"       color: #c7a17a;\n"
+"      }\n"
+"      QLineEdit:focus {\n"
+"       border-color: #c7a17a;\n"
+"      }\n"
+"     ")
+        self.lineprecio.setText("")
+        self.lineprecio.setObjectName("lineprecio")
+        self.verticalLayout_2.addWidget(self.lineprecio)
+        spacerItem34 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem34)
+        self.comboBox = QtWidgets.QComboBox(self.verticalLayoutWidget)
+        self.comboBox.setMinimumSize(QtCore.QSize(111, 21))
+        self.comboBox.setMaximumSize(QtCore.QSize(111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.comboBox.setFont(font)
+        self.comboBox.setStyleSheet("QComboBox {\n"
+"    background: #2a2a2a;\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    background: #2a2a2a;;\n"
+"    color: #c7a17a;\n"
+"}\n"
+"QComboBox::item:selected {\n"
+"    background: #2a2a2a;\n"
+"    color: #c7a17a; \n"
+"}")
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.verticalLayout_2.addWidget(self.comboBox)
+        spacerItem35 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem35)
+        self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.wagregar)
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(0, 10, 271, 51))
+        self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        spacerItem36 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem36)
+        self.titulo_bodega_2 = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
+        self.titulo_bodega_2.setMinimumSize(QtCore.QSize(221, 31))
+        self.titulo_bodega_2.setMaximumSize(QtCore.QSize(221, 31))
+        self.titulo_bodega_2.setStyleSheet("QLabel {\n"
+"    font: 63 italic 10pt \"Sitka Small Semibold\" ;\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+" color: #c7a17a;\n"
+"}")
+        self.titulo_bodega_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.titulo_bodega_2.setObjectName("titulo_bodega_2")
+        self.horizontalLayout_8.addWidget(self.titulo_bodega_2)
+        spacerItem37 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem37)
+        self.layoutWidget_2 = QtWidgets.QWidget(self.wagregar)
+        self.layoutWidget_2.setGeometry(QtCore.QRect(30, 110, 91, 201))
+        self.layoutWidget_2.setObjectName("layoutWidget_2")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.layoutWidget_2)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        spacerItem38 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem38)
+        self.Productoprecio_4 = QtWidgets.QLabel(self.layoutWidget_2)
+        self.Productoprecio_4.setMinimumSize(QtCore.QSize(81, 21))
+        self.Productoprecio_4.setMaximumSize(QtCore.QSize(81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.Productoprecio_4.setFont(font)
+        self.Productoprecio_4.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}\n"
+"\n"
+"\n"
+"     ")
+        self.Productoprecio_4.setObjectName("Productoprecio_4")
+        self.verticalLayout_3.addWidget(self.Productoprecio_4)
+        spacerItem39 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem39)
+        self.Productoprecio_3 = QtWidgets.QLabel(self.layoutWidget_2)
+        self.Productoprecio_3.setMinimumSize(QtCore.QSize(81, 21))
+        self.Productoprecio_3.setMaximumSize(QtCore.QSize(81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.Productoprecio_3.setFont(font)
+        self.Productoprecio_3.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.Productoprecio_3.setObjectName("Productoprecio_3")
+        self.verticalLayout_3.addWidget(self.Productoprecio_3)
+        spacerItem40 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem40)
+        self.productoproveedor_3 = QtWidgets.QLabel(self.layoutWidget_2)
+        self.productoproveedor_3.setMinimumSize(QtCore.QSize(81, 21))
+        self.productoproveedor_3.setMaximumSize(QtCore.QSize(81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.productoproveedor_3.setFont(font)
+        self.productoproveedor_3.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.productoproveedor_3.setObjectName("productoproveedor_3")
+        self.verticalLayout_3.addWidget(self.productoproveedor_3)
+        spacerItem41 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem41)
+        self.productoproveedor = QtWidgets.QLabel(self.layoutWidget_2)
+        self.productoproveedor.setMinimumSize(QtCore.QSize(81, 21))
+        self.productoproveedor.setMaximumSize(QtCore.QSize(81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.productoproveedor.setFont(font)
+        self.productoproveedor.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.productoproveedor.setObjectName("productoproveedor")
+        self.verticalLayout_3.addWidget(self.productoproveedor)
+        spacerItem42 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem42)
+        self.Productoprecio = QtWidgets.QLabel(self.layoutWidget_2)
+        self.Productoprecio.setMinimumSize(QtCore.QSize(81, 21))
+        self.Productoprecio.setMaximumSize(QtCore.QSize(81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.Productoprecio.setFont(font)
+        self.Productoprecio.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.Productoprecio.setObjectName("Productoprecio")
+        self.verticalLayout_3.addWidget(self.Productoprecio)
+        spacerItem43 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem43)
+        self.Productoprecio_2 = QtWidgets.QLabel(self.layoutWidget_2)
+        self.Productoprecio_2.setMinimumSize(QtCore.QSize(81, 21))
+        self.Productoprecio_2.setMaximumSize(QtCore.QSize(81, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        self.Productoprecio_2.setFont(font)
+        self.Productoprecio_2.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.Productoprecio_2.setObjectName("Productoprecio_2")
+        self.verticalLayout_3.addWidget(self.Productoprecio_2)
+        spacerItem44 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem44)
+        self.horizontalLayoutWidget_3 = QtWidgets.QWidget(self.wagregar)
+        self.horizontalLayoutWidget_3.setGeometry(QtCore.QRect(-1, 380, 271, 51))
+        self.horizontalLayoutWidget_3.setObjectName("horizontalLayoutWidget_3")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_3)
+        self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        spacerItem45 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_9.addItem(spacerItem45)
+        self.agregar = QtWidgets.QPushButton(self.horizontalLayoutWidget_3)
+        self.agregar.setMinimumSize(QtCore.QSize(111, 41))
+        self.agregar.setMaximumSize(QtCore.QSize(111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.agregar.setFont(font)
+        self.agregar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.agregar.setObjectName("agregar")
+        self.horizontalLayout_9.addWidget(self.agregar)
+        spacerItem46 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_9.addItem(spacerItem46)
+        self.horizontalLayoutWidget_4 = QtWidgets.QWidget(self.wagregar)
+        self.horizontalLayoutWidget_4.setGeometry(QtCore.QRect(-1, 430, 271, 51))
+        self.horizontalLayoutWidget_4.setObjectName("horizontalLayoutWidget_4")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_4)
+        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        spacerItem47 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_10.addItem(spacerItem47)
+        self.cerrar = QtWidgets.QPushButton(self.horizontalLayoutWidget_4)
+        self.cerrar.setMinimumSize(QtCore.QSize(111, 41))
+        self.cerrar.setMaximumSize(QtCore.QSize(111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(10)
+        self.cerrar.setFont(font)
+        self.cerrar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.cerrar.setObjectName("cerrar")
+        self.horizontalLayout_10.addWidget(self.cerrar)
+        spacerItem48 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_10.addItem(spacerItem48)
+        self.horizontalLayout_19.addWidget(self.wagregar)
+        self.wprincipal = QtWidgets.QWidget(Dialog)
+        self.wprincipal.setMinimumSize(QtCore.QSize(1, 501))
+        self.wprincipal.setMaximumSize(QtCore.QSize(920, 501))
+        self.wprincipal.setStyleSheet("")
+        self.wprincipal.setObjectName("wprincipal")
+        self.layoutWidget1 = QtWidgets.QWidget(self.wprincipal)
+        self.layoutWidget1.setGeometry(QtCore.QRect(9, 9, 896, 35))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.layoutWidget1)
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        spacerItem49 = QtWidgets.QSpacerItem(38, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem49)
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_6.setSpacing(0)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.label_8 = QtWidgets.QLabel(self.layoutWidget1)
+        self.label_8.setMinimumSize(QtCore.QSize(101, 31))
+        font = QtGui.QFont()
+        font.setFamily("Sitka Small Semibold")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(True)
+        font.setWeight(7)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("\n"
+"border: 1px solid #c7a17a;\n"
+"border-radius: 10px;\n"
+"color: #c7a17a;\n"
+"font: 63 italic 10pt \"Sitka Small Semibold\" ;\n"
+"")
+        self.label_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_8.setObjectName("label_8")
+        self.horizontalLayout_6.addWidget(self.label_8)
+        self.label_9 = QtWidgets.QLabel(self.layoutWidget1)
+        self.label_9.setMinimumSize(QtCore.QSize(431, 31))
+        font = QtGui.QFont()
+        font.setFamily("Sitka Small Semibold")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(True)
+        font.setWeight(7)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("\n"
+"border: 1px solid #c7a17a;\n"
+"border-radius: 10px;\n"
+"color: #c7a17a;\n"
+"font: 63 italic 10pt \"Sitka Small Semibold\" ;\n"
+"")
+        self.label_9.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_9.setObjectName("label_9")
+        self.horizontalLayout_6.addWidget(self.label_9)
+        self.horizontalLayout_5.addLayout(self.horizontalLayout_6)
+        spacerItem50 = QtWidgets.QSpacerItem(78, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem50)
+        self.label_10 = QtWidgets.QLabel(self.layoutWidget1)
+        self.label_10.setMinimumSize(QtCore.QSize(181, 31))
+        font = QtGui.QFont()
+        font.setFamily("Sitka Small Semibold")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(True)
+        font.setWeight(7)
+        self.label_10.setFont(font)
+        self.label_10.setStyleSheet("\n"
+"border: 1px solid #c7a17a;\n"
+"border-radius: 10px;\n"
+"color: #c7a17a;\n"
+"font: 63 italic 10pt \"Sitka Small Semibold\" ;\n"
+"")
+        self.label_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_10.setObjectName("label_10")
+        self.horizontalLayout_5.addWidget(self.label_10)
+        spacerItem51 = QtWidgets.QSpacerItem(38, 28, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem51)
+        self.horizontalLayoutWidget = QtWidgets.QWidget(self.wprincipal)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(9, 50, 894, 51))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        spacerItem52 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem52)
+        self.lbl_busqueda = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.lbl_busqueda.setMinimumSize(QtCore.QSize(96, 49))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Symbol")
+        font.setPointSize(12)
+        self.lbl_busqueda.setFont(font)
+        self.lbl_busqueda.setStyleSheet("QLabel {\n"
+"    border: 1px solid #c7a17a;\n"
+"    border-radius: 10px;\n"
+"    color: #c7a17a;\n"
+"    text-shadow: 0 0 10px #c7a17a\n"
+"}")
+        self.lbl_busqueda.setObjectName("lbl_busqueda")
+        self.horizontalLayout_7.addWidget(self.lbl_busqueda)
+        self.barrabusqueda = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.barrabusqueda.setMinimumSize(QtCore.QSize(420, 40))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         self.barrabusqueda.setFont(font)
@@ -36,50 +1171,60 @@ class Ui_Form(object):
 "     ")
         self.barrabusqueda.setText("")
         self.barrabusqueda.setObjectName("barrabusqueda")
-        self.lbl_busqueda = QtWidgets.QLabel(Form)
-        self.lbl_busqueda.setGeometry(QtCore.QRect(20, 70, 101, 31))
+        self.horizontalLayout_7.addWidget(self.barrabusqueda)
+        spacerItem53 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem53)
+        self.botonbuscar = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.botonbuscar.setMinimumSize(QtCore.QSize(110, 49))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
-        font.setPointSize(12)
-        self.lbl_busqueda.setFont(font)
-        self.lbl_busqueda.setStyleSheet("QLabel {\n"
-"    border: 1px solid #c7a17a;\n"
-"    border-radius: 10px;\n"
-"    color: #c7a17a;\n"
-"    text-shadow: 0 0 10px #c7a17a\n"
-"}")
-        self.lbl_busqueda.setObjectName("lbl_busqueda")
-        self.ENCARGADO = QtWidgets.QLabel(Form)
-        self.ENCARGADO.setGeometry(QtCore.QRect(20, 30, 221, 31))
+        font.setPointSize(9)
+        self.botonbuscar.setFont(font)
+        self.botonbuscar.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.botonbuscar.setObjectName("botonbuscar")
+        self.horizontalLayout_7.addWidget(self.botonbuscar)
+        self.botonreset = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.botonreset.setMinimumSize(QtCore.QSize(110, 49))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
-        font.setPointSize(12)
-        self.ENCARGADO.setFont(font)
-        self.ENCARGADO.setStyleSheet("QLabel {\n"
-"    border: 1px solid #c7a17a;\n"
-"    border-radius: 10px;\n"
-"    color: #c7a17a;\n"
-"    text-shadow: 0 0 10px #c7a17a\n"
-"}")
-        self.ENCARGADO.setObjectName("ENCARGADO")
-        self.titulo_bodega = QtWidgets.QLabel(Form)
-        self.titulo_bodega.setGeometry(QtCore.QRect(0, 0, 721, 24))
-        font = QtGui.QFont()
-        font.setFamily("Sitka Small Semibold")
-        font.setPointSize(16)
-        font.setBold(False)
-        font.setItalic(True)
-        font.setWeight(7)
-        self.titulo_bodega.setFont(font)
-        self.titulo_bodega.setStyleSheet("QLabel {\n"
-"    font: 63 italic 16pt \"Sitka Small Semibold\" ;\n"
-"    border-radius: 10px;\n"
-" color: #c7a17a;\n"
-"}")
-        self.titulo_bodega.setAlignment(QtCore.Qt.AlignCenter)
-        self.titulo_bodega.setObjectName("titulo_bodega")
-        self.tabWidget = QtWidgets.QTabWidget(Form)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 130, 741, 521))
+        font.setPointSize(9)
+        self.botonreset.setFont(font)
+        self.botonreset.setStyleSheet("QPushButton {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #5d432c, stop:1 #c7a17a);\n"
+"       color: white;\n"
+"       border-radius: 10px;\n"
+"       border: none;\n"
+"      }\n"
+"      QPushButton:hover {\n"
+"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"         stop:0 #c7a17a, stop:1 #5d432c);\n"
+"      }\n"
+"      QPushButton:pressed {\n"
+"      }")
+        self.botonreset.setObjectName("botonreset")
+        self.horizontalLayout_7.addWidget(self.botonreset)
+        spacerItem54 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem54)
+        self.widget = QtWidgets.QWidget(self.wprincipal)
+        self.widget.setGeometry(QtCore.QRect(60, 110, 801, 381))
+        self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.widget.setObjectName("widget")
+        self.tabWidget = QtWidgets.QTabWidget(self.widget)
+        self.tabWidget.setGeometry(QtCore.QRect(30, 20, 741, 351))
+        self.tabWidget.setMinimumSize(QtCore.QSize(741, 351))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Symbol")
         font.setPointSize(9)
@@ -105,6 +1250,37 @@ class Ui_Form(object):
 "    color: #222222;\n"
 "}")
         self.tabWidget.setObjectName("tabWidget")
+        self.BEBIDASA = QtWidgets.QWidget()
+        self.BEBIDASA.setObjectName("BEBIDASA")
+        self.tabla_bebidasa = QtWidgets.QTableWidget(self.BEBIDASA)
+        self.tabla_bebidasa.setGeometry(QtCore.QRect(10, 10, 711, 481))
+        self.tabla_bebidasa.setStyleSheet("")
+        self.tabla_bebidasa.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tabla_bebidasa.setObjectName("tabla_bebidasa")
+        self.tabla_bebidasa.setColumnCount(6)
+        self.tabla_bebidasa.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_bebidasa.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_bebidasa.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_bebidasa.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_bebidasa.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_bebidasa.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_bebidasa.setHorizontalHeaderItem(5, item)
+        self.label_2 = QtWidgets.QLabel(self.BEBIDASA)
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 741, 501))
+        self.label_2.setStyleSheet("\n"
+"background-color: #9a9a9a;\n"
+"")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.label_2.raise_()
+        self.tabla_bebidasa.raise_()
+        self.tabWidget.addTab(self.BEBIDASA, "")
         self.BEBIDAS = QtWidgets.QWidget()
         font = QtGui.QFont()
         font.setPointSize(15)
@@ -141,37 +1317,6 @@ class Ui_Form(object):
         self.label.raise_()
         self.tabla_bebidas.raise_()
         self.tabWidget.addTab(self.BEBIDAS, "")
-        self.BEBIDASA = QtWidgets.QWidget()
-        self.BEBIDASA.setObjectName("BEBIDASA")
-        self.tabla_bebidasa = QtWidgets.QTableWidget(self.BEBIDASA)
-        self.tabla_bebidasa.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_bebidasa.setStyleSheet("")
-        self.tabla_bebidasa.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tabla_bebidasa.setObjectName("tabla_bebidasa")
-        self.tabla_bebidasa.setColumnCount(6)
-        self.tabla_bebidasa.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_bebidasa.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_bebidasa.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_bebidasa.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_bebidasa.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_bebidasa.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_bebidasa.setHorizontalHeaderItem(5, item)
-        self.label_2 = QtWidgets.QLabel(self.BEBIDASA)
-        self.label_2.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_2.setStyleSheet("\n"
-"background-color: #9a9a9a;\n"
-"")
-        self.label_2.setText("")
-        self.label_2.setObjectName("label_2")
-        self.label_2.raise_()
-        self.tabla_bebidasa.raise_()
-        self.tabWidget.addTab(self.BEBIDASA, "")
         self.CARNES = QtWidgets.QWidget()
         self.CARNES.setObjectName("CARNES")
         self.tabla_carnes = QtWidgets.QTableWidget(self.CARNES)
@@ -228,35 +1373,6 @@ class Ui_Form(object):
         item = QtWidgets.QTableWidgetItem()
         self.tabla_condimentos.setHorizontalHeaderItem(5, item)
         self.tabWidget.addTab(self.condimentos, "")
-        self.Frutasyverduras = QtWidgets.QWidget()
-        self.Frutasyverduras.setObjectName("Frutasyverduras")
-        self.tabla_frutasyverduras = QtWidgets.QTableWidget(self.Frutasyverduras)
-        self.tabla_frutasyverduras.setGeometry(QtCore.QRect(10, 10, 711, 481))
-        self.tabla_frutasyverduras.setStyleSheet("")
-        self.tabla_frutasyverduras.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tabla_frutasyverduras.setObjectName("tabla_frutasyverduras")
-        self.tabla_frutasyverduras.setColumnCount(6)
-        self.tabla_frutasyverduras.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_frutasyverduras.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_frutasyverduras.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_frutasyverduras.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_frutasyverduras.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_frutasyverduras.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tabla_frutasyverduras.setHorizontalHeaderItem(5, item)
-        self.label_4 = QtWidgets.QLabel(self.Frutasyverduras)
-        self.label_4.setGeometry(QtCore.QRect(0, 0, 741, 501))
-        self.label_4.setStyleSheet("background-color: #9a9a9a;")
-        self.label_4.setText("")
-        self.label_4.setObjectName("label_4")
-        self.label_4.raise_()
-        self.tabla_frutasyverduras.raise_()
-        self.tabWidget.addTab(self.Frutasyverduras, "")
         self.Lacteos = QtWidgets.QWidget()
         self.Lacteos.setObjectName("Lacteos")
         self.tabla_lacteos = QtWidgets.QTableWidget(self.Lacteos)
@@ -319,242 +1435,217 @@ class Ui_Form(object):
         self.label_5.raise_()
         self.tabla_panaderia.raise_()
         self.tabWidget.addTab(self.PANADERIA, "")
-        self.botonbuscar = QtWidgets.QPushButton(Form)
-        self.botonbuscar.setGeometry(QtCore.QRect(480, 60, 101, 41))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
-        font.setPointSize(9)
-        self.botonbuscar.setFont(font)
-        self.botonbuscar.setStyleSheet("QPushButton {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #5d432c, stop:1 #c7a17a);\n"
-"       color: white;\n"
-"       border-radius: 10px;\n"
-"       border: none;\n"
-"      }\n"
-"      QPushButton:hover {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #c7a17a, stop:1 #5d432c);\n"
-"      }\n"
-"      QPushButton:pressed {\n"
-"      }")
-        self.botonbuscar.setObjectName("botonbuscar")
-        self.botonreset = QtWidgets.QPushButton(Form)
-        self.botonreset.setGeometry(QtCore.QRect(590, 60, 101, 41))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
-        font.setPointSize(9)
-        self.botonreset.setFont(font)
-        self.botonreset.setStyleSheet("QPushButton {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #5d432c, stop:1 #c7a17a);\n"
-"       color: white;\n"
-"       border-radius: 10px;\n"
-"       border: none;\n"
-"      }\n"
-"      QPushButton:hover {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #c7a17a, stop:1 #5d432c);\n"
-"      }\n"
-"      QPushButton:pressed {\n"
-"      }")
-        self.botonreset.setObjectName("botonreset")
-        self.editar = QtWidgets.QPushButton(Form)
-        self.editar.setGeometry(QtCore.QRect(770, 210, 121, 71))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
-        font.setPointSize(10)
-        self.editar.setFont(font)
-        self.editar.setStyleSheet("QPushButton {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #5d432c, stop:1 #c7a17a);\n"
-"       color: white;\n"
-"       border-radius: 10px;\n"
-"       border: none;\n"
-"      }\n"
-"      QPushButton:hover {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #c7a17a, stop:1 #5d432c);\n"
-"      }\n"
-"      QPushButton:pressed {\n"
-"      }")
-        self.editar.setObjectName("editar")
-        self.Registro = QtWidgets.QPushButton(Form)
-        self.Registro.setGeometry(QtCore.QRect(770, 300, 121, 71))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
-        font.setPointSize(10)
-        self.Registro.setFont(font)
-        self.Registro.setStyleSheet("QPushButton {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #5d432c, stop:1 #c7a17a);\n"
-"       color: white;\n"
-"       border-radius: 10px;\n"
-"       border: none;\n"
-"      }\n"
-"      QPushButton:hover {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #c7a17a, stop:1 #5d432c);\n"
-"      }\n"
-"      QPushButton:pressed {\n"
-"      }")
-        self.Registro.setObjectName("Registro")
-        self.agregar_2 = QtWidgets.QPushButton(Form)
-        self.agregar_2.setGeometry(QtCore.QRect(770, 390, 121, 71))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
-        font.setPointSize(10)
-        self.agregar_2.setFont(font)
-        self.agregar_2.setStyleSheet("QPushButton {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #5d432c, stop:1 #c7a17a);\n"
-"       color: white;\n"
-"       border-radius: 10px;\n"
-"       border: none;\n"
-"      }\n"
-"      QPushButton:hover {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #c7a17a, stop:1 #5d432c);\n"
-"      }\n"
-"      QPushButton:pressed {\n"
-"      }")
-        self.agregar_2.setObjectName("agregar_2")
-        self.eliminar = QtWidgets.QPushButton(Form)
-        self.eliminar.setGeometry(QtCore.QRect(770, 480, 121, 71))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI Symbol")
-        font.setPointSize(10)
-        self.eliminar.setFont(font)
-        self.eliminar.setStyleSheet("QPushButton {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #5d432c, stop:1 #c7a17a);\n"
-"       color: white;\n"
-"       border-radius: 10px;\n"
-"       border: none;\n"
-"      }\n"
-"      QPushButton:hover {\n"
-"       background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
-"         stop:0 #c7a17a, stop:1 #5d432c);\n"
-"      }\n"
-"      QPushButton:pressed {\n"
-"      }")
-        self.eliminar.setObjectName("eliminar")
-        self.tabWidget.raise_()
-        self.barrabusqueda.raise_()
-        self.lbl_busqueda.raise_()
-        self.ENCARGADO.raise_()
-        self.titulo_bodega.raise_()
-        self.botonbuscar.raise_()
-        self.botonreset.raise_()
-        self.editar.raise_()
-        self.Registro.raise_()
-        self.agregar_2.raise_()
-        self.eliminar.raise_()
+        self.Frutasyverduras = QtWidgets.QWidget()
+        self.Frutasyverduras.setObjectName("Frutasyverduras")
+        self.tabla_frutasyverduras = QtWidgets.QTableWidget(self.Frutasyverduras)
+        self.tabla_frutasyverduras.setGeometry(QtCore.QRect(10, 10, 711, 481))
+        self.tabla_frutasyverduras.setStyleSheet("")
+        self.tabla_frutasyverduras.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tabla_frutasyverduras.setObjectName("tabla_frutasyverduras")
+        self.tabla_frutasyverduras.setColumnCount(6)
+        self.tabla_frutasyverduras.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_frutasyverduras.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_frutasyverduras.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_frutasyverduras.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_frutasyverduras.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_frutasyverduras.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_frutasyverduras.setHorizontalHeaderItem(5, item)
+        self.label_4 = QtWidgets.QLabel(self.Frutasyverduras)
+        self.label_4.setGeometry(QtCore.QRect(0, 0, 741, 501))
+        self.label_4.setStyleSheet("background-color: #9a9a9a;")
+        self.label_4.setText("")
+        self.label_4.setObjectName("label_4")
+        self.label_4.raise_()
+        self.tabla_frutasyverduras.raise_()
+        self.tabWidget.addTab(self.Frutasyverduras, "")
+        self.horizontalLayout_19.addWidget(self.wprincipal)
 
-        self.retranslateUi(Form)
+        self.retranslateUi(Dialog)
         self.tabWidget.setCurrentIndex(6)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.agregar_2.clicked.connect(self.wagregar.show) # type: ignore
+        self.agregar_2.clicked.connect(self.wopciones.hide) # type: ignore
+        self.cerrar.clicked.connect(self.wagregar.hide) # type: ignore
+        self.cerrar.clicked.connect(self.wopciones.show) # type: ignore
+        self.cerrar_2.clicked.connect(self.weditar.hide) # type: ignore
+        self.editar.clicked.connect(self.wopciones.hide) # type: ignore
+        self.editar.clicked.connect(self.weditar.show) # type: ignore
+        self.eliminar.clicked.connect(self.wopciones.hide) # type: ignore
+        self.eliminar.clicked.connect(self.weliminar.show) # type: ignore
+        self.cerrar_3.clicked.connect(self.weliminar.hide) # type: ignore
+        self.cerrar_3.clicked.connect(self.wopciones.show) # type: ignore
+        self.cerrar_2.clicked.connect(self.wopciones.show) # type: ignore
+        self.cerrar.clicked.connect(self.weditar.hide) # type: ignore
+        self.cerrar.clicked.connect(self.weliminar.hide) # type: ignore
+        self.cerrar_2.clicked.connect(self.wagregar.hide) # type: ignore
+        self.cerrar_2.clicked.connect(self.weliminar.hide) # type: ignore
+        self.cerrar_3.clicked.connect(self.weditar.hide) # type: ignore
+        self.cerrar_3.clicked.connect(self.wagregar.hide) # type: ignore
+        self.cerrar_3.clicked.connect(self.tabWidget.update) # type: ignore
+        self.cerrar_2.clicked.connect(self.tabWidget.update) # type: ignore
+        self.cerrar.clicked.connect(self.tabWidget.update) # type: ignore
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.lbl_busqueda.setText(_translate("Form", "Búsqueda"))
-        self.ENCARGADO.setText(_translate("Form", "Encargado:  *******"))
-        self.titulo_bodega.setText(_translate("Form", "BODEGA"))
-        item = self.tabla_bebidas.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
-        item = self.tabla_bebidas.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
-        item = self.tabla_bebidas.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
-        item = self.tabla_bebidas.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
-        item = self.tabla_bebidas.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
-        item = self.tabla_bebidas.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BEBIDAS), _translate("Form", "Bebidas"))
+        Dialog.setWindowTitle(_translate("Dialog", "Form"))
+        self.agregar_2.setText(_translate("Dialog", "Agregar"))
+        self.editar.setText(_translate("Dialog", "Editar"))
+        self.eliminar.setText(_translate("Dialog", "Eliminar"))
+        self.salir.setText(_translate("Dialog", "SALIR"))
+        self.eliminar_2.setText(_translate("Dialog", "Eliminar"))
+        self.cerrar_3.setText(_translate("Dialog", "Cerrar"))
+        item = self.tableeliminar.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Código"))
+        item = self.tableeliminar.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Precio"))
+        item = self.tableeliminar.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "Producto"))
+        item = self.tableeliminar.horizontalHeaderItem(3)
+        item.setText(_translate("Dialog", "Cantidad"))
+        item = self.tableeliminar.horizontalHeaderItem(4)
+        item.setText(_translate("Dialog", "Último Ingreso"))
+        item = self.tableeliminar.horizontalHeaderItem(5)
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.productoproveedor_5.setText(_translate("Dialog", "Código"))
+        self.buscareliminar.setText(_translate("Dialog", "Buscar"))
+        self.titulo_bodega_4.setText(_translate("Dialog", "Eliminar Producto"))
+        self.titulo_bodega_3.setText(_translate("Dialog", "Editar Producto"))
+        self.Productoprecio_5.setText(_translate("Dialog", "Nombre"))
+        self.Productoprecio_6.setText(_translate("Dialog", "Cantidad"))
+        self.productoproveedor_2.setText(_translate("Dialog", "Proveedor"))
+        self.Productoprecio_7.setText(_translate("Dialog", "Precio"))
+        self.actualizar.setText(_translate("Dialog", "Actualizar"))
+        self.cerrar_2.setText(_translate("Dialog", "Cerrar"))
+        item = self.tableeditar.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Código"))
+        item = self.tableeditar.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Precio"))
+        item = self.tableeditar.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "Producto"))
+        item = self.tableeditar.horizontalHeaderItem(3)
+        item.setText(_translate("Dialog", "Cantidad"))
+        item = self.tableeditar.horizontalHeaderItem(4)
+        item.setText(_translate("Dialog", "Último Ingreso"))
+        item = self.tableeditar.horizontalHeaderItem(5)
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.productoproveedor_4.setText(_translate("Dialog", "Código"))
+        self.buscareditar.setText(_translate("Dialog", "Buscar"))
+        self.comboBox.setItemText(0, _translate("Dialog", "Bebidas"))
+        self.comboBox.setItemText(1, _translate("Dialog", "Bebidas A."))
+        self.comboBox.setItemText(2, _translate("Dialog", "Carnes"))
+        self.comboBox.setItemText(3, _translate("Dialog", "Condimentos"))
+        self.comboBox.setItemText(4, _translate("Dialog", "Frutas y Verduras"))
+        self.comboBox.setItemText(5, _translate("Dialog", "Panadería"))
+        self.comboBox.setItemText(6, _translate("Dialog", "Lácteos"))
+        self.titulo_bodega_2.setText(_translate("Dialog", "Ingresar Producto"))
+        self.Productoprecio_4.setText(_translate("Dialog", "Nombre"))
+        self.Productoprecio_3.setText(_translate("Dialog", "Cantidad"))
+        self.productoproveedor_3.setText(_translate("Dialog", "Código"))
+        self.productoproveedor.setText(_translate("Dialog", "Proveedor"))
+        self.Productoprecio.setText(_translate("Dialog", "Precio"))
+        self.Productoprecio_2.setText(_translate("Dialog", "Tipo"))
+        self.agregar.setText(_translate("Dialog", "Agregar "))
+        self.cerrar.setText(_translate("Dialog", "Cerrar"))
+        self.label_8.setText(_translate("Dialog", "Encargado:"))
+        self.label_9.setText(_translate("Dialog", "Nombre del encargado"))
+        self.label_10.setText(_translate("Dialog", "Recepción"))
+        self.lbl_busqueda.setText(_translate("Dialog", "Búsqueda"))
+        self.botonbuscar.setText(_translate("Dialog", "Buscar"))
+        self.botonreset.setText(_translate("Dialog", "Reiniciar"))
         item = self.tabla_bebidasa.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
+        item.setText(_translate("Dialog", "Código"))
         item = self.tabla_bebidasa.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
+        item.setText(_translate("Dialog", "Precio"))
         item = self.tabla_bebidasa.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
+        item.setText(_translate("Dialog", "Producto"))
         item = self.tabla_bebidasa.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
+        item.setText(_translate("Dialog", "Cantidad"))
         item = self.tabla_bebidasa.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
+        item.setText(_translate("Dialog", "Último Ingreso"))
         item = self.tabla_bebidasa.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BEBIDASA), _translate("Form", "Bebidas A."))
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BEBIDASA), _translate("Dialog", "Bebidas A."))
+        item = self.tabla_bebidas.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Código"))
+        item = self.tabla_bebidas.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Precio"))
+        item = self.tabla_bebidas.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "Producto"))
+        item = self.tabla_bebidas.horizontalHeaderItem(3)
+        item.setText(_translate("Dialog", "Cantidad"))
+        item = self.tabla_bebidas.horizontalHeaderItem(4)
+        item.setText(_translate("Dialog", "Último Ingreso"))
+        item = self.tabla_bebidas.horizontalHeaderItem(5)
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BEBIDAS), _translate("Dialog", "Bebidas"))
         item = self.tabla_carnes.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
+        item.setText(_translate("Dialog", "Código"))
         item = self.tabla_carnes.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
+        item.setText(_translate("Dialog", "Precio"))
         item = self.tabla_carnes.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
+        item.setText(_translate("Dialog", "Producto"))
         item = self.tabla_carnes.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
+        item.setText(_translate("Dialog", "Cantidad"))
         item = self.tabla_carnes.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
+        item.setText(_translate("Dialog", "Último Ingreso"))
         item = self.tabla_carnes.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.CARNES), _translate("Form", "Carnes"))
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.CARNES), _translate("Dialog", "Carnes"))
         item = self.tabla_condimentos.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
+        item.setText(_translate("Dialog", "Código"))
         item = self.tabla_condimentos.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
+        item.setText(_translate("Dialog", "Precio"))
         item = self.tabla_condimentos.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
+        item.setText(_translate("Dialog", "Producto"))
         item = self.tabla_condimentos.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
+        item.setText(_translate("Dialog", "Cantidad"))
         item = self.tabla_condimentos.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
+        item.setText(_translate("Dialog", "Último Ingreso"))
         item = self.tabla_condimentos.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.condimentos), _translate("Form", "Condimentos"))
-        item = self.tabla_frutasyverduras.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
-        item = self.tabla_frutasyverduras.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
-        item = self.tabla_frutasyverduras.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
-        item = self.tabla_frutasyverduras.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
-        item = self.tabla_frutasyverduras.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
-        item = self.tabla_frutasyverduras.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Frutasyverduras), _translate("Form", "Frutas y Verduras"))
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.condimentos), _translate("Dialog", "Condimentos"))
         item = self.tabla_lacteos.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
+        item.setText(_translate("Dialog", "Código"))
         item = self.tabla_lacteos.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
+        item.setText(_translate("Dialog", "Precio"))
         item = self.tabla_lacteos.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
+        item.setText(_translate("Dialog", "Producto"))
         item = self.tabla_lacteos.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
+        item.setText(_translate("Dialog", "Cantidad"))
         item = self.tabla_lacteos.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
+        item.setText(_translate("Dialog", "Último Ingreso"))
         item = self.tabla_lacteos.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Lacteos), _translate("Form", "Lácteos"))
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Lacteos), _translate("Dialog", "Lácteos"))
         item = self.tabla_panaderia.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Código"))
+        item.setText(_translate("Dialog", "Código"))
         item = self.tabla_panaderia.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Precio"))
+        item.setText(_translate("Dialog", "Precio"))
         item = self.tabla_panaderia.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "Producto"))
+        item.setText(_translate("Dialog", "Producto"))
         item = self.tabla_panaderia.horizontalHeaderItem(3)
-        item.setText(_translate("Form", "Cantidad"))
+        item.setText(_translate("Dialog", "Cantidad"))
         item = self.tabla_panaderia.horizontalHeaderItem(4)
-        item.setText(_translate("Form", "Último Ingreso"))
+        item.setText(_translate("Dialog", "Último Ingreso"))
         item = self.tabla_panaderia.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Proveedor"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.PANADERIA), _translate("Form", "Panadería"))
-        self.botonbuscar.setText(_translate("Form", "Buscar"))
-        self.botonreset.setText(_translate("Form", "Reiniciar"))
-        self.editar.setText(_translate("Form", "Editar"))
-        self.Registro.setText(_translate("Form", "Registro"))
-        self.agregar_2.setText(_translate("Form", "Agregar"))
-        self.eliminar.setText(_translate("Form", "Eliminar"))
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.PANADERIA), _translate("Dialog", "Panadería"))
+        item = self.tabla_frutasyverduras.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Código"))
+        item = self.tabla_frutasyverduras.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Precio"))
+        item = self.tabla_frutasyverduras.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "Producto"))
+        item = self.tabla_frutasyverduras.horizontalHeaderItem(3)
+        item.setText(_translate("Dialog", "Cantidad"))
+        item = self.tabla_frutasyverduras.horizontalHeaderItem(4)
+        item.setText(_translate("Dialog", "Último Ingreso"))
+        item = self.tabla_frutasyverduras.horizontalHeaderItem(5)
+        item.setText(_translate("Dialog", "Proveedor"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Frutasyverduras), _translate("Dialog", "Frutas y Verduras"))
