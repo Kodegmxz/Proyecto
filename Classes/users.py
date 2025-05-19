@@ -22,6 +22,9 @@
             elif rol == "Bodega":
                 from Ui.Almacen.a_almacen import a3
                 a3(db, widget)
+            elif rol == "Cocina":
+                from Ui.Cocina.a_cocina import a4
+                a4(db, widget)
         except Exception as e:
             print(e)
             return True

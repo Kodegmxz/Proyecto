@@ -553,19 +553,6 @@ padding: 10px 20px;</string>
        </layout>
       </item>
       <item>
-       <spacer name="verticalSpacer_9">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>25</width>
-          <height>15</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_12">
         <item>
          <spacer name="horizontalSpacer_40">
